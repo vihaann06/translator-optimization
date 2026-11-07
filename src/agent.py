@@ -107,8 +107,8 @@ class Model:
                     model=self.name, messages=messages, temperature=self.temperature,
                     max_tokens=self.max_output_tokens, response_format={"type": "json_object"})
                 break
-            except RateLimitError:
-                if attempt == 11:
+            except RateLimitError as e:
+                if attempt == 11 or "insufficient_quota" in str(e) or "no credits" in str(e):
                     raise
                 await asyncio.sleep(min(60, 2 ** attempt) + random.random())
         usage = resp.usage

@@ -1,0 +1,83 @@
+{
+  "task_id": 170,
+  "intent_template_id": 289,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "a11y-syntax-highlighting: 1 star",
+          "a11y-webring.club: 2 stars",
+          "accessible-html-content-patterns: 1 star",
+          "cloud-to-butt: 0 stars",
+          "dotfiles: 0 stars",
+          "empathy-prompts: 6 stars",
+          "ericwbailey.website: 2 stars",
+          "gimmiethat.space: 0 stars",
+          "millennials-to-snake-people: 6 stars",
+          "remove-board-movement-events-from-the-github-issue-timeline: 0 stars",
+          "solarized-prism-theme: 0 stars",
+          "timeit: 0 stars"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "task_type": "retrieve",
+        "retrieved_data": [
+          "a11y-syntax-highlighting: 1 star",
+          "a11y-webring.club: 2 stars",
+          "accessible-html-content-patterns: 1 star",
+          "cloud-to-butt: 0 stars",
+          "dotfiles: 0 stars",
+          "empathy-prompts: 6 stars",
+          "ericwbailey.website: 2 stars",
+          "gimmiethat.space: 0 stars",
+          "millennials-to-snake-people: 6 stars",
+          "remove-board-movement-events-from-the-github-issue-timeline: 0 stars",
+          "solarized-prism-theme: 0 stars",
+          "timeit: 0 stars"
+        ]
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          193.0,
+          190.0,
+          189.0,
+          188.0,
+          184.0,
+          181.0
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (0/6), Missing: 6, Extra: 12",
+            "Expected: [193.0, 190.0, ..., 181.0], Got: [a11y-syntax-highlighting: 1 star, a11y-webring.club: 2 stars, ..., timeit: 0 stars]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}
