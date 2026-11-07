@@ -1,0 +1,2539 @@
+[
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 25,
+  "intent_template_id": 222,
+  "start_urls": [
+   "__SHOPPING__/epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html"
+  ],
+  "intent": "Get name(s) of reviewer(s) who mention print quality explicitly with a rating of 3 or less stars for the product on the current page",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      "Roxanne Brandon Coffey",
+      "Nelson"
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  ],
+  "intent_template": "Get name(s) of reviewer(s) who mention {{description}} for the product on the current page",
+  "instantiation_dict": {
+   "description": "print quality explicitly with a rating of 3 or less stars"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 31,
+  "intent_template_id": 33,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "In the photoshopbattles forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. Return a list of objects with keys \"username\", \"post_title\", and \"count\".",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      {
+       "username": "Proud_Idiot",
+       "post_title": "UK Prime Minister Rishi Sunak looking at a pothole",
+       "count": 0
+      }
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "username": {
+        "type": "string"
+       },
+       "post_title": {
+        "type": "string"
+       },
+       "count": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   }
+  ],
+  "intent_template": "In the {{forum}} forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. {{retrieved_data_format_spec}}.",
+  "instantiation_dict": {
+   "forum": "photoshopbattles",
+   "retrieved_data_format_spec": "Return a list of objects with keys \"username\", \"post_title\", and \"count\""
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 44,
+  "intent_template_id": 303,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Open my todos page",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": [
+      "__GITLAB__/dashboard/todos",
+      "__GITLAB__/dashboard/todos?state=pending"
+     ],
+     "headers": null,
+     "query_params": null,
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "page",
+     "sort"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Open my todos page",
+  "instantiation_dict": {},
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 64,
+  "intent_template_id": 276,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Get customer email(s) who have 2 orders in any state in the entire history",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      "musiclover99@hotmail.com",
+      "roni_cost@example.com"
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  ],
+  "intent_template": "Get customer email(s) who {{order_criteria}} in the entire history",
+  "instantiation_dict": {
+   "order_criteria": "have 2 orders in any state"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 66,
+  "intent_template_id": 17,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "Among the top 10 hottest posts in the \"Books\" forum, get the post titles from those that recommend exactly one book.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      "I just finished reading The Hobbit to my 6 year old daughter, and she loved it!",
+      "Apple Books has a free audiobook of A Christmas Carol narrated by LeVar Burton!"
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  ],
+  "intent_template": "Among the top {{number}} hottest posts in the \"{{forum}}\" forum, get {{description}} from those that {{filter_criterion}}.{{retrieved_data_format_spec}}",
+  "instantiation_dict": {
+   "number": 10,
+   "description": "the post titles",
+   "forum": "Books",
+   "filter_criterion": "recommend exactly one book",
+   "retrieved_data_format_spec": ""
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 105,
+  "intent_template_id": 349,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Navigate to the page showing the list of not yet closed issues in the OpenAPITools/openapi-generator repository that have labels related to OpenAPI Generator CLI",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__GITLAB__/OpenAPITools/openapi-generator/-/issues.*$",
+     "headers": null,
+     "query_params": null,
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     ".*"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__GITLAB__/api/graphql",
+     "headers": {
+      "referer": [
+       "__GITLAB__/OpenAPITools/openapi-generator/-/issues/?state=opened&label_name%5B%5D=OpenAPI%20Generator%20CLI",
+       "__GITLAB__/OpenAPITools/openapi-generator/-/issues/?label_name%5B%5D=OpenAPI%20Generator%20CLI"
+      ]
+     },
+     "query_params": null,
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "page",
+     "sort"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Navigate to the page showing the list of {{state}} issues in the {{repo}} repository that have labels related to {{label}}",
+  "instantiation_dict": {
+   "label": "OpenAPI Generator CLI",
+   "repo": "OpenAPITools/openapi-generator",
+   "state": "not yet closed"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 110,
+  "intent_template_id": 270,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Get the monthly count of completed orders from Jan 2022 through Nov 2022, inclusive. Return a list of objects with keys \"month\" (month name) and \"count\" (as integer) only, without any additional details.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      {
+       "month": "January",
+       "count": 11
+      },
+      {
+       "month": "February",
+       "count": 16
+      },
+      {
+       "month": "March",
+       "count": 14
+      },
+      {
+       "month": "April",
+       "count": 7
+      },
+      {
+       "month": "May",
+       "count": 8
+      },
+      {
+       "month": "June",
+       "count": 13
+      },
+      {
+       "month": "July",
+       "count": 9
+      },
+      {
+       "month": "August",
+       "count": 8
+      },
+      {
+       "month": "September",
+       "count": 10
+      },
+      {
+       "month": "October",
+       "count": 4
+      },
+      {
+       "month": "November",
+       "count": 5
+      }
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "month": {
+        "type": "string",
+        "format": "month"
+       },
+       "count": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   }
+  ],
+  "intent_template": "Get the monthly count of completed orders {{period}}. {{retrieved_data_format_spec}}.",
+  "instantiation_dict": {
+   "period": "from Jan 2022 through Nov 2022, inclusive",
+   "retrieved_data_format_spec": "Return a list of objects with keys \"month\" (month name) and \"count\" (as integer) only, without any additional details"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 147,
+  "intent_template_id": 155,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "Get the size of the picture frame I bought in 2022. Return a list of objects with keys \"width\" and \"height\".",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      {
+       "width": "^16(?:\\.0+)?\\s*[-]?\\s*(?:inch(?:es)?|in\\.?|\u2033|\"|'|')$",
+       "height": "^24(?:\\.0+)?\\s*[-]?\\s*(?:inch(?:es)?|in\\.?|\u2033|\"|'|')$"
+      }
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "width": {
+        "type": "string"
+       },
+       "height": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  ],
+  "intent_template": "Get the {{option}} of the {{product}} I bought {{time}}.{{retrieved_data_format_spec}}",
+  "instantiation_dict": {
+   "option": "size",
+   "product": "picture frame",
+   "time": "in 2022",
+   "retrieved_data_format_spec": " Return a list of objects with keys \"width\" and \"height\"."
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 165,
+  "intent_template_id": 136,
+  "start_urls": [
+   "__SHOPPING__/sandgrens-swedish-handmade-wooden-clog-sandal-copenhagen.html"
+  ],
+  "intent": "Get all review titles with 2 stars or below for the product on the current page.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      "So cute but too small",
+      "Toe rubbed"
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  ],
+  "intent_template": "Get all review titles with 2 stars or below for the product on the current page.",
+  "instantiation_dict": {},
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 170,
+  "intent_template_id": 289,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Get the project ID(s) of my personal project(s) that received the least stars",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      193,
+      190,
+      189,
+      188,
+      184,
+      181
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     }
+    }
+   }
+  ],
+  "intent_template": "Get the project ID(s) of my personal project(s) that received {{description}}",
+  "instantiation_dict": {
+   "description": "the least stars"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 197,
+  "intent_template_id": 367,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Get the total payment amount of the last 5 non-cancelled orders. Return the value as a number (e.g., 10.99) only, without any additional details.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      778.2
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "number",
+      "format": "currency"
+     }
+    }
+   }
+  ],
+  "intent_template": "{{payment_query}}. {{retrieved_data_format_spec}}.",
+  "instantiation_dict": {
+   "payment_query": "Get the total payment amount of the last 5 non-cancelled orders",
+   "retrieved_data_format_spec": "Return the value as a number (e.g., 10.99) only, without any additional details"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 235,
+  "intent_template_id": 213,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "Get the order number of my most recent under delivery order",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "NOT_FOUND_ERROR",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   }
+  ],
+  "intent_template": "Get the order number of my most recent {{status}} order",
+  "instantiation_dict": {
+   "status": "under delivery"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 269,
+  "intent_template_id": 139,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "Open the \"women shoes\" category page filtered to under $25",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING__/clothing-shoes-jewelry/women/shoes.html",
+     "headers": null,
+     "query_params": {
+      "price": [
+       "0-25"
+      ]
+     },
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "^(?!price$).+$"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Open the \"{{product_category}}\" category page filtered to {{price_range}}",
+  "instantiation_dict": {
+   "price_range": "under $25",
+   "product_category": "women shoes"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 286,
+  "intent_template_id": 207,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "View the product page for the least expensive ssd hard drive with a minimum storage capacity of 1TB.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING__/portable-ssd-2tb-external-hard-drive-mobile-solid-state-drive-portable-hard-drive-for-pc-laptop-and-mac-data-storage-and-transfer-2tb-silver.html",
+     "headers": null,
+     "query_params": null,
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "View the product page for the least expensive {{product}} with a minimum storage capacity of {{min_storage}}.",
+  "instantiation_dict": {
+   "product": "ssd hard drive",
+   "min_storage": "1TB"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 316,
+  "intent_template_id": 324,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Get the email addresses of the top 3 contributors (by commit count) to facebook\"s guide on building react apps repo",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      "dan.abramov@gmail.com",
+      "timer150@gmail.com",
+      "ian@iansutherland.ca"
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  ],
+  "intent_template": "Get the {{attribute}} of the top 3 contributors (by commit count) to {{repo}} repo{{retrieved_data_format_spec}}",
+  "instantiation_dict": {
+   "repo": "facebook\"s guide on building react apps",
+   "attribute": "email addresses",
+   "retrieved_data_format_spec": ""
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 325,
+  "intent_template_id": 208,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "Pull up the page with all \"mouth night guard\" listings sorted by descending price.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING__/catalogsearch/result/index/",
+     "headers": null,
+     "query_params": {
+      "q": [
+       "mouth night guard "
+      ],
+      "product_list_order": [
+       "price"
+      ]
+     },
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "^(?!q$|product_list_dir$|product_list_order).+$"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Pull up the page with all \"{{product}}\" listings sorted by {{sorting_order}}.",
+  "instantiation_dict": {
+   "product": "mouth night guard",
+   "sorting_order": "descending price"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 349,
+  "intent_template_id": 298,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Get the usernames of other users who have access to my repo gimmiethat.space",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "RETRIEVE",
+     "status": "SUCCESS",
+     "retrieved_data": [
+      "^@?yjlou$"
+     ],
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  ],
+  "intent_template": "Get the usernames of other users who have access to my repo {{repo}}",
+  "instantiation_dict": {
+   "repo": "gimmiethat.space"
+  },
+  "revision": 3
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 357,
+  "intent_template_id": 291,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Go to the merge requests requiring my review",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__GITLAB__/dashboard/merge_requests",
+     "headers": null,
+     "query_params": {
+      "reviewer_username": [
+       "byteblaze"
+      ],
+      "scope": [
+       "^(all|)$"
+      ],
+      "state": [
+       "^(opened|)$"
+      ]
+     },
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Go to the merge requests requiring my review",
+  "instantiation_dict": {},
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 399,
+  "intent_template_id": 6,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "Change my bio to \"I am a robot\" in the discussion forum",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/user/MarvelsGrantMan136/edit_biography",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "user_biography[biography]": "I am a robot"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": false,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Change my bio to \"{{content}}\" in the discussion forum",
+  "instantiation_dict": {
+   "content": "I am a robot"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 416,
+  "intent_template_id": 360,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Reply on the merge request assigned to me for wcag: if the last comment is from the author, reply \"Thank you\"; otherwise tag the author (e.g., @user) as a reminder.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__GITLAB__/a11yproject/a11yproject.com/notes?target_id=72409&target_type=merge_request",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "$.note.noteable_type": "MergeRequest",
+      "$.note.note": "Thank you"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Reply on the merge request assigned to me for {{topic}}: if the last comment is from the author, reply \"Thank you\"; otherwise tag the author (e.g., @user) as a reminder.",
+  "instantiation_dict": {
+   "topic": "wcag"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 451,
+  "intent_template_id": 331,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "set the homepage URL on my GitLab profile to www.byteblaze.com",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__GITLAB__/-/profile",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "user[website_url]": [
+       "https://www.byteblaze.com",
+       "http://www.byteblaze.com"
+      ]
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": {
+     "type": "object",
+     "properties": {
+      "user[website_url]": {
+       "type": "string"
+      }
+     }
+    },
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "set the homepage URL on my GitLab profile to {{url}}",
+  "instantiation_dict": {
+   "url": "www.byteblaze.com"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 489,
+  "intent_template_id": 275,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Change the page title of \"Privacy Policy\" page on my site to \"No privacy policy is needed in this dystopian world\".",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING_ADMIN__/cms/page/save/back/edit",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "title": "No privacy policy is needed in this dystopian world",
+      "is_active": "1",
+      "store_id[0]": "0",
+      "page_id": "4"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Change the page title of \"{{old_heading}}\" page on my site to \"{{heading}}\".",
+  "instantiation_dict": {
+   "heading": "No privacy policy is needed in this dystopian world",
+   "old_heading": "Privacy Policy"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 502,
+  "intent_template_id": 287,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Mark all Gobi HeatTec Tee as out of stock",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__SHOPPING_ADMIN__/catalog/product/save/id/446/type/configurable/store/0/set/\\d+/back/edit$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "product[quantity_and_stock_status][is_in_stock]": "0"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Mark all {{product}} as out of stock",
+  "instantiation_dict": {
+   "product": "Gobi HeatTec Tee"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 520,
+  "intent_template_id": 196,
+  "start_urls": [
+   "__SHOPPING__/magnetic-metal-stainless-steel-d-pads-kits-directional-pad-replacement-parts-for-xbox-one-elite-controller-elite-series-2-xbox-one-xbox-one-s-x-controller.html"
+  ],
+  "intent": "Add the product on the current page to my wishlist",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING__/wishlist/index/add/",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "product": "37313",
+      "qty": "1"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Add the product on the current page to my wishlist",
+  "instantiation_dict": {},
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 546,
+  "intent_template_id": 251,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Update the product description of Lucia Cross-Fit Bra to \"{count} customer(s) love it!\" where count is the number of reviews with 4 stars or above, or \"don't miss out on this amazing product\" when there are no such reviews.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__SHOPPING_ADMIN__/catalog/product/save/id/1668/type/configurable/store/0/set/\\d+/back/edit$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "product[short_description]": "<p>don't miss out on this amazing product</p>"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Update the product description of {{product}} to \"{count} customer(s) love it!\" where count is the number of reviews with 4 stars or above, or \"don't miss out on this amazing product\" when there are no such reviews.",
+  "instantiation_dict": {
+   "product": "Lucia Cross-Fit Bra"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 572,
+  "intent_template_id": 165,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "I recently moved, my address is 654 Aspen Road, House #3, Boston, MA, 02110, update my information on OneStopShopping accordingly",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING__/customer/address/formPost/id/26/",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "firstname": "Emma",
+      "lastname": "Lopez",
+      "street[0]": "654 Aspen Road",
+      "street[1]": "House #3",
+      "country_id": "US",
+      "city": "Boston",
+      "postcode": "02110"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "I recently moved, my address is {{address}}, update my information on OneStopShopping accordingly",
+  "instantiation_dict": {
+   "address": "654 Aspen Road, House #3, Boston, MA, 02110"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 580,
+  "intent_template_id": 7,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "Create a new forum with name and title \"sci_fi\", description \"A wild place for sci-fi enthusiasts\", and sidebar \"**New**, Classic, *Movies*, Post my novel, Random\"",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/create_forum",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "forum[name]": "sci_fi",
+      "forum[title]": "sci_fi",
+      "forum[description]": "A wild place for sci-fi enthusiasts",
+      "forum[sidebar]": "**New**, Classic, *Movies*, Post my novel, Random"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Create a new forum with name and title \"{{name}}\", description \"{{description}}\", and sidebar \"{{sidebar_list}}\"",
+  "instantiation_dict": {
+   "name": "sci_fi",
+   "description": "A wild place for sci-fi enthusiasts",
+   "sidebar_list": "**New**, Classic, *Movies*, Post my novel, Random"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping"
+  ],
+  "task_id": 587,
+  "intent_template_id": 194,
+  "start_urls": [
+   "__SHOPPING__"
+  ],
+  "intent": "Rate my recently purchased PS3 accessory with 3 stars using my nickname GamingEmma, with the summary \"Ok I guess\" and review \"Does the job\"",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING__/review/product/post/id/101441/",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "ratings[4]": "18",
+      "nickname": "GamingEmma",
+      "title": "Ok I guess",
+      "detail": "Does the job"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Rate my recently purchased {{product}} with {{num_star}} stars using my nickname {{nickname}}, with the summary \"{{summary}}\" and review \"{{review}}\"",
+  "instantiation_dict": {
+   "product": "PS3 accessory",
+   "num_star": 3,
+   "nickname": "GamingEmma",
+   "summary": "Ok I guess",
+   "review": "Does the job"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 598,
+  "intent_template_id": 4,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "Subscribe to the \"pittsburgh\" forum from the page of the all time most commented post in that forum.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": [
+      "__REDDIT__/f/pittsburgh/subscribe.json",
+      "__REDDIT__/f/pittsburgh/unsubscribe.json"
+     ],
+     "headers": {
+      "referer": "__REDDIT__/f/pittsburgh/132053/is-bbq-chipped-chopped-ham-a-thing-my-grandma-says-it-is"
+     },
+     "query_params": null,
+     "post_data": null,
+     "response_content": {
+      "subscribed": true
+     },
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Subscribe to the \"{{forum}}\" forum from the page of the {{post_selector}} post in that forum.",
+  "instantiation_dict": {
+   "post_selector": "all time most commented",
+   "forum": "pittsburgh"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 615,
+  "intent_template_id": 11,
+  "start_urls": [
+   "__REDDIT__/f/pics"
+  ],
+  "intent": "Re-post the image of Bald Eagle from this forum to connecticut forum using the image URL and title \"from /f/pics\"",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__REDDIT__/submit.*$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "submission[url]": "__REDDIT__/submission_images/b02113033af32feae9ff147dbbe3764039368d67d193885bd04e65c2e6beea9c.jpg",
+      "submission[title]": "from /f/pics",
+      "submission[forum]": "10006"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Re-post the image of {{content}} from this forum to {{forum}} forum using the image URL and title \"from /f/pics\"",
+  "instantiation_dict": {
+   "content": "Bald Eagle",
+   "forum": "connecticut"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 636,
+  "intent_template_id": 6100,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "Create a post in the most appropriate forum. Title it \"DIY toolkit recommendations\" and in post details ask \"I need recommendations for DIY toolkit within a budget of $100 please\"",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": [
+      "__REDDIT__/submit",
+      "__REDDIT__/submit/diy"
+     ],
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "submission[title]": "DIY toolkit recommendations",
+      "submission[body]": "I need recommendations for DIY toolkit within a budget of $100 please",
+      "submission[forum]": "10007"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Create a post in the most appropriate forum. Title it \"{{category}} recommendations\" and in post details ask \"I need recommendations for {{category}} within a budget of {{price}} please\"",
+  "instantiation_dict": {
+   "category": "DIY toolkit",
+   "price": "$100"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 658,
+  "intent_template_id": 327,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Create an issue in a11yproject repo with title \"401 bad gateway\". Assign the issue to Roshanjossey (you can invite users to the project if needed). Set due date to be the end of 2030",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__GITLAB__/a11yproject/a11yproject.com/-/issues",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "issue[title]": "401 bad gateway",
+      "issue[assignee_ids][]": "2264",
+      "issue[due_date]": "2030-12-31"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Create an issue in {{repo}} repo with title \"{{issue}}\". Assign the issue to {{account}} (you can invite users to the project if needed). Set due date to be {{due}}",
+  "instantiation_dict": {
+   "repo": "a11yproject",
+   "issue": "401 bad gateway",
+   "account": "Roshanjossey",
+   "due": "the end of 2030"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping",
+   "reddit"
+  ],
+  "task_id": 674,
+  "intent_template_id": 101,
+  "start_urls": [
+   "__SHOPPING__",
+   "__REDDIT__"
+  ],
+  "intent": "Create a post in the game related discussion forum about Doc and Pies Arcade Factory Cocktail Arcade Machine to report customer reviews with 3 stars and less rating from the OneStopShop with the post title \"real user feedback on Doc and Pies Arcade Factory Cocktail Arcade Machine\". Format the post body as a bullet point list in the same order they appear (md format: - \"<review title>\").",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__REDDIT__/submit.*$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "submission[title]": "real user feedback on Doc and Pies Arcade Factory Cocktail Arcade Machine",
+      "submission[body]": "- \"Poorly Made Exterior. Consider a different Company.\"\r\n- \"piece of junk ,..can't believe I spent money on this !!!!\"\r\n- \"Based arrived broken but game itself works\"\r\n- \"Based arrived broken but game itself works\"",
+      "submission[forum]": "10048"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": {
+     "type": "object",
+     "properties": {
+      "$.actions[0].content": {
+       "type": "string",
+       "format": "markdown"
+      }
+     }
+    },
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Create a post in the game related discussion forum about {{product}} to report customer reviews with {{rating}} rating from the OneStopShop with the post title \"real user feedback on {{product}}\". Format the post body as a bullet point list in the same order they appear (md format: - \"<review title>\").",
+  "instantiation_dict": {
+   "product": "Doc and Pies Arcade Factory Cocktail Arcade Machine",
+   "rating": "3 stars and less"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 679,
+  "intent_template_id": 253,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Go to the list of orders that are completed",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__SHOPPING_ADMIN__/mui/index/render/.*$",
+     "headers": {
+      "referer": "__SHOPPING_ADMIN__/sales/order/"
+     },
+     "query_params": {
+      "namespace": [
+       "sales_order_grid"
+      ],
+      "filters[placeholder]": [
+       "true"
+      ],
+      "filters[status]": [
+       "complete"
+      ],
+      "search": [
+       ""
+      ],
+      "keywordUpdated": [
+       "false"
+      ]
+     },
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "^paging",
+     "^sorting",
+     "isAjax"
+    ],
+    "decode_base64_query": true,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Go to the list of orders that are {{status}}",
+  "instantiation_dict": {
+   "status": "completed"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit",
+   "gitlab"
+  ],
+  "task_id": 688,
+  "intent_template_id": 117,
+  "start_urls": [
+   "__REDDIT__",
+   "__GITLAB__"
+  ],
+  "intent": "Promote lahwaacz/arch-wiki-docs in the discussion forum science by creating a post with the project description as the title.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__REDDIT__/submit/?.*$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "submission[mediaType]": "url",
+      "submission[url]": "__GITLAB__/lahwaacz/arch-wiki-docs",
+      "submission[title]": "A script to download pages from Arch Wiki for offline browsing",
+      "submission[forum]": "10077"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Promote {{repo}} in the discussion forum {{forum}} by creating a post with the project description as the title.",
+  "instantiation_dict": {
+   "repo": "lahwaacz/arch-wiki-docs",
+   "forum": "science"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 708,
+  "intent_template_id": 268,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Show the tax report for for this year (today is March 15, 2023).",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING_ADMIN__/reports/report_sales/tax/filter",
+     "headers": null,
+     "query_params": {
+      "report_type": [
+       "created_at_order"
+      ],
+      "from": [
+       "01/1/2023"
+      ],
+      "to": [
+       "03/15/2023"
+      ]
+     },
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "^(?!report_type$|from$|to$).*$"
+    ],
+    "decode_base64_query": true,
+    "query_params_schema": {
+     "type": "object",
+     "properties": {
+      "report_type": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "from": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "format": "date"
+       }
+      },
+      "to": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "format": "date"
+       }
+      }
+     }
+    },
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Show the {{report}} for {{time_span}} (today is March 15, 2023).",
+  "instantiation_dict": {
+   "report": "tax report",
+   "time_span": "for this year"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 709,
+  "intent_template_id": 271,
+  "start_urls": [
+   "__SHOPPING_ADMIN__"
+  ],
+  "intent": "Show the orders report from May 1, 2021 to March 31, 2022.",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "NAVIGATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__SHOPPING_ADMIN__/reports/report_sales/sales/filter",
+     "headers": null,
+     "query_params": {
+      "report_type": [
+       "created_at_order"
+      ],
+      "from": [
+       "05/1/2021"
+      ],
+      "to": [
+       "03/31/2022"
+      ]
+     },
+     "post_data": null,
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "GET",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "^(?!report_type$|from$|to$).*$"
+    ],
+    "decode_base64_query": true,
+    "query_params_schema": {
+     "type": "object",
+     "properties": {
+      "report_type": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "from": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "format": "date"
+       }
+      },
+      "to": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "format": "date"
+       }
+      }
+     }
+    },
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Show the {{type}} report from {{start_date}} to {{end_date}}.",
+  "instantiation_dict": {
+   "type": "orders",
+   "start_date": "May 1, 2021",
+   "end_date": "March 31, 2022",
+   "article": "an"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "reddit"
+  ],
+  "task_id": 724,
+  "intent_template_id": 25,
+  "start_urls": [
+   "__REDDIT__"
+  ],
+  "intent": "Like all submissions created by Hrekires in forum news",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/129816.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/129808.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/129794.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/129783.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/129594.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/129508.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/43839.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/43781.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/43572.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "__REDDIT__/sv/43558.json",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "choice": "1"
+     },
+     "response_content": null,
+     "response_status": 200,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Like all submissions created by {{user}} in forum {{forum}}",
+  "instantiation_dict": {
+   "user": "Hrekires",
+   "forum": "news"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "gitlab"
+  ],
+  "task_id": 750,
+  "intent_template_id": 2100,
+  "start_urls": [
+   "__GITLAB__"
+  ],
+  "intent": "Start a private project called \"agi_index\" with HTML Gitlab pages template and add Vinta Chen as members",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "__GITLAB__/projects",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "project[template_name]": "plainhtml",
+      "project[name]": "agi_index",
+      "project[path]": "agi_index",
+      "project[namespace_id]": "2505",
+      "project[visibility_level]": "0"
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "^__GITLAB__/api/v4/projects/\\d+/invitations$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "user_id": "278"
+     },
+     "response_content": null,
+     "response_status": 201,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": [
+     "serializer"
+    ],
+    "ignored_query_params_patterns": null,
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": null,
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "Start a private project called \"{{project_name}}\" with {{template}} template and add {{account_list}} as members",
+  "instantiation_dict": {
+   "project_name": "agi_index",
+   "template": "HTML Gitlab pages",
+   "account_list": "Vinta Chen"
+  },
+  "revision": 2
+ },
+ {
+  "sites": [
+   "shopping_admin"
+  ],
+  "task_id": 780,
+  "intent_template_id": 742,
+  "start_urls": [
+   "__SHOPPING_ADMIN__/catalog/product/edit/id/1481/"
+  ],
+  "intent": "Increase the price of white Ingrid Running with size L and above by $17",
+  "eval": [
+   {
+    "expected": {
+     "task_type": "MUTATE",
+     "status": "SUCCESS",
+     "retrieved_data": null,
+     "error_details": null
+    },
+    "evaluator": "AgentResponseEvaluator",
+    "ordered": false,
+    "results_schema": {
+     "type": "null"
+    }
+   },
+   {
+    "expected": {
+     "url": "^__SHOPPING_ADMIN__/catalog/product/save/id/1264/type/simple/store/0/set/\\d+/back/edit$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "product[price]": 101.0
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "isAjax"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": {
+     "type": "object",
+     "properties": {
+      "product[price]": {
+       "type": "number",
+       "format": "currency"
+      }
+     }
+    },
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   },
+   {
+    "expected": {
+     "url": "^__SHOPPING_ADMIN__/catalog/product/save/id/1267/type/simple/store/0/set/\\d+/back/edit$",
+     "headers": null,
+     "query_params": null,
+     "post_data": {
+      "product[price]": 101.0
+     },
+     "response_content": null,
+     "response_status": 302,
+     "http_method": "POST",
+     "response_cookies": null
+    },
+    "evaluator": "NetworkEventEvaluator",
+    "last_event_only": true,
+    "ignored_query_params": null,
+    "ignored_query_params_patterns": [
+     "isAjax"
+    ],
+    "decode_base64_query": false,
+    "query_params_schema": null,
+    "post_data_schema": {
+     "type": "object",
+     "properties": {
+      "product[price]": {
+       "type": "number",
+       "format": "currency"
+      }
+     }
+    },
+    "ignored_post_data_params_patterns": null,
+    "should_not_exist": false
+   }
+  ],
+  "intent_template": "{{action}} the price of {{config}} by {{amount}}",
+  "instantiation_dict": {
+   "amount": "$17",
+   "action": "Increase",
+   "config": "white Ingrid Running with size L and above"
+  },
+  "revision": 2
+ }
+]

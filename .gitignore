@@ -1,0 +1,10 @@
+.venv/
+config/.auth/
+__pycache__/
+*.pyc
+runs/*/tasks/*/snapshots/
+runs/*/tasks/*/screenshots/
+runs/*/tasks/*/translations/
+runs/*/tasks/*/network.har
+runs/smoke*/
+.pytest_cache/

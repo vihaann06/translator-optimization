@@ -1,0 +1,6 @@
+webarena-verified==1.2.3
+playwright
+openai
+tiktoken
+lxml
+pytest
