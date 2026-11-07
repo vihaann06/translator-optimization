@@ -10,6 +10,7 @@ Per task writes runs/<run>/tasks/<task_id>/:
 """
 import argparse
 import asyncio
+import subprocess
 import gzip
 import importlib.util
 import json
@@ -197,6 +198,11 @@ def evaluate(out_dir, task_ids, eval_config):
     return results
 
 
+def is_mutating(task):
+    return any(e.get("expected", {}).get("task_type") == "MUTATE"
+               for e in task["eval"] if e["evaluator"] == "AgentResponseEvaluator")
+
+
 async def main_async(args):
     sites_cfg = json.loads((ROOT / "config/sites.json").read_text())["sites"]
     tasks = load_tasks(args.tasks)
@@ -218,12 +224,11 @@ async def main_async(args):
             await gitlab_login(browser, sites_cfg["gitlab"], storage)
 
         async def one(task):
-            mutating = any(e.get("expected", {}).get("task_type") == "MUTATE"
-                           for e in task["eval"] if e["evaluator"] == "AgentResponseEvaluator")
+            mutating = is_mutating(task)
             locks = [site_locks[s] for s in sorted(task["sites"])] if mutating and args.serialize_mutations else []
+            for lock in locks:
+                await lock.acquire()
             async with sem:
-                for lock in locks:
-                    await lock.acquire()
                 started = time.time()
                 try:
                     totals = await asyncio.wait_for(
@@ -237,16 +242,19 @@ async def main_async(args):
                         (task_dir / "agent_response.json").write_text(json.dumps(
                             {"task_type": None, "status": "UNKNOWN_ERROR", "retrieved_data": None,
                              "error_details": "runner error"}))
-                finally:
-                    for lock in reversed(locks):
-                        lock.release()
                 totals.update(task_id=task["task_id"], sites=task["sites"], wall_s=round(time.time() - started, 1))
                 with summary_path.open("a") as f:
                     f.write(json.dumps(totals) + "\n")
                 print(json.dumps({k: totals.get(k) for k in ("task_id", "steps", "cost_usd", "wall_s", "stopped", "error")}),
                       flush=True)
+            for lock in reversed(locks):
+                lock.release()
 
-        await asyncio.gather(*(one(t) for t in tasks))
+        if args.read_only_first:
+            await asyncio.gather(*(one(t) for t in tasks if not is_mutating(t)))
+            await asyncio.gather(*(one(t) for t in tasks if is_mutating(t)))
+        else:
+            await asyncio.gather(*(one(t) for t in tasks))
         await browser.close()
     scores = evaluate(out_dir, [t["task_id"] for t in tasks], args.eval_config)
     rows = [json.loads(l) for l in summary_path.read_text().splitlines()]
@@ -257,6 +265,9 @@ async def main_async(args):
               "mean_steps": sum(r.get("steps", 0) for r in rows) / max(1, len(rows)),
               "runner_errors": [r["task_id"] for r in rows if r.get("error")]}
     (out_dir / "report.json").write_text(json.dumps(report, indent=2))
+    if args.gzip_har:
+        for har in (out_dir / "tasks").glob("*/network.har"):
+            subprocess.run(["gzip", "-1", "-f", str(har)], check=False)
     print(json.dumps({k: v for k, v in report.items() if k != "scores"}, indent=2))
 
 
@@ -272,6 +283,10 @@ def main():
     parser.add_argument("--task-timeout", type=float, default=1200)
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--serialize-mutations", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--read-only-first", action=argparse.BooleanOptionalAction, default=False,
+                        help="run all non-mutating tasks before any mutating task, so mutations cannot change their answers")
+    parser.add_argument("--gzip-har", action=argparse.BooleanOptionalAction, default=True,
+                        help="gzip network.har after evaluation (HARs are ~90%% of run size)")
     parser.add_argument("--eval-config", default=str(ROOT / "config/webarena_verified.json"))
     asyncio.run(main_async(parser.parse_args()))
 
