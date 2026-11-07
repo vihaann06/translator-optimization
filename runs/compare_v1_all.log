@@ -1,0 +1,64 @@
+{
+  "translator": "translators/baseline_axtree.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "all",
+  "model": "gpt-4.1-mini",
+  "n_steps": 489,
+  "n_tasks": 40,
+  "step_accuracy": 0.8159509202453987,
+  "element_accuracy": 0.8627450980392157,
+  "ref_element_recall": 1.0,
+  "task_macro_accuracy": 0.8190783035610621,
+  "parse_errors": 0,
+  "mean_page_tokens": 7028.253578732107,
+  "cost_usd": 0.8735
+}
+{"name": "baseline_axtree", "pages": 516, "mean_tokens": 6991, "median_tokens": 2931, "p90_tokens": 11243, "max_tokens": 71753, "over_40k": 24, "mean_ids": 478.0, "translate_ms_mean": 5.07, "translate_ms_p90": 8.24, "ref_element_recall_all": 1.0, "all_step_accuracy": 0.816, "all_element_accuracy": 0.8627, "all_ref_element_recall": 1.0, "all_prompt_tokens_mean": 6958.6667, "all_latency_mean": 0.9251, "all_cost_usd": 0.8735}
+{
+  "translator": "translators/prune_viewport.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "all",
+  "model": "gpt-4.1-mini",
+  "n_steps": 489,
+  "n_tasks": 40,
+  "step_accuracy": 0.6032719836400818,
+  "element_accuracy": 0.6750700280112045,
+  "ref_element_recall": 0.8851540616246498,
+  "task_macro_accuracy": 0.6022814972383939,
+  "parse_errors": 1,
+  "mean_page_tokens": 951.7770961145194,
+  "cost_usd": 0.3959
+}
+{"name": "prune_viewport", "pages": 516, "mean_tokens": 937, "median_tokens": 882, "p90_tokens": 1739, "max_tokens": 2632, "over_40k": 0, "mean_ids": 53.8, "translate_ms_mean": 1.46, "translate_ms_p90": 2.9, "ref_element_recall_all": 0.8852, "all_step_accuracy": 0.6033, "all_element_accuracy": 0.6751, "all_ref_element_recall": 0.8852, "all_prompt_tokens_mean": 1840.3047, "all_latency_mean": 0.8897, "all_cost_usd": 0.3959}
+{
+  "translator": "translators/prune_flat.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "all",
+  "model": "gpt-4.1-mini",
+  "n_steps": 489,
+  "n_tasks": 40,
+  "step_accuracy": 0.65439672801636,
+  "element_accuracy": 0.7142857142857143,
+  "ref_element_recall": 0.927170868347339,
+  "task_macro_accuracy": 0.6786545359174669,
+  "parse_errors": 1,
+  "mean_page_tokens": 2262.523517382413,
+  "cost_usd": 0.6495
+}
+{"name": "prune_flat", "pages": 516, "mean_tokens": 2228, "median_tokens": 959, "p90_tokens": 4426, "max_tokens": 21387, "over_40k": 0, "mean_ids": 116.7, "translate_ms_mean": 2.32, "translate_ms_p90": 4.57, "ref_element_recall_all": 0.9272, "all_step_accuracy": 0.6544, "all_element_accuracy": 0.7143, "all_ref_element_recall": 0.9272, "all_prompt_tokens_mean": 3151.0511, "all_latency_mean": 0.891, "all_cost_usd": 0.6495}
+{
+  "translator": "translators/prune_tables.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "all",
+  "model": "gpt-4.1-mini",
+  "n_steps": 489,
+  "n_tasks": 40,
+  "step_accuracy": 0.6687116564417178,
+  "element_accuracy": 0.7450980392156863,
+  "ref_element_recall": 0.927170868347339,
+  "task_macro_accuracy": 0.6741624682788476,
+  "parse_errors": 2,
+  "mean_page_tokens": 2389.3435582822085,
+  "cost_usd": 0.6719
+}
+{"name": "prune_tables", "pages": 516, "mean_tokens": 2351, "median_tokens": 1047, "p90_tokens": 4678, "max_tokens": 21729, "over_40k": 0, "mean_ids": 119.5, "translate_ms_mean": 3.43, "translate_ms_p90": 7.75, "ref_element_recall_all": 0.9272, "all_step_accuracy": 0.6687, "all_element_accuracy": 0.7451, "all_ref_element_recall": 0.9272, "all_prompt_tokens_mean": 3277.8712, "all_latency_mean": 0.8947, "all_cost_usd": 0.6719}

@@ -1,0 +1,15 @@
+{
+  "translator": "translators/prune_labels.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "gold",
+  "model": "gpt-4.1-mini",
+  "n_steps": 95,
+  "n_tasks": 12,
+  "step_accuracy": 0.6631578947368421,
+  "element_accuracy": 0.8289473684210527,
+  "ref_element_recall": 1.0,
+  "task_macro_accuracy": 0.7914021164021164,
+  "parse_errors": 1,
+  "mean_page_tokens": 2064.4947368421053,
+  "cost_usd": 0.102
+}

@@ -1,0 +1,15 @@
+{
+  "translator": "translators/prune_viewport.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "all",
+  "model": "gpt-4.1-mini",
+  "n_steps": 489,
+  "n_tasks": 40,
+  "step_accuracy": 0.6032719836400818,
+  "element_accuracy": 0.6750700280112045,
+  "ref_element_recall": 0.8851540616246498,
+  "task_macro_accuracy": 0.6022814972383939,
+  "parse_errors": 1,
+  "mean_page_tokens": 951.7770961145194,
+  "cost_usd": 0.3959
+}

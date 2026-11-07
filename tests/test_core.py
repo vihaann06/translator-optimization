@@ -51,3 +51,26 @@ def test_select_respects_quota_and_unique_templates():
     subset = select(tasks, {"shopping": 5, "reddit": 3}, seed=1)
     assert len(subset) == 8
     assert len({t["intent_template_id"] for t in subset}) == 8
+
+
+def _tiny_state():
+    def n(i, role, name="", kids=(), backend=None, props=()):
+        return {"nodeId": str(i), "role": {"value": role}, "name": {"value": name}, "childIds": [str(k) for k in kids],
+                "backendDOMNodeId": backend, "properties": [{"name": k, "value": {"value": v}} for k, v in props]}
+    nodes = [n(1, "RootWebArea", "Page", [2, 5]), n(2, "generic", "", [3, 4]),
+             n(3, "link", "Home", [6], backend=10), n(4, "StaticText", "Hello world"),
+             n(5, "table", "", [7]), n(6, "StaticText", "Home"), n(7, "row", "", [8, 9]),
+             n(8, "cell", "Alice", [11]), n(9, "cell", "", [12]), n(11, "StaticText", "Alice"),
+             n(12, "button", "Edit", backend=20, props=[("focusable", True)])]
+    return {"ax_nodes": nodes, "wid_by_backend": {"10": "w10", "20": "w20"}, "bounds": {},
+            "viewport": {"scrollY": 0, "height": 720}}
+
+
+def test_pruned_variants_keep_interactive_ids_and_drop_noise():
+    import importlib
+    for name in ("prune_basic", "prune_labels", "prune_tables", "prune_sections", "prune_viewport", "prune_flat"):
+        out = importlib.import_module(f"translators.{name}").translate(_tiny_state())
+        assert set(out["id_map"].values()) == {"w10", "w20"}, name
+        assert "generic" not in out["text"] and out["text"].count("Home") == 1, name
+    tables = importlib.import_module("translators.prune_tables").translate(_tiny_state())["text"]
+    assert 'row: Alice | [2] button "Edit"' in tables

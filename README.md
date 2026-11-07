@@ -56,9 +56,18 @@ work from the AX tree, the HTML, or both.
     --out runs/offline_baseline --split gold     # or --split all
 # 3. autonomous search (gpt-4.1 proposes, gpt-4.1-mini reads), budget-capped
 .venv/bin/python -m src.search --name s1 --reference runs/baseline_v1 --iterations 5 --max-cost 10
-# 4. online validation of a champion
+# 4. compare translators offline: tokens/latency on all saved states + repeated replays
+.venv/bin/python -m scripts.compare_offline translators/baseline_axtree.py translators/prune_flat.py \
+    --repeats 3 --split gold --out runs/compare_v1       # --static-only skips model calls
+# 5. online validation of a champion
 .venv/bin/python -m src.run_online --run champ_v1 --translator runs/search_s1/candidates/iterNN.py
 ```
+
+### Pruning translators
+`translators/pruned.py` is a task-agnostic, configurable pruned AX-tree renderer (IDs only on interactive
+elements, duplicate text and unnamed wrappers dropped, one line per table row, long option lists capped,
+compact landmarks, optional viewport window). `translators/prune_*.py` are its variants; results of the
+offline comparison are in `runs/compare_v1/SUMMARY.md`.
 
 ### Per-task outputs (`runs/<run>/tasks/<task_id>/`)
 `agent_response.json`, `network.har` (WebArena-Verified inputs), `eval_result.json`, `steps.jsonl`
