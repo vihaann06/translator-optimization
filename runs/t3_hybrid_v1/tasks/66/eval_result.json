@@ -1,0 +1,75 @@
+{
+  "task_id": 66,
+  "intent_template_id": 17,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "The letters of T. S. Eliot to Emily Hale that were kept sealed from 1956 to 2020 have been released for free online",
+          "Friendly reminder bookshop.org exists.",
+          "Appalachian prison book project seeks notebook donations: \"The books can help inmates learn new skills, broaden their worldviews and obtain college credits through the West Virginia University Higher Education in Prison Initiative\"",
+          "After Two Decades And 38 Children\u2019s Books Lin Oliver Continues Her Thriving Collaboration With Henry Winkler",
+          "Museum issues appeal to save famed \"Misty of Chincoteague\" ranch from being sold to developers",
+          "How Ukrainian publishers are fighting to survive",
+          "The simple greatness of Agatha Christie",
+          "I just finished reading The Hobbit to my 6 year old daughter, and she loved it!",
+          "Apple Books has a free audiobook of A Christmas Carol narrated by LeVar Burton!",
+          "What Is It That Makes Used Bookstores So Wonderful?"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": [
+          "the letters of t. s. eliot to emily hale that were kept sealed from 1956 to 2020 have been released for free online",
+          "friendly reminder bookshop.org exists.",
+          "appalachian prison book project seeks notebook donations: \"the books can help inmates learn new skills, broaden their worldviews and obtain college credits through the west virginia university higher education in prison initiative\"",
+          "after two decades and 38 children's books lin oliver continues her thriving collaboration with henry winkler",
+          "museum issues appeal to save famed \"misty of chincoteague\" ranch from being sold to developers",
+          "how ukrainian publishers are fighting to survive",
+          "the simple greatness of agatha christie",
+          "i just finished reading the hobbit to my 6 year old daughter, and she loved it!",
+          "apple books has a free audiobook of a christmas carol narrated by levar burton!",
+          "what is it that makes used bookstores so wonderful?"
+        ],
+        "task_type": "retrieve",
+        "status": "success"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          "i just finished reading the hobbit to my 6 year old daughter, and she loved it!",
+          "apple books has a free audiobook of a christmas carol narrated by levar burton!"
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array contains all expected elements (2/2) but has 8 extra element(s)",
+            "Expected: [i just finished reading the hobbit to my 6 year old daughter, and she loved it!, apple books has a free audiobook of a christmas carol narrated by levar burton!], Got: [the letters of t. s. eliot to emily hale that were kept sealed from 1956 to 2020 have been released for free online, friendly reminder bookshop.org exists., ..., what is it that makes used bookstores so wonderful?]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

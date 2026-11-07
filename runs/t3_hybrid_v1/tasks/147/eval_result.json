@@ -1,0 +1,65 @@
+{
+  "task_id": 147,
+  "intent_template_id": 155,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          {
+            "width": "15 cm",
+            "height": "16.5 cm"
+          }
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": [
+          {
+            "width": "15 cm",
+            "height": "16.5 cm"
+          }
+        ],
+        "task_type": "retrieve",
+        "status": "success"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "width": "^16(?:\\.0+)?\\s*[-]?\\s*(?:inch(?:es)?|in\\.?|\u2033|\"|'|')$",
+            "height": "^24(?:\\.0+)?\\s*[-]?\\s*(?:inch(?:es)?|in\\.?|\u2033|\"|'|')$"
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (0/1), Missing: 1, Extra: 1",
+            "Expected: [{'width': NormalizedString('^16(?:\\\\.0+)?\\\\s*[-]?\\\\s*(?:inch(?:es)?|in\\\\.?|\u2033|\"|\\'|\\')$'), 'height': NormalizedString('^24(?:\\\\.0+)?\\\\s*[-]?\\\\s*(?:inch(?:es)?|in\\\\.?|\u2033|\"|\\'|\\')$')}], Got: [{'width': NormalizedString('15 cm'), 'height': NormalizedString('16.5 cm')}]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

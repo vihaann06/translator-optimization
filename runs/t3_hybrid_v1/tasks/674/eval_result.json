@@ -1,0 +1,87 @@
+{
+  "task_id": 674,
+  "intent_template_id": 101,
+  "sites": [
+    "shopping",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "Poorly Made Exterior. Consider a different Company. Bubbled paper across entire top. Poorly measured design. Plexiglass short on one end but not other. Vinyl trim ran short in several visable places.Lid wouldn't fit into base due to framing measurements being off. Oh...and screws were actually popped out of framing too!Worst part is the company wants to bill $320 to ship back. So first they bill you nearly 2k for unit that looks bad then bill $320 to return. What???We are now looking for an alternative for our kids for Christmas. We planned on one big gift this year that we could enjoy as a family and not do a lot of individual gifts. :(Very sad.It did turn on if that counts. I guess everything was just poorly measured. Poorly assembled.",
+          "piece of junk ,..can't believe I spent money on this !!!! This item arrived in damaged box,..then the top section arrived a few days later. Kept it, since it was a Christmas gift, in hopes we could use it, still, and didn't have time for a replacement. Have had to contact tech support several times, and to adjust the volume, you practically have to take it apart, trying not to pull wires loose,..the materials are cheap quality and the screws come out, but you can't tighten, as it would break the cheap fabricated materials. Want to return, but stuck with junk, as I'm not paying to ship this back! AVOID this junk pile and you will avoid a big piece of worthless junk taking up space in your game room!!"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "task_type": "retrieve",
+        "status": "success"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected mutate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "real user feedback on doc and pies arcade factory cocktail arcade machine",
+          "submission[body]": "- \"poorly made exterior. consider a different company.\" - \"piece of junk ,..can't believe i spent money on this !!!!\" - \"based arrived broken but game itself works\" - \"based arrived broken but game itself works\"",
+          "submission[forum]": "10048"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

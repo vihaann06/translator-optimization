@@ -1,0 +1,13 @@
+{
+  "run": "t3_hybrid_v1",
+  "tasks": "/home/ubuntu/repos/translator-optimization/data/subset_v1.json",
+  "translator": "translators/t3_hybrid.py",
+  "model": "gpt-4.1-mini",
+  "concurrency": 8,
+  "max_steps": 30,
+  "max_page_tokens": 40000,
+  "task_timeout": 1200,
+  "limit": 0,
+  "serialize_mutations": true,
+  "eval_config": "/home/ubuntu/repos/translator-optimization/config/webarena_verified.json"
+}

@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Orders report from May 1, 2021 to March 31, 2022 is displayed with total orders: 41, total sales items: 124, total sales amount: $5,559.33, total shipping: $620.00, total discount: $176.11."
+  ],
+  "error_details": null
+}
