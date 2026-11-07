@@ -1,0 +1,176 @@
+{
+  "task_id": 339,
+  "intent_template_id": 299,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "navigate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected navigate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+          "headers": null,
+          "query_params": null,
+          "post_data": null,
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "GET",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/issues",
+            "query_params": {}
+          },
+          "response_status": 200,
+          "http_method": "GET",
+          "post_data": null,
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__GITLAB__/a11yproject/a11yproject.com/-/issues/.*$",
+          "query_params": {}
+        },
+        "response_status": 200,
+        "http_method": "GET",
+        "post_data": null,
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/api/graphql",
+          "headers": {
+            "referer": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+          },
+          "query_params": null,
+          "post_data": null,
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/api/graphql",
+            "query_params": {}
+          },
+          "headers": {
+            "referer": {
+              "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/issues",
+              "query_params": {}
+            }
+          },
+          "response_status": 200,
+          "http_method": "POST",
+          "post_data": null,
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/api/graphql",
+          "query_params": {}
+        },
+        "headers": {
+          "referer": {
+            "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/issues/",
+            "query_params": {
+              "state": [
+                "opened"
+              ],
+              "label_name[]": [
+                "bug"
+              ]
+            }
+          }
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "post_data": null,
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

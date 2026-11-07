@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Best sellers report from May 1, 2022 to May 31, 2023 is displayed with 315 total order quantity."
+  ],
+  "error_details": null
+}

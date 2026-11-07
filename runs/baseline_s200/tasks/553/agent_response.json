@@ -1,0 +1,12 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "http://localhost:9999/t3_yqlpha",
+    "http://localhost:9999/t3_116e4p2",
+    "http://localhost:9999/t3_yknvtb",
+    "http://localhost:9999/t3_z7vn7e",
+    "http://localhost:9999/t3_zzmx2a"
+  ],
+  "error_details": null
+}

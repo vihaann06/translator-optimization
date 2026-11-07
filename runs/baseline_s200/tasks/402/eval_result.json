@@ -1,0 +1,91 @@
+{
+  "task_id": 402,
+  "intent_template_id": 6,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/user/MarvelsGrantMan136/edit_biography",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "user_biography[biography]": "Freelance Web Developer",
+            "user_biography[_token]": "52b88b4c978a93e4cd6e439e24.uVsLmDONKAUBrPDA32aGRBI13N5rXTe2Sx8iCbK1OZE.gCxtzmPAXHJUm7ezrgD1EHFCtq45KE_XBFMST_X2atDxPT_TAP5wNFPntQ"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/user/MarvelsGrantMan136/edit_biography",
+            "query_params": {}
+          },
+          "post_data": {
+            "user_biography[biography]": "freelance web developer"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/user/MarvelsGrantMan136/edit_biography",
+          "query_params": {}
+        },
+        "post_data": {
+          "user_biography[biography]": "freelance web developer"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

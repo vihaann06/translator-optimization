@@ -1,0 +1,108 @@
+{
+  "task_id": 490,
+  "intent_template_id": 275,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/cms/page/save/back/edit",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "page_id": "5",
+            "title": "Secret",
+            "page_layout": "1column",
+            "identifier": "about-us",
+            "content_heading": "About us",
+            "content": "<div class=\"about-info cms-content\">\r\n      <p class=\"cms-content-important\">With more than 230 stores spanning 43 states and growing, Luma is a nationally recognized active wear manufacturer and retailer. We\u2019re passionate about active lifestyles \u2013 and it goes way beyond apparel.</p>\r\n\r\n      <p>At Luma, wellness is a way of life. We don\u2019t believe age, gender or past actions define you, only your ambition and desire for wholeness... today.</p>\r\n\r\n      <p>We differentiate ourselves through a combination of unique designs and styles merged with unequaled standards of quality and authenticity. Our founders have deep roots in yoga and health communities and our selections serve amateur practitioners and professional athletes alike.</p>\r\n\r\n      <ul style=\"list-style: none; margin-top: 20px; padding: 0;\">\r\n          <li><a href=\"{{store url=\"contact\"}}\">Contact Luma</a></li>\r\n          <li><a href=\"{{store url=\"customer-service\"}}\">Customer Service</a></li>\r\n          <li><a href=\"{{store url=\"privacy-policy\"}}\">Luma Privacy Policy</a></li>\r\n          <li><a href=\"{{store url=\"\"}}\">Shop Luma</a></li>\r\n      </ul>\r\n  </div>",
+            "creation_time": "2023-04-19 16:15:40",
+            "update_time": "2023-04-19 16:15:40",
+            "is_active": "1",
+            "sort_order": "0",
+            "layout_update_selected": "_no_update_",
+            "store_id[0]": "0",
+            "form_key": "WH7G2HLsomrAj58r"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/cms/page/save/back/edit",
+            "query_params": {}
+          },
+          "post_data": {
+            "title": "secret",
+            "is_active": "1",
+            "store_id[0]": "0",
+            "page_id": "5"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING_ADMIN__/cms/page/save/back/edit",
+          "query_params": {}
+        },
+        "post_data": {
+          "title": "secret",
+          "is_active": "1",
+          "store_id[0]": "0",
+          "page_id": "5"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

@@ -1,0 +1,88 @@
+{
+  "task_id": 671,
+  "intent_template_id": 101,
+  "sites": [
+    "shopping",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "Disappointing. Didn't last long before it stopped powering on and needed to be sent in for repair.",
+          "didn't last a year without issues",
+          "Received used items!!"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected mutate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "real user feedback on sony computer entertainment vr",
+          "submission[body]": "- \"disappointing. didn't last long before it stopped powering on and needed to be sent in for repair.\" - \"didn't last a year without issues\" - \"received used items!!\" - \"received used items!!\"",
+          "submission[forum]": "10048"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

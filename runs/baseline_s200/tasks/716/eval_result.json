@@ -1,0 +1,198 @@
+{
+  "task_id": 716,
+  "intent_template_id": 24,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "error",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "error",
+      "score": 0.0,
+      "actual": {
+        "task_type": null,
+        "status": "UNKNOWN_ERROR",
+        "retrieved_data": null,
+        "error_details": "agent did not stop within the step budget"
+      },
+      "actual_normalized": null,
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": "Error during evaluation with evaluator AgentResponseEvaluator for task 716: 'NoneType' object has no attribute 'strip'",
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/sv/81371.json",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "token": "4068.4zVkcovVNwcYTOJcmYJI7IWhgmVff9vY8FUAfKcSiRM.zl5XArqSQ0tiFo419MwQmtbUsAsMF73psjNZHspk-mSBdxwZyblcN3Autw",
+            "choice": "0"
+          },
+          "response_content": null,
+          "response_status": -1,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/sv/81371.json",
+            "query_params": {}
+          },
+          "post_data": {
+            "choice": "0"
+          },
+          "response_status": -1,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/sv/81371.json",
+          "query_params": {}
+        },
+        "post_data": {
+          "choice": "-1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/sv/59421.json",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "token": "b31915d0e1153ed75e10e997f4dae7.nTXGE8K2OVYeSM83DiYijXwYALDvNskXDfrRlepPLbk.sF71Y_PxTRpkEqNeY2h6-y9tMt68Xq8mT5yI94c5Xs7_d754gNpSZnYqmg",
+            "choice": "-1"
+          },
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/sv/59421.json",
+            "query_params": {}
+          },
+          "post_data": {
+            "choice": "-1"
+          },
+          "response_status": 200,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/sv/59421.json",
+          "query_params": {}
+        },
+        "post_data": {
+          "choice": "-1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/sv/59447.json",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "token": "13f74d39.Zx6d1-4xLfQqpAjlyNZXXu4QyPNGBxHIQ-NiJYPf1GY.SnWup992WbhQ_mSMpZgPKL1l-p0Vb3f5AYU7R-6ppxEFXOW8rF1GxELGXQ",
+            "choice": "-1"
+          },
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/sv/59447.json",
+            "query_params": {}
+          },
+          "post_data": {
+            "choice": "-1"
+          },
+          "response_status": 200,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/sv/59447.json",
+          "query_params": {}
+        },
+        "post_data": {
+          "choice": "-1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

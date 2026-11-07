@@ -1,0 +1,51 @@
+{
+  "task_id": 811,
+  "intent_template_id": 999,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "error",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "error",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": null,
+      "assertions": null,
+      "error_msg": "Error during evaluation with evaluator NetworkEventEvaluator for task 811: Alternatives require 2+ items. Got [2330] with 1 item(s). Pass the value directly (not in a list).",
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

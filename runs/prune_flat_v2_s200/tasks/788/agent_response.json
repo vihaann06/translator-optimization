@@ -1,0 +1,13 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "full_name": "Andrew M. Whalen",
+      "username": "amwhalen",
+      "user_location": "Massachusetts",
+      "email": null
+    }
+  ],
+  "error_details": null
+}

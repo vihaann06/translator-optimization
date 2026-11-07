@@ -1,0 +1,59 @@
+{
+  "task_id": 360,
+  "intent_template_id": 206,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "Bornbridge Artificial Spiral Topiary Tree - Indoor / Outdoor Topiary Trees - Artificial Outdoor Plants (2 Pack, 4' Cypress) Color 4' Boxwood Size 2 Pack",
+          "Russound 5B45W 4\" Indoor Outdoor Speakers White"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          "bornbridge artificial spiral topiary tree - indoor / outdoor topiary trees - artificial outdoor plants (2 pack, 4' cypress) color 4' boxwood size 2 pack",
+          "russound 5b45w 4\" indoor outdoor speakers white"
+        ]
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          "bornbridge artificial spiral topiary tree - indoor / outdoor topiary trees - artificial outdoor plants (2 pack, 4' cypress)",
+          "russound 5b45w 4\" indoor outdoor speakers white"
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (1/2), Missing: 1, Extra: 1",
+            "Expected: [bornbridge artificial spiral topiary tree - indoor / outdoor topiary trees - artificial outdoor plants (2 pack, 4' cypress), russound 5b45w 4\" indoor outdoor speakers white], Got: [bornbridge artificial spiral topiary tree - indoor / outdoor topiary trees - artificial outdoor plants (2 pack, 4' cypress) color 4' boxwood size 2 pack, russound 5b45w 4\" indoor outdoor speakers white]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

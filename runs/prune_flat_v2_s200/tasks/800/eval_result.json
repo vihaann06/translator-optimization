@@ -1,0 +1,173 @@
+{
+  "task_id": 800,
+  "intent_template_id": 600,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/groups",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "xdWkB9fSQXzAr1X78+LtBHNE/nTGznNlu9yGMTU1kkobOmF6+wWlwhO06LyPB5xQegYuqzZgPYTz3qnMqsbRjg==",
+            "group[parent_id]": "",
+            "group[name]": "x-lab",
+            "group[path]": "x-lab",
+            "group[visibility_level]": "20",
+            "user[role]": "software_developer",
+            "group[jobs_to_be_done]": ""
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/groups",
+            "query_params": {}
+          },
+          "post_data": {
+            "group[name]": "x lab",
+            "group[path]": "x lab"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/groups",
+          "query_params": {}
+        },
+        "post_data": {
+          "group[name]": "x lab",
+          "group[path]": "x lab"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/api/v4/groups/2604/invitations",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "format": "json",
+            "access_level": 10,
+            "invite_source": "invite_members_banner",
+            "tasks_to_be_done": [],
+            "tasks_project_id": "",
+            "user_id": "632,2400,2399,2398"
+          },
+          "response_content": null,
+          "response_status": 201,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/api/v4/groups/2604/invitations",
+            "query_params": {}
+          },
+          "post_data": {
+            "user_id": [
+              "2398",
+              "2399",
+              "2400",
+              "632"
+            ]
+          },
+          "response_status": 201,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__GITLAB__/api/v4/groups/\\d+/invitations$",
+          "query_params": {}
+        },
+        "post_data": {
+          "user_id": [
+            "340",
+            "632",
+            "64",
+            "86",
+            "96"
+          ]
+        },
+        "response_status": 201,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

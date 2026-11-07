@@ -1,0 +1,111 @@
+{
+ "baseline_s200": {
+  "solved": 61,
+  "n": 200,
+  "success": 0.305,
+  "steps": 2652,
+  "hit_cap": 50,
+  "prompt_tokens_total": 16423188,
+  "prompt_tokens_mean": 6193,
+  "prompt_tokens_median": 3992,
+  "prompt_tokens_p90": 12083,
+  "prompt_tokens_max": 41187,
+  "page_tokens_mean": 5753,
+  "truncated_pages": 42,
+  "tokens_per_task": 82116,
+  "model_latency_mean": 1.022,
+  "model_latency_p90": 1.29,
+  "wall_per_step": 2.6,
+  "wall_per_task": 34.4,
+  "cost_usd": 6.7337,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "20/49",
+   "multi": "0/13",
+   "reddit": "16/38",
+   "shopping": "13/50",
+   "shopping_admin": "12/50"
+  },
+  "by_difficulty": {
+   "hard": "26/100",
+   "normal": "35/100"
+  },
+  "by_type": {
+   "MUTATE": "37/114",
+   "NAVIGATE": "5/22",
+   "RETRIEVE": "19/64"
+  }
+ },
+ "prune_flat_v2_s200": {
+  "solved": 59,
+  "n": 200,
+  "success": 0.295,
+  "steps": 2624,
+  "hit_cap": 48,
+  "prompt_tokens_total": 8826214,
+  "prompt_tokens_mean": 3364,
+  "prompt_tokens_median": 2253,
+  "prompt_tokens_p90": 5687,
+  "prompt_tokens_max": 32939,
+  "page_tokens_mean": 2337,
+  "truncated_pages": 0,
+  "tokens_per_task": 44131,
+  "model_latency_mean": 0.914,
+  "model_latency_p90": 1.21,
+  "wall_per_step": 2.7,
+  "wall_per_task": 35.5,
+  "cost_usd": 3.7474,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "20/49",
+   "multi": "0/13",
+   "reddit": "15/38",
+   "shopping": "13/50",
+   "shopping_admin": "11/50"
+  },
+  "by_difficulty": {
+   "hard": "25/100",
+   "normal": "34/100"
+  },
+  "by_type": {
+   "MUTATE": "36/114",
+   "NAVIGATE": "6/22",
+   "RETRIEVE": "17/64"
+  }
+ },
+ "paired": {
+  "n": 200,
+  "lost": [
+   113,
+   134,
+   225,
+   260,
+   360,
+   453,
+   472,
+   493,
+   603,
+   627,
+   634,
+   750
+  ],
+  "gained": [
+   26,
+   288,
+   299,
+   357,
+   397,
+   496,
+   636,
+   649,
+   657,
+   703
+  ],
+  "diff_pts": -1.0,
+  "ci95_pts": [
+   -5.6,
+   3.6
+  ],
+  "mcnemar_p": 0.832
+ }
+}

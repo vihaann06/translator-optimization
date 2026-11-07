@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Best sellers report from May 1, 2022 to May 31, 2023 is displayed with 94 records including product names, prices, order quantities, and dates."
+  ],
+  "error_details": null
+}

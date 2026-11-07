@@ -1,0 +1,19 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "title": "Not comfortable",
+      "rating": 3
+    },
+    {
+      "title": "Poor quality",
+      "rating": 2
+    },
+    {
+      "title": "Disappointed",
+      "rating": 1
+    }
+  ],
+  "error_details": null
+}

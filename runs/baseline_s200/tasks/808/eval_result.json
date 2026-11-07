@@ -1,0 +1,103 @@
+{
+  "task_id": 808,
+  "intent_template_id": 327,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/byteblaze/cloud-to-butt/-/issues",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "ceBxdNGIkQAtPYgcch225oXSq9ez7nthi5EIWfvMHt/fbsmlnz58mNalkicUdcjprPhGpB4D94OjtWKWCUE+LQ==",
+            "issue[title]": "Let's keep the project alive",
+            "issue[description]": "",
+            "issue[confidential]": "0",
+            "issue[assignee_ids][]": "2330",
+            "issue[milestone_id]": "",
+            "issue[label_ids][]": "",
+            "issue[due_date]": "2033-03-31",
+            "issue[issue_type]": "issue",
+            "issue[lock_version]": "0"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/byteblaze/cloud-to-butt/-/issues",
+            "query_params": {}
+          },
+          "post_data": {
+            "issue[title]": "let's keep the project alive",
+            "issue[assignee_ids][]": "2330",
+            "issue[due_date]": "2033-03-31"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/byteblaze/cloud-to-butt/-/issues",
+          "query_params": {}
+        },
+        "post_data": {
+          "issue[title]": "let's keep the project alive",
+          "issue[assignee_ids][]": "2330",
+          "issue[due_date]": "2033-03-31"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

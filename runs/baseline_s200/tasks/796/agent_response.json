@@ -1,0 +1,6 @@
+{
+  "task_type": null,
+  "status": "UNKNOWN_ERROR",
+  "retrieved_data": null,
+  "error_details": "agent did not stop within the step budget"
+}

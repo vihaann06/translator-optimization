@@ -1,0 +1,11 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "order_count": 19,
+      "amount": 8327.99
+    }
+  ],
+  "error_details": null
+}

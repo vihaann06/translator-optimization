@@ -1,0 +1,115 @@
+{
+  "task_id": 708,
+  "intent_template_id": 268,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "No tax records found for the period from 2023-01-01 to 2023-03-15."
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "navigate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected navigate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/reports/report_sales/tax/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT15ZWFyJmZyb209MjAyMy0wMS0wMSZ0bz0yMDIzLTAzLTE1JnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MA==/",
+          "headers": null,
+          "query_params": null,
+          "post_data": null,
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "GET",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/reports/report_sales/tax/filter",
+            "query_params": {
+              "report_type": [
+                "created_at_order"
+              ],
+              "from": [
+                "2023-01-01"
+              ],
+              "to": [
+                "2023-03-15"
+              ]
+            }
+          },
+          "response_status": 200,
+          "http_method": "GET",
+          "post_data": null,
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING_ADMIN__/reports/report_sales/tax/filter",
+          "query_params": {
+            "report_type": [
+              "created_at_order"
+            ],
+            "from": [
+              "2023-01-01"
+            ],
+            "to": [
+              "2023-03-15"
+            ]
+          }
+        },
+        "response_status": 200,
+        "http_method": "GET",
+        "post_data": null,
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

@@ -1,0 +1,111 @@
+{
+  "task_id": 686,
+  "intent_template_id": 117,
+  "sites": [
+    "reddit",
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "auth0/angular-storage",
+            "submission[body]": "Angular module for storing data in localStorage or sessionStorage with a simple API.",
+            "submission[forum]": "10082",
+            "submission[userFlag]": "none",
+            "submission[_token]": "ccdec4d0b.yOpQu4VAMyxSBZlAjhY9AVhd-1poI2kYutoXwWrlN1c.oI8g0tUmW0gLZ_05vUFfNGs8lCM3SVEhyJ9dsxqMARD7nB3ZxzlURzU31A"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": null,
+            "submission[title]": "auth0/angular storage",
+            "submission[forum]": "10082"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit/?.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[mediaType]": "url",
+          "submission[url]": "__gitlab__/auth0/angular storage",
+          "submission[title]": "a storage library for angularjs done right",
+          "submission[forum]": "10082"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

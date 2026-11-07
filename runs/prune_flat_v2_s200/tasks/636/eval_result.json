@@ -1,0 +1,99 @@
+{
+  "task_id": 636,
+  "intent_template_id": 6100,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "DIY toolkit recommendations",
+            "submission[body]": "I need recommendations for DIY toolkit within a budget of $100 please",
+            "submission[forum]": "10007",
+            "submission[userFlag]": "none",
+            "submission[_token]": "e23fa.RNZCA-k57k2ss8HHlIcyPL6F3btq3GRFVYdJyh0Z82c.DIR6ctoUqTzI26qD-_8EacTTh4s5phM0Pc8lgi8ouFATg3pTvWiaG5r8tg"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "diy toolkit recommendations",
+            "submission[body]": "i need recommendations for diy toolkit within a budget of $100 please",
+            "submission[forum]": "10007"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/submit",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "diy toolkit recommendations",
+          "submission[body]": "i need recommendations for diy toolkit within a budget of $100 please",
+          "submission[forum]": "10007"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

@@ -1,0 +1,94 @@
+{
+  "task_id": 493,
+  "intent_template_id": 280,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/sales/order/addComment/order_id/65/?isAjax=true",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "history[comment]": "sorry we are bankrupt, please contact our customer service for refund",
+            "history[is_customer_notified]": "1",
+            "form_key": "5Lg64XNLNnK5TKvi"
+          },
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/sales/order/addComment/order_id/65/",
+            "query_params": {}
+          },
+          "post_data": {
+            "history[comment]": "sorry we are bankrupt, please contact our customer service for refund",
+            "history[is_customer_notified]": "1"
+          },
+          "response_status": 200,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING_ADMIN__/sales/order/addComment/order_id/65",
+          "query_params": {}
+        },
+        "post_data": {
+          "history[comment]": "sorry we are bankrupt, please contact our customer service for refund",
+          "history[is_customer_notified]": "1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

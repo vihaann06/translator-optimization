@@ -1,0 +1,98 @@
+{
+  "task_id": 513,
+  "intent_template_id": 189,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7770/wishlist/index/add/",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "product": "87363",
+            "uenc": "aHR0cDovL2xvY2FsaG9zdDo3NzcwL2NhdGFsb2dzZWFyY2gvcmVzdWx0Lz9xPWNoYWly",
+            "form_key": "xR95NqQz4ljhF2yG"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": {
+            "mage-messages": "[{\"type\":\"success\",\"text\":\"\\nXCJ Comfortable Task ChairHome Office Chair, Modern Faux Fur Home Office Chair, Fluffy Chair for Girls, Makeup Vanity Chair has been added to your Wish List. Click <a href=\\\"http:\\/\\/localhost:7770\\/catalogsearch\\/result\\/?q=chair\\\">here<\\/a> to continue shopping.\"}]"
+          }
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING__/wishlist/index/add",
+            "query_params": {}
+          },
+          "post_data": {
+            "qty": null
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": {
+            "mage-messages": "[{\"type\":\"success\",\"text\":\"\\nxcj comfortable task chairhome office chair, modern faux fur home office chair, fluffy chair for girls, makeup vanity chair has been added to your wish list. click <a href=\\\"http:\\/\\/localhost:7770\\/catalogsearch\\/result\\/?q=chair\\\">here<\\/a> to continue shopping.\"}]"
+          },
+          "response_content": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING__/wishlist/index/add",
+          "query_params": {}
+        },
+        "post_data": {
+          "qty": null
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_cookies": {
+          "mage-messages": "^.*chair.* has been added to your wish list.*$"
+        },
+        "response_content": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

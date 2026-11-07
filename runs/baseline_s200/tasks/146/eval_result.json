@@ -1,0 +1,62 @@
+{
+  "task_id": 146,
+  "intent_template_id": 155,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "NOT_FOUND_ERROR",
+        "retrieved_data": null,
+        "error_details": "No picture frame item found in the order placed in Sep 2022 or nearby dates."
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "not_found_error",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "width": "^16(?:\\.0+)?\\s*[-]?\\s*(?:inch(?:es)?|in\\.?|\u2033|\"|'|')$",
+            "height": "^24(?:\\.0+)?\\s*[-]?\\s*(?:inch(?:es)?|in\\.?|\u2033|\"|'|')$"
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.status_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected success, got not_found_error"
+          ],
+          "error_msg": null
+        },
+        {
+          "assertion_name": "retrieved_data_missing_or_null",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected retrieved_data to be ({'width': NormalizedString('^16(?:\\\\.0+)?\\\\s*[-]?\\\\s*(?:inch(?:es)?|in\\\\.?|\u2033|\"|\\'|\\')$'), 'height': NormalizedString('^24(?:\\\\.0+)?\\\\s*[-]?\\\\s*(?:inch(?:es)?|in\\\\.?|\u2033|\"|\\'|\\')$')},), but got None or empty"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

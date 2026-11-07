@@ -1,0 +1,6 @@
+{
+  "task_type": "MUTATE",
+  "status": "NOT_FOUND_ERROR",
+  "retrieved_data": null,
+  "error_details": "No posts found with the given title to edit."
+}

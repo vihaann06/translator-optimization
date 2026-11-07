@@ -1,0 +1,51 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "month": "January",
+      "count": 14
+    },
+    {
+      "month": "February",
+      "count": 10
+    },
+    {
+      "month": "March",
+      "count": 11
+    },
+    {
+      "month": "April",
+      "count": 11
+    },
+    {
+      "month": "May",
+      "count": 8
+    },
+    {
+      "month": "June",
+      "count": 0
+    },
+    {
+      "month": "July",
+      "count": 0
+    },
+    {
+      "month": "August",
+      "count": 0
+    },
+    {
+      "month": "September",
+      "count": 0
+    },
+    {
+      "month": "October",
+      "count": 6
+    },
+    {
+      "month": "November",
+      "count": 7
+    }
+  ],
+  "error_details": null
+}

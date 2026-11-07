@@ -1,0 +1,92 @@
+{
+  "task_id": 553,
+  "intent_template_id": 84,
+  "sites": [
+    "gitlab",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "http://localhost:9999/t3_yqlpha",
+          "http://localhost:9999/t3_116e4p2",
+          "http://localhost:9999/t3_yknvtb",
+          "http://localhost:9999/t3_z7vn7e",
+          "http://localhost:9999/t3_zzmx2a"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected mutate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/api/v4/projects/byteblaze/gimmiethat.space/repository/commits",
+          "query_params": {}
+        },
+        "post_data": {
+          "branch": "main",
+          "$.actions[0].action": "create",
+          "$.actions[0].file_path": "news/urls.json",
+          "$.actions[0].content": "{\"urls\":[\"__reddit__/f/news/129905/ohio man charged for using molotov cocktails to attack\",\"__reddit__/f/news/129904/in a loss for fox news judge allows dominion s defamation\",\"__reddit__/f/news/129903/theater group sues to block tennessee s new anti drag law\",\"__reddit__/f/news/129902/andrew tate released from jail in romania and placed under\",\"__reddit__/f/news/129901/rare high risk storm alert issued for parts of midwest and\"]}",
+          "$.actions[1].action": null
+        },
+        "response_status": 201,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

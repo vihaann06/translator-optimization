@@ -1,0 +1,174 @@
+{
+  "task_id": 716,
+  "intent_template_id": 24,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/sv/81371.json",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "token": "36ff9f8895bfc721b8eb495a6eec.W6Pk3XwuKkXmSqHzCnXdzXwBG7Tx52Nj4Oa98UFjuEI.KNmgjzBLGyfVGsicZCyHjypGcc2ZlRYWjJ7Hphgv2gwE1IK4NFZjB9Yt-A",
+            "choice": "-1"
+          },
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/sv/81371.json",
+            "query_params": {}
+          },
+          "post_data": {
+            "choice": "-1"
+          },
+          "response_status": 200,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/sv/81371.json",
+          "query_params": {}
+        },
+        "post_data": {
+          "choice": "-1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/sv/59421.json",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "token": "3f4ec7f9978989e183f8ad108a7ef183.fys8TJ-_Pjezmp7zSlyxLatQCiXzlQtWLgLVfeqInNc.DFF4HtPaD1WAyvecJAXrb_0XYFyb534jQnqvKrPE_pkgXFop18d3dYP9xw",
+            "choice": "-1"
+          },
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/sv/59421.json",
+            "query_params": {}
+          },
+          "post_data": {
+            "choice": "-1"
+          },
+          "response_status": 200,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/sv/59421.json",
+          "query_params": {}
+        },
+        "post_data": {
+          "choice": "-1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/sv/59447.json",
+          "query_params": {}
+        },
+        "post_data": {
+          "choice": "-1"
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

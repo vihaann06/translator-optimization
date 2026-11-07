@@ -1,0 +1,114 @@
+{
+  "task_id": 682,
+  "intent_template_id": 116,
+  "sites": [
+    "reddit",
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": "http://localhost:8023/byteblaze/chatgpt",
+            "submission[title]": "byteblaze/chatgpt",
+            "submission[body]": "3 commit(s) already!",
+            "submission[forum]": "10018",
+            "submission[userFlag]": "none",
+            "submission[_token]": "5b8c55fd038c.qyRSp16RZZ7_Ic_aDh97djTH3-nMHtg1f5o-9oPrn60.2XAx7SveM_ynU_2DT1UcOVqrkJ6-LpBaK9cOtMu07NXvbDrFE_sLr8pTlg"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": "__gitlab__/byteblaze/chatgpt",
+            "submission[title]": "byteblaze/chatgpt",
+            "submission[body]": "3 commit(s) already!",
+            "submission[forum]": "10018"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit/?.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[mediaType]": "url",
+          "submission[url]": "__gitlab__/convexegg/chatgpt",
+          "submission[title]": "convexegg/chatgpt",
+          "submission[body]": "193 commits already!",
+          "submission[forum]": "^(10043|10018|10082|10078)$"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

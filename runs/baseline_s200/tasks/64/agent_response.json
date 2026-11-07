@@ -1,0 +1,6 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": null,
+  "error_details": "The page contains many orders with customer names but no direct emails visible. To get emails, I need to check the Customers section or order details. I will navigate to the Customers page to find emails for customers with 2 orders."
+}

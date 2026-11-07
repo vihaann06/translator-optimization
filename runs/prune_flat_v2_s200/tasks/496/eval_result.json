@@ -1,0 +1,102 @@
+{
+  "task_id": 496,
+  "intent_template_id": 284,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/admin/order_shipment/save/order_id/299/",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "form_key": "PbBVuUxKvTraul1U",
+            "tracking[1][carrier_code]": "fedex",
+            "tracking[1][title]": "Federal Express",
+            "tracking[1][number]": "8974568499",
+            "sourceCode": "default",
+            "shipment[items][1565]": "1",
+            "shipment[items][1567]": "1",
+            "shipment[items][1569]": "1",
+            "shipment[items][1571]": "1",
+            "shipment[items][1573]": "1",
+            "shipment[comment_text]": ""
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/admin/order_shipment/save/order_id/299",
+            "query_params": {}
+          },
+          "post_data": {
+            "tracking[1][carrier_code]": "fedex",
+            "tracking[1][number]": "8974568499"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING_ADMIN__/admin/order_shipment/save/order_id/299",
+          "query_params": {}
+        },
+        "post_data": {
+          "tracking[1][carrier_code]": "fedex",
+          "tracking[1][number]": "8974568499"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

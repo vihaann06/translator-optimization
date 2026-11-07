@@ -1,0 +1,133 @@
+{
+  "task_id": 565,
+  "intent_template_id": 88,
+  "sites": [
+    "gitlab",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "I made a makeup table for my girlfriend's birthday out of an old bar cabinet|/t3_10aqhun",
+          "I DIY\u2019d this bloody red leather purse for Halloween!|/t3_ydz8o8",
+          "I made a honeycomb firewood rack|/t3_zq8e1p",
+          "Original post got taken down for lack of details, so here is the detailed process of Making the 3D Geometric pattern doors.|/t3_11empmc",
+          "I built a shed this summer|/t3_zronjy",
+          "[Meta] Hey there, mod of /r/Locksmith here. Please refer people with lock issues to /r/AskALocksmith instead.|/t3_124tv9r",
+          "Used drywall compound instead of tile adhesive. How screwed am I ?|/t3_zivgfq",
+          "Dashcam install to Subaru Legacy with hidden wires|/t3_z7756x",
+          "DIY Window Bench and Storage Unit|/t3_10chs13",
+          "Old disgusting bathroom gets a makeover (reupload)|/t3_10j7s6d"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected mutate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/projects",
+          "query_params": {}
+        },
+        "post_data": {
+          "project[template_name]": null,
+          "project[name]": "todo",
+          "project[path]": "todo",
+          "project[namespace_id]": "2505",
+          "project[visibility_level]": "0"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/api/v4/projects/byteblaze/TODO/repository/commits",
+          "query_params": {}
+        },
+        "post_data": {
+          "branch": "main",
+          "$.actions[0].action": "^(update|create)$",
+          "$.actions[0].file_path": "readme.md",
+          "$.actions[0].content": "# TODO\n\n## Most Active DIY Threads\n\n- [Separate glued plastic parts](__REDDIT__/f/DIY/118903/separate-glued-plastic-parts)\n- [How would you fix this dryer vent mess?](__REDDIT__/f/DIY/118923/how-would-you-fix-this-dryer-vent-mess)\n- [Basement Bulkhead/Soffit + Wall Framing](__REDDIT__/f/DIY/118935/basement-bulkhead-soffit-wall-framing)\n- [GE Water Heater Pilot Light Won't Stay Lit](__REDDIT__/f/DIY/118904/ge-water-heater-pilot-light-won-t-stay-lit)\n- [Attempting to move a wall outlet in my basement a few inches to the left and am totally stumped. Any help GREATLY appreciated!!](__REDDIT__/f/DIY/118960/attempting-to-move-a-wall-outlet-in-my-basement-a-few-inches)\n- [AFCI Outlet Question](__REDDIT__/f/DIY/118931/afci-outlet-question)\n- [Teflon tape to attach washing machine drain hose to pipe?](__REDDIT__/f/DIY/118824/teflon-tape-to-attach-washing-machine-drain-hose-to-pipe)\n- [Paver base for shed?](__REDDIT__/f/DIY/118866/paver-base-for-shed)\n- [Ways to locate our buried electrical service?](__REDDIT__/f/DIY/118820/ways-to-locate-our-buried-electrical-service)\n- [How to eliminate transitions for disability/mobility reasons](__REDDIT__/f/DIY/118836/how-to-eliminate-transitions-for-disability-mobility-reasons)",
+          "$.actions[1].action": null
+        },
+        "response_status": 201,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

@@ -1,0 +1,12 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "username": "TheShredda",
+      "post_title": "PsBattle: This cat standing on its back legs",
+      "count": 1
+    }
+  ],
+  "error_details": null
+}
