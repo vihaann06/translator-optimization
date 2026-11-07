@@ -74,3 +74,25 @@ def test_pruned_variants_keep_interactive_ids_and_drop_noise():
         assert "generic" not in out["text"] and out["text"].count("Home") == 1, name
     tables = importlib.import_module("translators.prune_tables").translate(_tiny_state())["text"]
     assert 'row: Alice | [2] button "Edit"' in tables
+
+
+def test_prune_flat_v2_keeps_blocks_dedups_values_and_groups_items():
+    from translators.prune_flat_v2 import translate
+
+    def n(i, role, name="", kids=(), backend=None, value=None, ignored=False):
+        d = {"nodeId": str(i), "role": {"value": role}, "name": {"value": name}, "ignored": ignored,
+             "childIds": [str(k) for k in kids], "backendDOMNodeId": backend, "properties": []}
+        if value is not None:
+            d["value"] = {"value": value}
+        return d
+    nodes = [n(1, "RootWebArea", "Page", [2, 6]),
+             n(2, "searchbox", "Filter", [3], backend=10, value="react apps"), n(3, "generic", "", [4]),
+             n(4, "StaticText", "react apps"), n(6, "list", "", [7, 8, 9]),
+             *[x for k, title in ((7, "First"), (8, "Second"), (9, "Third")) for x in (
+                 n(k, "listitem", "", [k * 10, k * 10 + 1]), n(k * 10, "generic", "", [k * 10 + 2]),
+                 n(k * 10 + 2, "StaticText", title), n(k * 10 + 1, "generic", "", [k * 10 + 3]),
+                 n(k * 10 + 3, "StaticText", f"{title} body \ue605"))]]
+    out = translate({"ax_nodes": nodes, "wid_by_backend": {"10": "w10"}, "bounds": {},
+                     "viewport": {"scrollY": 0, "height": 720}})["text"]
+    assert out.count("react apps") == 1
+    assert "- First\n  First body\n- Second" in out and "\ue605" not in out

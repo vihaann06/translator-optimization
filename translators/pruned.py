@@ -11,6 +11,12 @@ Pruning levers (each a keyword option of render()):
   max_options        long <select>/listbox option lists keep the selected + first N options
   sections           landmarks become "## role" headers; banner/navigation/contentinfo on one line
   viewport           0 = whole page; k>0 = keep only elements within k screens of the visible area
+  block_breaks       merge_text only joins text from the same block (same parent, ignoring inline wrappers)
+  value_dedup        drop text that repeats a form control's current value
+  group_items        items of a repeated container (>=3 children) that render to 2-12 lines get a "- " bullet
+                     on their first line and "  " on the rest (outermost such item wins)
+  cleanup            also drop layout-table wrappers, icon-font glyphs (Unicode private use area) and lines made
+                     only of invisible characters
 """
 import json
 
@@ -28,6 +34,9 @@ WRAPPERS = {"generic", "none", "group", "list", "listitem", "LabelText", "paragr
 DROP = {"InlineTextBox", "LineBreak", "ListMarker"}
 LANDMARKS = {"banner", "navigation", "contentinfo", "complementary", "main", "search"}
 COMPACT_LANDMARKS = {"banner", "navigation", "contentinfo"}
+INLINE = {"strong", "emphasis", "mark", "code", "Abbr", "time", "superscript", "subscript", "insertion", "deletion"}
+LAYOUT_TABLE = {"LayoutTable", "LayoutTableRow", "LayoutTableCell"}
+INVISIBLE = " \t\xa0\u200b\u200c\u200d\u2060\ufeff"
 CELLS = {"cell", "gridcell", "columnheader", "rowheader"}
 STATES = {"checked", "selected", "disabled", "expanded", "pressed", "required", "readonly", "level",
           "valuetext", "invalid"}
@@ -39,7 +48,8 @@ def _val(node, key):
 
 class Renderer:
     def __init__(self, state, ids="interactive", dup_text=True, collapse=True, merge_text=True, indent=" ",
-                 labels=False, tables=False, max_options=0, sections=False, viewport=0):
+                 labels=False, tables=False, max_options=0, sections=False, viewport=0, block_breaks=False,
+                 value_dedup=False, group_items=False, cleanup=False):
         self.nodes = {n["nodeId"]: n for n in state["ax_nodes"]}
         self.wids = state["wid_by_backend"]
         self.bounds = state.get("bounds", {})
@@ -48,7 +58,11 @@ class Renderer:
         self.bottom = vp.get("scrollY", 0) + (1 + viewport) * vp.get("height", 720)
         self.vp_y, self.vp_h = vp.get("scrollY", 0), vp.get("height", 720)
         self.o = dict(ids=ids, dup_text=dup_text, collapse=collapse, merge_text=merge_text, indent=indent,
-                      labels=labels, tables=tables, max_options=max_options, sections=sections, viewport=viewport)
+                      labels=labels, tables=tables, max_options=max_options, sections=sections, viewport=viewport,
+                      block_breaks=block_breaks, value_dedup=value_dedup, group_items=group_items, cleanup=cleanup)
+        self.parent = {c: n["nodeId"] for n in state["ax_nodes"] for c in n.get("childIds", [])}
+        self.last_block = None
+        self.merge_floor = 0
         self.lines, self.id_map, self.reverse = [], {}, {}
         self.recent_text = ""
         self.recent_name = ""
@@ -108,20 +122,31 @@ class Renderer:
             s += f" {k}={json.dumps(v, ensure_ascii=False)}"
         return s
 
-    def emit(self, depth, text, kind="node"):
-        if not text.strip():
+    def block_of(self, nid):
+        p = self.parent.get(nid)
+        while p and _val(self.nodes.get(p, {}), "role") in INLINE:
+            p = self.parent.get(p)
+        return p
+
+    def emit(self, depth, text, kind="node", block=None):
+        if not text.strip() or (self.o["cleanup"] and not text.strip(INVISIBLE)):
             return
-        if kind == "text" and self.o["merge_text"] and self.lines and self.lines[-1][0] == depth \
-                and self.lines[-1][2] == "text" and len(self.lines[-1][1]) < 300:
-            self.lines[-1] = (depth, self.lines[-1][1] + " " + text, "text")
+        last = self.lines[-1] if len(self.lines) > self.merge_floor else None
+        if kind == "text" and self.o["merge_text"] and last and last[0] == depth and last[2] == "text" \
+                and len(last[1]) < 300 and (not self.o["block_breaks"] or block == self.last_block):
+            last[1] += " " + text
         else:
-            self.lines.append((depth, text, kind))
+            self.lines.append([depth, text, kind, None])
         if kind == "text":
             self.recent_text = text
             self.recent_name = ""
+            self.last_block = block
 
     def text_of(self, node):
-        return _val(node, "name")
+        name = _val(node, "name")
+        if self.o["cleanup"]:
+            name = " ".join("".join(c for c in name if not 0xE000 <= ord(c) <= 0xF8FF).split())
+        return name
 
     # ---- inline rendering (rows, compact landmarks) --------------------------------------------
     def inline(self, nid, ctx):
@@ -165,8 +190,7 @@ class Renderer:
             return
         wid = self.wid(node) or inherited_wid
         if node.get("ignored"):
-            for c in node.get("childIds", []):
-                self.visit(c, depth, ctx, wid)
+            self.visit_children(node, depth, ctx, wid)
             return
         side = self.visible(self.wid(node))
         if side:
@@ -181,7 +205,7 @@ class Renderer:
             name = name.strip()
             if name and not (self.o["dup_text"] and ((ctx and name in ctx) or name in self.recent_name)):
                 self.emit(depth, name if self.o["merge_text"] else f"StaticText {json.dumps(name, ensure_ascii=False)}",
-                          "text")
+                          "text", self.block_of(nid))
             return
         interactive = self.interactive(node, role)
         if role == "image" and not name and not interactive:
@@ -201,8 +225,7 @@ class Renderer:
                     self.emit(depth, f"{role}{' ' + json.dumps(name) if name else ''}: " + " · ".join(parts))
                 return
             self.emit(depth, f"## {role}{' ' + json.dumps(name) if name else ''}")
-            for c in children:
-                self.visit(c, depth, ctx, wid)
+            self.visit_children(node, depth, ctx, wid)
             return
         if self.o["max_options"] and role in ("combobox", "listbox"):
             opts = self.options(nid, [])
@@ -215,24 +238,39 @@ class Renderer:
                 self.emit(depth + 1, f"... ({len(opts) - len(keep)} more options)", "note")
                 return
         named_wrapper = role in WRAPPERS and name and role not in ("RootWebArea", "WebArea", "document")
-        if self.o["collapse"] and role in WRAPPERS and not interactive and not self.props(node) and not named_wrapper:
-            for c in children:
-                self.visit(c, depth, ctx, wid)
+        is_wrapper = role in WRAPPERS or (self.o["cleanup"] and role in LAYOUT_TABLE)
+        if self.o["collapse"] and is_wrapper and not interactive and not self.props(node) and not named_wrapper:
+            self.visit_children(node, depth, ctx, wid)
             return
         label = None
         if self.o["labels"] and role in FORM_CONTROLS and not name:
             label = self.recent_text
         self.emit(depth, self.fmt(node, role, name, interactive, label))
-        self.recent_name = name if self.o["dup_text"] else ""
-        for c in children:
-            self.visit(c, depth + 1, name or ctx, wid)
+        value = _val(node, "value") if self.o["value_dedup"] else ""
+        own = f"{name} {value}".strip()
+        self.recent_name = own if self.o["dup_text"] else ""
+        self.visit_children(node, depth + 1, own or ctx, wid)
+
+    def visit_children(self, node, depth, ctx, wid):
+        kids = node.get("childIds", [])
+        group = self.o["group_items"] and len(kids) >= 3
+        for c in kids:
+            start, floor = len(self.lines), self.merge_floor
+            if group:
+                self.merge_floor = start
+            self.visit(c, depth, ctx, wid)
+            self.merge_floor = floor
+            if group and 2 <= len(self.lines) - start <= 12:
+                for line in self.lines[start:]:
+                    line[3] = "  "
+                self.lines[start][3] = "- "
 
     def render(self):
         child_ids = {c for n in self.nodes.values() for c in n.get("childIds", [])}
         for nid, node in self.nodes.items():
             if nid not in child_ids:
                 self.visit(nid, 0, None)
-        text = "\n".join(self.o["indent"] * d + t for d, t, _ in self.lines)
+        text = "\n".join(self.o["indent"] * d + (g or "") + t for d, t, _, g in self.lines)
         if self.o["viewport"]:
             pos = f"[viewport: y={self.vp_y}-{self.vp_y + self.vp_h}; showing about {2 * self.o['viewport'] + 1} screens]"
             if self.hidden_above:

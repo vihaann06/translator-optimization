@@ -19,3 +19,18 @@ actions, and the baseline translator reproduces the exact prompt that produced t
 on `all`), which biases replay towards the baseline; many disagreements pick an element with the same name.
 Baseline replays also hit OpenAI's prompt cache (repeated identical prompts), so replay cost/latency
 understate the baseline's online cost.
+
+## prune_flat_v2 (after the prune_flat online run)
+
+v2 = prune_flat + `block_breaks` (text from different blocks stays on separate lines), `value_dedup` (text
+repeating a control's value dropped), `group_items` (multi-line items of repeated containers bulleted with
+"- "), `cleanup` (layout-table wrappers and icon-font glyphs dropped).
+
+| translator | page tokens mean / p90 / max | gold step acc (sd) | gold element acc (sd) | all step acc | all element acc | prompt tokens/step (all) | model latency (all) |
+|---|---|---|---|---|---|---|---|
+| baseline_axtree | 6991 / 11243 / 71753 | 73.3% (1.3) | 83.3% (0.6) | 81.6% | 86.3% | 6959 | 0.93 s |
+| prune_flat | 2228 / 4426 / 21387 | 75.4% (2.0) | 80.3% (1.1) | 65.4% | 71.4% | 3151 | 0.89 s |
+| prune_flat_v2 | 2265 / 4446 / 23498 | 71.9% (1.3) | 77.2% (1.6) | 69.5% | 74.5% | 3191 | 0.86 s |
+
+All-steps step accuracy by site (baseline / prune_flat / v2): shopping 87 / 55 / 68, admin 81 / 67 / 68,
+gitlab 72 / 65 / 66, reddit 84 / 75 / 74.

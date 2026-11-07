@@ -1,0 +1,62 @@
+{
+  "translator": "translators/prune_flat_v2.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "gold",
+  "model": "gpt-4.1-mini",
+  "n_steps": 95,
+  "n_tasks": 12,
+  "step_accuracy": 0.7157894736842105,
+  "element_accuracy": 0.75,
+  "ref_element_recall": 1.0,
+  "task_macro_accuracy": 0.8320767195767195,
+  "parse_errors": 0,
+  "mean_page_tokens": 1949.6842105263158,
+  "cost_usd": 0.1142
+}
+{
+  "translator": "translators/prune_flat_v2.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "gold",
+  "model": "gpt-4.1-mini",
+  "n_steps": 95,
+  "n_tasks": 12,
+  "step_accuracy": 0.7368421052631579,
+  "element_accuracy": 0.7894736842105263,
+  "ref_element_recall": 1.0,
+  "task_macro_accuracy": 0.8337301587301588,
+  "parse_errors": 0,
+  "mean_page_tokens": 1949.6842105263158,
+  "cost_usd": 0.067
+}
+{
+  "translator": "translators/prune_flat_v2.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "gold",
+  "model": "gpt-4.1-mini",
+  "n_steps": 95,
+  "n_tasks": 12,
+  "step_accuracy": 0.7052631578947368,
+  "element_accuracy": 0.7763157894736842,
+  "ref_element_recall": 1.0,
+  "task_macro_accuracy": 0.796957671957672,
+  "parse_errors": 1,
+  "mean_page_tokens": 1949.6842105263158,
+  "cost_usd": 0.0887
+}
+{"name": "prune_flat_v2", "pages": 516, "mean_tokens": 2265, "median_tokens": 978, "p90_tokens": 4446, "max_tokens": 23498, "over_40k": 0, "mean_ids": 116.7, "translate_ms_mean": 3.45, "translate_ms_p90": 6.79, "ref_element_recall_all": 0.9272, "gold_step_accuracy": 0.7193, "gold_element_accuracy": 0.7719, "gold_ref_element_recall": 1.0, "gold_prompt_tokens_mean": 2807.2211, "gold_latency_mean": 0.8369, "gold_cost_usd": 0.09}
+{
+  "translator": "translators/prune_flat_v2.py",
+  "reference": "/home/ubuntu/repos/translator-optimization/runs/baseline_v1",
+  "split": "all",
+  "model": "gpt-4.1-mini",
+  "n_steps": 489,
+  "n_tasks": 40,
+  "step_accuracy": 0.6952965235173824,
+  "element_accuracy": 0.7450980392156863,
+  "ref_element_recall": 0.927170868347339,
+  "task_macro_accuracy": 0.7209018344363172,
+  "parse_errors": 0,
+  "mean_page_tokens": 2302.2617586912065,
+  "cost_usd": 0.6476
+}
+{"name": "prune_flat_v2", "pages": 516, "mean_tokens": 2265, "median_tokens": 978, "p90_tokens": 4446, "max_tokens": 23498, "over_40k": 0, "mean_ids": 116.7, "translate_ms_mean": 4.1, "translate_ms_p90": 6.1, "ref_element_recall_all": 0.9272, "all_step_accuracy": 0.6953, "all_element_accuracy": 0.7451, "all_ref_element_recall": 0.9272, "all_prompt_tokens_mean": 3190.7894, "all_latency_mean": 0.8562, "all_cost_usd": 0.6476}
