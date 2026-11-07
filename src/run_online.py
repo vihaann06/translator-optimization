@@ -14,6 +14,7 @@ import subprocess
 import gzip
 import importlib.util
 import json
+import shutil
 import time
 import traceback
 from pathlib import Path
@@ -177,6 +178,8 @@ async def run_task(browser, task, args, sites_cfg, translate, model, out_dir, st
         totals["stopped"] = True
     (task_dir / "agent_response.json").write_text(json.dumps(response, indent=2, ensure_ascii=False))
     await context.close()
+    if args.gzip_har and (task_dir / "network.har").exists():
+        subprocess.run(["gzip", "-1", "-f", str(task_dir / "network.har")], check=False)
     return totals
 
 
@@ -188,8 +191,16 @@ def evaluate(out_dir, task_ids, eval_config):
         task_dir = out_dir / "tasks" / str(task_id)
         try:
             response = json.loads((task_dir / "agent_response.json").read_text())
-            result = wa.evaluate_task(task_id=task_id, agent_response=response,
-                                      network_trace=task_dir / "network.har")
+            har, packed = task_dir / "network.har", task_dir / "network.har.gz"
+            unpacked = not har.exists() and packed.exists()
+            if unpacked:
+                with gzip.open(packed, "rb") as src, har.open("wb") as dst:
+                    shutil.copyfileobj(src, dst)
+            try:
+                result = wa.evaluate_task(task_id=task_id, agent_response=response, network_trace=har)
+            finally:
+                if unpacked:
+                    har.unlink()
             data = json.loads(result.model_dump_json())
         except Exception as e:
             data = {"status": "error", "score": 0.0, "error_msg": repr(e)}
@@ -286,7 +297,7 @@ def main():
     parser.add_argument("--read-only-first", action=argparse.BooleanOptionalAction, default=False,
                         help="run all non-mutating tasks before any mutating task, so mutations cannot change their answers")
     parser.add_argument("--gzip-har", action=argparse.BooleanOptionalAction, default=True,
-                        help="gzip network.har after evaluation (HARs are ~90%% of run size)")
+                        help="gzip each network.har once its task finishes (HARs are ~90%% of run size)")
     parser.add_argument("--eval-config", default=str(ROOT / "config/webarena_verified.json"))
     asyncio.run(main_async(parser.parse_args()))
 
