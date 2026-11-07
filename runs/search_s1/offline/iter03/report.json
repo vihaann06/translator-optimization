@@ -1,0 +1,15 @@
+{
+  "translator": "/home/ubuntu/repos/translator-optimization/runs/search_s1/candidates/iter03.py",
+  "reference": "runs/baseline_v1",
+  "split": "gold",
+  "model": "gpt-4.1-mini",
+  "n_steps": 95,
+  "n_tasks": 12,
+  "step_accuracy": 0.6631578947368421,
+  "element_accuracy": 0.75,
+  "ref_element_recall": 0.9605263157894737,
+  "task_macro_accuracy": 0.7735449735449736,
+  "parse_errors": 0,
+  "mean_page_tokens": 6695.38947368421,
+  "cost_usd": 0.295
+}
