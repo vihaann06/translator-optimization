@@ -90,6 +90,8 @@ def smoke_test(path, ref_dir, n=6):
         valid = set(state["wid_by_backend"].values())
         bad = [v for v in out["id_map"].values() if v not in valid]
         assert not bad, f"id_map has wids not in state: {bad[:5]}"
+        assert len(out["text"]) >= 200 and out["id_map"], \
+            f"near-empty output on {p.parent.parent.name}: {len(out['text'])} chars, {len(out['id_map'])} ids"
         assert time.time() - t0 < 10, "translate too slow"
 
 
@@ -100,7 +102,7 @@ def main():
     p.add_argument("--champion", default=str(ROOT / "translators/baseline_axtree.py"))
     p.add_argument("--iterations", type=int, default=1)
     p.add_argument("--split", default="gold")
-    p.add_argument("--min-gain", type=float, default=0.02)
+    p.add_argument("--min-gain", type=float, default=0.05)
     p.add_argument("--agent-model", default="gpt-4.1-mini")
     p.add_argument("--optimizer-model", default="gpt-4.1")
     p.add_argument("--max-cases", type=int, default=25)

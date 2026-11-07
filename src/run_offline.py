@@ -134,6 +134,7 @@ async def main_async(args):
                         "element_ok": False if rec.get("wid") else None, "correct": False}
 
     results = await asyncio.gather(*(one(i) for i in items))
+    await model.client.close()
     with (out_dir / "traces.jsonl").open("w") as f:
         for r in results:
             f.write(json.dumps(r, ensure_ascii=False, default=str) + "\n")
