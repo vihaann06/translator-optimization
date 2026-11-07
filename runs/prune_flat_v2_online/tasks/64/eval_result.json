@@ -1,0 +1,115 @@
+{
+  "task_id": 64,
+  "intent_template_id": 276,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "helloworld@yahoo.com",
+          "avidreader99@yahoo.com",
+          "matt.baker@yahoo.com",
+          "harrypotterfan1@gmail.com",
+          "beachlover99@yahoo.com",
+          "soccerfanatic22@gmail.com",
+          "johndoe123@gmail.com",
+          "gamingpro456@gmail.com",
+          "john.smith.xyz@gmail.com",
+          "brian.smith@yahoo.com",
+          "artsygal123@hotmail.com",
+          "coolcat321@hotmail.com",
+          "jla_7781@gmail.com",
+          "jason.miller@yahoo.com",
+          "michael.nguyen@yahoo.com",
+          "marym@gmail.com",
+          "alexander.thomas@hotmail.com",
+          "fitnessjunkie22@yahoo.com",
+          "katie.wong@hotmail.com",
+          "samantha.nguyen@gmail.com",
+          "janesmith456@yahoo.com",
+          "fashionista88@gmail.com",
+          "roni_cost@example.com",
+          "bob123@hotmail.com",
+          "jennifer.white@yahoo.com",
+          "adam.garcia@gmail.com",
+          "musiclover99@hotmail.com",
+          "david.lee@gmail.com",
+          "jane.doe@hotmail.com",
+          "veronica.costello@example.com"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": [
+          "helloworld@yahoo.com",
+          "avidreader99@yahoo.com",
+          "matt.baker@yahoo.com",
+          "harrypotterfan1@gmail.com",
+          "beachlover99@yahoo.com",
+          "soccerfanatic22@gmail.com",
+          "johndoe123@gmail.com",
+          "gamingpro456@gmail.com",
+          "john.smith.xyz@gmail.com",
+          "brian.smith@yahoo.com",
+          "artsygal123@hotmail.com",
+          "coolcat321@hotmail.com",
+          "jla_7781@gmail.com",
+          "jason.miller@yahoo.com",
+          "michael.nguyen@yahoo.com",
+          "marym@gmail.com",
+          "alexander.thomas@hotmail.com",
+          "fitnessjunkie22@yahoo.com",
+          "katie.wong@hotmail.com",
+          "samantha.nguyen@gmail.com",
+          "janesmith456@yahoo.com",
+          "fashionista88@gmail.com",
+          "roni_cost@example.com",
+          "bob123@hotmail.com",
+          "jennifer.white@yahoo.com",
+          "adam.garcia@gmail.com",
+          "musiclover99@hotmail.com",
+          "david.lee@gmail.com",
+          "jane.doe@hotmail.com",
+          "veronica.costello@example.com"
+        ],
+        "task_type": "retrieve",
+        "status": "success"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          "musiclover99@hotmail.com",
+          "roni_cost@example.com"
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array contains all expected elements (2/2) but has 28 extra element(s)",
+            "Expected: [musiclover99@hotmail.com, roni_cost@example.com], Got: [helloworld@yahoo.com, avidreader99@yahoo.com, ..., veronica.costello@example.com]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

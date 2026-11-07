@@ -1,0 +1,108 @@
+{
+  "task_id": 615,
+  "intent_template_id": 11,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "task_type": "mutate",
+        "status": "success"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/Connecticut",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": "http://localhost:9999/image/bald-eagle.jpg",
+            "submission[title]": "from /f/pics",
+            "submission[forum]": "10006",
+            "submission[userFlag]": "none",
+            "submission[_token]": "c27b8206726da0e976480752f6b23890.H1wd7Dd0HmTOZc8J5eeEI-8-vz-IRqkUnIhPyC7NOZo.LxtFpk8daS6YIoNT1NTPa5hIyAr4LMRXyLsku2-cff4rLnqJAzhmHLokoA"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/Connecticut",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[url]": "__reddit__/image/bald eagle.jpg",
+            "submission[title]": "from /f/pics",
+            "submission[forum]": "10006"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[url]": "__reddit__/submission_images/b02113033af32feae9ff147dbbe3764039368d67d193885bd04e65c2e6beea9c.jpg",
+          "submission[title]": "from /f/pics",
+          "submission[forum]": "10006"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

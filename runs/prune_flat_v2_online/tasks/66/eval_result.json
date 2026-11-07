@@ -1,0 +1,69 @@
+{
+  "task_id": 66,
+  "intent_template_id": 17,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "The simple greatness of Agatha Christie",
+          "I just finished reading The Hobbit to my 6 year old daughter, and she loved it!",
+          "Just finished Things Fall Apart (Chinua Achebe) and I LOVED it",
+          "The haunting of hill house was so good",
+          "\"The Bell Jar\" by Sylvia Plath",
+          "All Systems Red by Martha Wells",
+          "Just finished Fahrenheit 451 and I think I've found me a new favorite author"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": [
+          "the simple greatness of agatha christie",
+          "i just finished reading the hobbit to my 6 year old daughter, and she loved it!",
+          "just finished things fall apart (chinua achebe) and i loved it",
+          "the haunting of hill house was so good",
+          "\"the bell jar\" by sylvia plath",
+          "all systems red by martha wells",
+          "just finished fahrenheit 451 and i think i've found me a new favorite author"
+        ],
+        "task_type": "retrieve",
+        "status": "success"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          "i just finished reading the hobbit to my 6 year old daughter, and she loved it!",
+          "apple books has a free audiobook of a christmas carol narrated by levar burton!"
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (1/2), Missing: 1, Extra: 6",
+            "Expected: [i just finished reading the hobbit to my 6 year old daughter, and she loved it!, apple books has a free audiobook of a christmas carol narrated by levar burton!], Got: [the simple greatness of agatha christie, i just finished reading the hobbit to my 6 year old daughter, and she loved it!, ..., just finished fahrenheit 451 and i think i've found me a new favorite author]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

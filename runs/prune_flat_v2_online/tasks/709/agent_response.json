@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Orders report from May 1, 2021 to March 31, 2022 is displayed with 33 records found, including daily order counts, sales items, sales totals, invoiced amounts, refunded amounts, sales tax, shipping, discounts, and cancellations."
+  ],
+  "error_details": null
+}
