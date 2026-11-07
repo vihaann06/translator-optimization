@@ -1,0 +1,111 @@
+{
+  "task_id": 451,
+  "intent_template_id": 331,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/-/profile",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "_method": "put",
+            "authenticity_token": "Jszf7/tv8iiKVKSOR4yY004PIfIYpeaCk5l4dly24bFUcItskVEo1qksxnGea/Vvvn5cKWNNMtAnr9rhYVBhlQ==",
+            "user[status][availability]": "not_set",
+            "user[name]": "Byte Blaze",
+            "user[id]": "2330",
+            "user[email]": "ericwbailey@fakegithub.com",
+            "user[validation_password]": "validation_password",
+            "user[website_url]": "www.byteblaze.com",
+            "user[location]": "Boston, MA",
+            "user[organization]": "@github",
+            "user[bio]": "Inclusive design and accessibility advocate. Accessibility and design systems wonk for @primer.",
+            "user[private_profile]": "0",
+            "user[include_private_contributions]": "0"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/-/profile",
+            "query_params": {}
+          },
+          "post_data": {
+            "user[website_url]": "www.byteblaze.com"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/-/profile",
+          "query_params": {}
+        },
+        "post_data": {
+          "user[website_url]": "https://www.byteblaze.com"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

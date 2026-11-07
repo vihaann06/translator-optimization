@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Orders report from May 1, 2021 to March 31, 2022 is displayed with 41 orders, 124 sales items, total sales of $5,559.33, $620.00 invoiced shipping, and $176.11 discounts."
+  ],
+  "error_details": null
+}

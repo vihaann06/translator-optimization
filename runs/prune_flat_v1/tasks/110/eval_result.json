@@ -1,0 +1,185 @@
+{
+  "task_id": 110,
+  "intent_template_id": 270,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          {
+            "month": "January",
+            "count": 18
+          },
+          {
+            "month": "February",
+            "count": 11
+          },
+          {
+            "month": "March",
+            "count": 8
+          },
+          {
+            "month": "April",
+            "count": 13
+          },
+          {
+            "month": "May",
+            "count": 0
+          },
+          {
+            "month": "June",
+            "count": 11
+          },
+          {
+            "month": "July",
+            "count": 11
+          },
+          {
+            "month": "August",
+            "count": 9
+          },
+          {
+            "month": "September",
+            "count": 11
+          },
+          {
+            "month": "October",
+            "count": 7
+          },
+          {
+            "month": "November",
+            "count": 7
+          }
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "month": "January",
+            "count": 18.0
+          },
+          {
+            "month": "February",
+            "count": 11.0
+          },
+          {
+            "month": "March",
+            "count": 8.0
+          },
+          {
+            "month": "April",
+            "count": 13.0
+          },
+          {
+            "month": "May",
+            "count": 0.0
+          },
+          {
+            "month": "June",
+            "count": 11.0
+          },
+          {
+            "month": "July",
+            "count": 11.0
+          },
+          {
+            "month": "August",
+            "count": 9.0
+          },
+          {
+            "month": "September",
+            "count": 11.0
+          },
+          {
+            "month": "October",
+            "count": 7.0
+          },
+          {
+            "month": "November",
+            "count": 7.0
+          }
+        ]
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "month": "January",
+            "count": 11.0
+          },
+          {
+            "month": "February",
+            "count": 16.0
+          },
+          {
+            "month": "March",
+            "count": 14.0
+          },
+          {
+            "month": "April",
+            "count": 7.0
+          },
+          {
+            "month": "May",
+            "count": 8.0
+          },
+          {
+            "month": "June",
+            "count": 13.0
+          },
+          {
+            "month": "July",
+            "count": 9.0
+          },
+          {
+            "month": "August",
+            "count": 8.0
+          },
+          {
+            "month": "September",
+            "count": 10.0
+          },
+          {
+            "month": "October",
+            "count": 4.0
+          },
+          {
+            "month": "November",
+            "count": 5.0
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (0/11), Missing: 11, Extra: 11",
+            "Expected: [{'month': Month('January'), 'count': Number(11.0)}, {'month': Month('February'), 'count': Number(16.0)}, ..., {'month': Month('November'), 'count': Number(5.0)}], Got: [{'month': Month('January'), 'count': Number(18.0)}, {'month': Month('February'), 'count': Number(11.0)}, ..., {'month': Month('November'), 'count': Number(7.0)}]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

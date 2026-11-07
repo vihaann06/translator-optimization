@@ -1,0 +1,12 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    194.4,
+    190.0,
+    151.4,
+    188.2,
+    83.4
+  ],
+  "error_details": null
+}

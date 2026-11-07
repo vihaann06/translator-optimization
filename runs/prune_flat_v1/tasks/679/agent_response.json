@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Orders list filtered by status 'Complete' is displayed."
+  ],
+  "error_details": null
+}
