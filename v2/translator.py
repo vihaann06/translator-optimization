@@ -308,7 +308,7 @@ class Renderer:
                 rows.append(n)
             elif self.role(n) not in {"table", "grid", "treegrid"}:
                 stack = self.kids(n) + stack
-        header, body = None, []
+        header, body, row_ids = None, [], []
         for r in rows:
             cells = [c for c in self.kids(r) if self.role(c) in {"cell", "gridcell", "columnheader", "rowheader"}]
             if not cells:
@@ -319,13 +319,17 @@ class Renderer:
             if self.hidden(r):
                 continue
             body.append([self.cell(c) for c in cells])
-        return header, body
+            row_ids.append(self.sid(r))
+        return header, body, row_ids
 
-    def collection(self, node, items_rows, header, label):
+    def collection(self, node, items_rows, header, label, row_ids=None):
         cid = f"C{len(self.collections) + 1}"
         key = f"{cid}:{self.wid(node) or node['nodeId']}"
-        lines = [" | ".join(r) if isinstance(r, list) else r for r in items_rows]
-        self.collections[cid] = {"label": label, "header": header, "rows": items_rows, "lines": lines}
+        row_ids = row_ids or [None] * len(items_rows)
+        lines = [(f"[{i}] " if i else "") + (" | ".join(r) if isinstance(r, list) else r)
+                 for r, i in zip(items_rows, row_ids)]
+        self.collections[cid] = {"label": label, "header": header, "rows": items_rows, "lines": lines,
+                                 "row_ids": row_ids}
         b = self.open_block(key, f"{cid} {label}".strip(), kind="collection")
         b.cid = cid
         size = sum(len(x) for x in lines)
@@ -399,9 +403,9 @@ class Renderer:
                 self.emit(f"img {q(name, 80)}", depth)
             return
         if role in {"table", "grid", "treegrid"}:
-            header, body = self.table_rows(node)
+            header, body, row_ids = self.table_rows(node)
             if body:
-                self.collection(node, body, header, name or self.last_heading)
+                self.collection(node, body, header, name or self.last_heading, row_ids)
             return
         if role == "heading":
             inter = [k for k in self.kids(node) if self.interactive(k)]
@@ -415,6 +419,17 @@ class Renderer:
                     self.emit(self.element(k), depth + 1)
             self.last_text = self.last_heading = name or self.text_of(node)
             return
+        if role == "generic" and self.props(node).get("focusable") and not self.props(node).get("editable"):
+            label = name if name and len(name) <= 80 else ""
+            self.emit(f"[{self.sid(node)}] clickable {q(label) if label else ''}".rstrip(), depth)
+            for k in self.kids(node):
+                self.walk(k, depth + 1, name or parent_name)
+            return
+        if role in {"DescriptionListTerm", "term"} and not any(self.interactive(k) for k in self.kids(node)):
+            text = self.text_of(node)
+            if text:
+                self.emit(f"[{self.sid(node)}] {q(text, 80)}", depth)
+                return
         if self.interactive(node):
             self.emit(self.element(node), depth)
             if role in FIELD_ROLES or role in TOGGLE_ROLES or role == "link":

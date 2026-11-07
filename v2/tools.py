@@ -51,7 +51,9 @@ def query(render, collection, contains=None, where=None, count=False, sum=None, 
     if not coll:
         return f"query error: unknown collection {collection!r}; available: {', '.join(render['collections']) or 'none'}"
     header, rows = coll["header"], coll["rows"]
+    row_ids = coll.get("row_ids") or [None] * len(rows)
     line = lambda r: " | ".join(r) if isinstance(r, list) else r
+    shown = lambda i: (f"[{row_ids[i]}] " if row_ids[i] else "") + line(rows[i])
     hits = list(range(len(rows)))
     if contains:
         hits = [i for i in hits if str(contains).lower() in line(rows[i]).lower()]
@@ -66,11 +68,15 @@ def query(render, collection, contains=None, where=None, count=False, sum=None, 
            + (" (only rows loaded on this page are searched)" if len(rows) >= 20 else "")]
     if sum:
         si = _col(header, sum)
+        if si is None and header:
+            return f"query error: unknown column {sum!r}; columns: {' | '.join(header)}"
         vals = [num(_cell(rows[i], si)) for i in hits]
         nums = [v for v in vals if v is not None]
         out.append(f"sum({sum}) = {round(_sum(nums), 4)} over {len(nums)} numeric values")
     if group_by:
         gi = _col(header, group_by)
+        if gi is None and header:
+            return f"query error: unknown column {group_by!r}; columns: {' | '.join(header)}"
         groups = {}
         for i in hits:
             groups.setdefault(_cell(rows[i], gi), []).append(i)
@@ -82,7 +88,7 @@ def query(render, collection, contains=None, where=None, count=False, sum=None, 
         out.append(" cols: " + " | ".join(header))
     limit = max(1, min(int(limit or 20), MAX_ROWS))
     offset = max(0, int(offset or 0))
-    out.extend(" " + line(rows[i]) for i in hits[offset:offset + limit])
+    out.extend(" " + shown(i) for i in hits[offset:offset + limit])
     if len(hits) > offset + limit:
         out.append(f" … {len(hits) - offset - limit} more (use offset={offset + limit})")
     return "\n".join(out)
