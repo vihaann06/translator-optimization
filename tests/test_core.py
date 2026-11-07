@@ -96,3 +96,22 @@ def test_prune_flat_v2_keeps_blocks_dedups_values_and_groups_items():
                      "viewport": {"scrollY": 0, "height": 720}})["text"]
     assert out.count("react apps") == 1
     assert "- First\n  First body\n- Second" in out and "\ue605" not in out
+
+
+def test_t3_hybrid_ids_only_on_choosable_and_folds_passive_text():
+    from translators.t3_hybrid import translate
+
+    def n(i, role, name="", kids=(), backend=None, focusable=False):
+        return {"nodeId": str(i), "role": {"value": role}, "name": {"value": name}, "childIds": [str(k) for k in kids],
+                "backendDOMNodeId": backend,
+                "properties": [{"name": "focusable", "value": {"value": True}}] if focusable else []}
+    nodes = [n(1, "RootWebArea", "Page", [2, 3]), n(2, "main", "", [4, 5], backend=20),
+             n(3, "group", "", [6], backend=30), n(4, "link", "Home", backend=40, focusable=True),
+             n(5, "generic", "", [7], backend=50), n(6, "StaticText", "Long passive text " * 20),
+             n(7, "StaticText", "Short")]
+    html = '<html><body><main data-wid="w20"><a data-wid="w40">Home</a><div data-wid="w50">Short</div></main>' \
+           '<div data-wid="w30">...</div></body></html>'
+    out = translate({"ax_nodes": nodes, "html": html, "bounds": {}, "viewport": {},
+                     "wid_by_backend": {"20": "w20", "30": "w30", "40": "w40", "50": "w50"}})
+    assert out["id_map"]["1"] == "w40" and "[MAIN CONTENT]" in out["text"]
+    assert "(+" in out["text"] and set(out["id_map"].values()) == {"w40"}

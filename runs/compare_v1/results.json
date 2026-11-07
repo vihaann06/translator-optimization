@@ -258,5 +258,18 @@
     "all_latency_mean_sd": 0.0,
     "all_cost_usd": 0.6476,
     "all_cost_usd_sd": 0.0
+  },
+  "t3_hybrid": {
+    "translator": "translators/t3_hybrid.py",
+    "pages": 516,
+    "mean_tokens": 3823,
+    "median_tokens": 1748,
+    "p90_tokens": 7097,
+    "max_tokens": 38462,
+    "over_40k": 0,
+    "mean_ids": 283.7,
+    "translate_ms_mean": 39.82,
+    "translate_ms_p90": 85.34,
+    "ref_element_recall_all": 0.9328
   }
 }
