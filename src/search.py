@@ -36,8 +36,12 @@ State keys available to translate(state):
   wid_by_backend: {str(backendDOMNodeId): wid}  (wid = the element's data-wid attribute)
   wid_parent: {wid: parent wid}, bounds: {wid: [x, y, w, h]} in page coordinates
   html: page.content() with data-wid, data-live-value, data-live-checked, data-live-selected attributes
-Only the Python standard library and lxml are available. translate must be deterministic, take under 2 s
-per page and never raise. Every wid in id_map must come from the state.
+Only the Python standard library and lxml are available. translate must be deterministic and take under 2 s
+per page. Do NOT wrap translate in a try/except that returns empty output: errors must surface so they can
+be fixed. Every wid in id_map must come from the state. AX nodes with "ignored": true still have children
+that must be traversed. Values are wrapped: node["role"]["value"], node["name"]["value"],
+node["value"]["value"], properties = [{"name": ..., "value": {"value": ...}}]; nodeId/childIds are strings,
+backendDOMNodeId is an int (look it up as wid_by_backend[str(id)]).
 
 You will see the current champion translator, the agent's offline failures on it and the history of past
 attempts. Diagnose the representation bottleneck behind the failures, then write a complete replacement
@@ -106,6 +110,7 @@ def main():
     p.add_argument("--agent-model", default="gpt-4.1-mini")
     p.add_argument("--optimizer-model", default="gpt-4.1")
     p.add_argument("--max-cases", type=int, default=25)
+    p.add_argument("--repairs", type=int, default=2, help="optimizer fix-up turns when a candidate fails validation")
     p.add_argument("--max-cost", type=float, default=10.0, help="stop when total offline+optimizer USD exceeds this")
     a = p.parse_args()
     out = ROOT / "runs" / f"search_{a.name}"
@@ -147,7 +152,26 @@ def main():
         try:
             assert code, "no python block"
             path.write_text(code.group(1))
-            smoke_test(path, a.reference)
+            for repair in range(a.repairs + 1):
+                try:
+                    smoke_test(path, a.reference)
+                    break
+                except Exception as err:
+                    if repair == a.repairs:
+                        raise
+                    feedback = f"Your module failed validation on saved states:\n{traceback.format_exc()[-1500:]}\n" \
+                               "Fix it and reply with the complete corrected module in one ```python block."
+                    resp = client.chat.completions.create(
+                        model=a.optimizer_model, temperature=0.2,
+                        messages=[{"role": "system", "content": OPTIMIZER_SYSTEM}, {"role": "user", "content": user},
+                                  {"role": "assistant", "content": reply}, {"role": "user", "content": feedback}])
+                    u = resp.usage
+                    spent += (u.prompt_tokens * 2.0 + u.completion_tokens * 8.0) / 1e6
+                    reply = resp.choices[0].message.content
+                    (cand_dir / f"iter{it:02d}.repair{repair + 1}.md").write_text(reply)
+                    code = re.search(r"```python\n(.*?)```", reply, re.S)
+                    assert code, "no python block in repair"
+                    path.write_text(code.group(1))
             report = offline(path, f"iter{it:02d}")
             spent += report["cost_usd"]
             entry.update(step_accuracy=round(report["step_accuracy"], 4), report=report)
