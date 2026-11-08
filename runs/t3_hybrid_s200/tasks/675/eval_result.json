@@ -1,0 +1,105 @@
+{
+  "task_id": 675,
+  "intent_template_id": 101,
+  "sites": [
+    "shopping",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "error",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "error",
+      "score": 0.0,
+      "actual": {
+        "task_type": null,
+        "status": "UNKNOWN_ERROR",
+        "retrieved_data": null,
+        "error_details": "agent did not stop within the step budget"
+      },
+      "actual_normalized": null,
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": "Error during evaluation with evaluator AgentResponseEvaluator for task 675: 'NoneType' object has no attribute 'strip'",
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/gaming",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "real user feedback on HORI 3D Surround Gaming Neckset",
+            "submission[body]": "- \"Poor sound quality\"\r\n- \"Uncomfortable to wear\"\r\n- \"Stopped working after a week\"\r\n- \"Not worth the price\"",
+            "submission[forum]": "10048",
+            "submission[userFlag]": "none",
+            "submission[_token]": "39624a20dfb2e0e924.cRAnp9qYFs97q-YNLQng7ZvkiEAs7O6d95RUqxuMLo4.XERT05TZcuI60oVFGEXNu_Gw13hbroz_o_Y78k_9TPslJGnIqqwm9zmdvw"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/gaming",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "real user feedback on hori 3d surround gaming neckset",
+            "submission[body]": "- \"poor sound quality\" - \"uncomfortable to wear\" - \"stopped working after a week\" - \"not worth the price\"",
+            "submission[forum]": "10048"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "real user feedback on hori 3d surround gaming neckset",
+          "submission[body]": "- \"not worth it for pc users\" - \"i really wanted to like this.\" - \"i wish this was better...\" - \"i wish this was better...\"",
+          "submission[forum]": "10048"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

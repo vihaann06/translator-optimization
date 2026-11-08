@@ -1,0 +1,121 @@
+{
+  "task_id": 703,
+  "intent_template_id": 258,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/sales_rule/promo_quote/save/",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "name": "Thanks giving sale",
+            "discount_amount": "40",
+            "discount_qty": "0",
+            "is_active": "1",
+            "use_auto_generation": "0",
+            "is_rss": "1",
+            "stop_rules_processing": "1",
+            "simple_action": "by_fixed",
+            "website_ids[0]": "1",
+            "customer_group_ids[0]": "1",
+            "coupon_type": "1",
+            "apply_to_shipping": "0",
+            "rule[actions][1][type]": "Magento\\SalesRule\\Model\\Rule\\Condition\\Product\\Combine",
+            "rule[actions][1][aggregator]": "all",
+            "rule[actions][1][value]": "1",
+            "form_key": "i9zNWxnKZLgOzbqS"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/sales_rule/promo_quote/save",
+            "query_params": {}
+          },
+          "post_data": {
+            "name": "thanks giving sale",
+            "discount_amount": "40",
+            "is_active": "1",
+            "customer_group_ids[0]": "1",
+            "website_ids[0]": "1",
+            "coupon_type": "1",
+            "rule[actions][1][type]": "magento\\salesrule\\model\\rule\\condition\\product\\combine",
+            "rule[actions][1][aggregator]": "all",
+            "rule[actions][1][value]": "1"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING_ADMIN__/sales_rule/promo_quote/save",
+          "query_params": {}
+        },
+        "post_data": {
+          "name": "thanks giving sale",
+          "discount_amount": "40",
+          "is_active": "1",
+          "customer_group_ids[0]": "1",
+          "website_ids[0]": "1",
+          "coupon_type": "1",
+          "rule[actions][1][type]": "magento\\salesrule\\model\\rule\\condition\\product\\combine",
+          "rule[actions][1][aggregator]": "all",
+          "rule[actions][1][value]": "1"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

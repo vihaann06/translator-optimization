@@ -1,0 +1,12 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "http://localhost:9999/t/naval-academy-renames-building-after-jimmy-carter",
+    "http://localhost:9999/t/kansas-gov-laura-kelly-wins-re-election-defeating-gop-challenger-nbc-news-projects",
+    "http://localhost:9999/t/trump-aide-granted-immunity-set-to-testify-at-grand-jury-probing-mar-a-lago-documents",
+    "http://localhost:9999/t/us-bat-species-devastated-by-fungus-now-listed-as-endangered",
+    "http://localhost:9999/t/court-abortion-doctors-cant-be-charged-under-arizona-law"
+  ],
+  "error_details": null
+}

@@ -1,0 +1,109 @@
+{
+  "task_id": 674,
+  "intent_template_id": 101,
+  "sites": [
+    "shopping",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/gaming",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "real user feedback on Doc and Pies Arcade Factory Cocktail Arcade Machine",
+            "submission[body]": "- \"Not worth the price\"\r\n- \"Disappointing quality\"\r\n- \"Stopped working after a month\"\r\n- \"Mediocre gameplay experience\"\r\n- \"Poor customer service\"",
+            "submission[forum]": "10048",
+            "submission[userFlag]": "none",
+            "submission[_token]": "4af13d65ec091bedd.MAIeVoGfv50XE33yKesu7N0zODFwkfOfC_GbFtmN7Bk.AWxkH-TJxqtxRAqBfbtFiphmDwU32pTpVLbJU4HYuH5kWEYyye6NwkVyFg"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/gaming",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "real user feedback on doc and pies arcade factory cocktail arcade machine",
+            "submission[body]": "- \"not worth the price\" - \"disappointing quality\" - \"stopped working after a month\" - \"mediocre gameplay experience\" - \"poor customer service\"",
+            "submission[forum]": "10048"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "real user feedback on doc and pies arcade factory cocktail arcade machine",
+          "submission[body]": "- \"poorly made exterior. consider a different company.\" - \"piece of junk ,..can't believe i spent money on this !!!!\" - \"based arrived broken but game itself works\" - \"based arrived broken but game itself works\"",
+          "submission[forum]": "10048"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

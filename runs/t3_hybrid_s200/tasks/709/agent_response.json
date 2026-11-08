@@ -1,0 +1,17 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Orders Report from 05/01/2021 to 03/31/2022",
+    "Total Orders: 41",
+    "Total Sales Items: 124",
+    "Total Sales: $5,559.33",
+    "Total Invoiced: $0.00",
+    "Total Refunded: $0.00",
+    "Total Sales Tax: $0.00",
+    "Total Sales Shipping: $620.00",
+    "Total Sales Discount: $176.11",
+    "Total Canceled: $0.00"
+  ],
+  "error_details": null
+}

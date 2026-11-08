@@ -1,0 +1,114 @@
+{
+  "task_id": 683,
+  "intent_template_id": 116,
+  "sites": [
+    "reddit",
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/MachineLearning",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": "http://localhost:8023/byteblaze/metaseq",
+            "submission[title]": "byteblaze/metaseq",
+            "submission[body]": "6 commit(s) already!",
+            "submission[forum]": "10018",
+            "submission[userFlag]": "none",
+            "submission[_token]": "696b6faacafe483.Lsx0_DHveT1SKoqv1Qp32NVhkk1dX8hs7XHNPIQin1w.A6MytVjXEQ5_Z8zEuT8ivYIOqgg2F5o0mz6FSN5HrANI_zKPVKQ7ZGRg5Q"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/MachineLearning",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": "__gitlab__/byteblaze/metaseq",
+            "submission[title]": "byteblaze/metaseq",
+            "submission[body]": "6 commit(s) already!",
+            "submission[forum]": "10018"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit/?.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[mediaType]": "url",
+          "submission[url]": "__gitlab__/facebook/metaseq",
+          "submission[title]": "facebook/metaseq",
+          "submission[body]": "272 commits already!",
+          "submission[forum]": "^(10043|10018)$"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

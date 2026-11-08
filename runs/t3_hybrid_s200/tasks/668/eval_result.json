@@ -1,0 +1,114 @@
+{
+  "task_id": 668,
+  "intent_template_id": 335,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/merge_requests",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "iQhF5sTlFlReGIhNL0e0wdflF/gVA4S148nk7LQer3+kiZGCWgKRhnSZK4ywr/I5tNTy3XGMIH7c/fO6MrTKBA==",
+            "merge_request[title]": "Redesign",
+            "merge_request_diff_head_sha": "5f24e9d0839b31253ea95e9f8fb9bd9fa134de18",
+            "merge_request[description]": "",
+            "merge_request[assignee_ids][]": "0",
+            "merge_request[reviewer_ids][]": "2264",
+            "merge_request[milestone_id]": "",
+            "merge_request[label_ids][]": "",
+            "merge_request[force_remove_source_branch]": "0",
+            "merge_request[squash]": "0",
+            "merge_request[lock_version]": "0",
+            "merge_request[source_project_id]": "174",
+            "merge_request[source_branch]": "redesign",
+            "merge_request[target_project_id]": "174",
+            "merge_request[target_branch]": "main"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/merge_requests",
+            "query_params": {}
+          },
+          "post_data": {
+            "merge_request[target_branch]": "main",
+            "merge_request[source_branch]": "redesign",
+            "merge_request[target_project_id]": "174",
+            "merge_request[source_project_id]": "174",
+            "merge_request[assignee_ids][]": "0",
+            "merge_request[reviewer_ids][]": "2264"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/merge_requests",
+          "query_params": {}
+        },
+        "post_data": {
+          "merge_request[target_branch]": "main",
+          "merge_request[source_branch]": "redesign",
+          "merge_request[target_project_id]": "174",
+          "merge_request[source_project_id]": "174",
+          "merge_request[assignee_ids][]": "0",
+          "merge_request[reviewer_ids][]": "2264"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

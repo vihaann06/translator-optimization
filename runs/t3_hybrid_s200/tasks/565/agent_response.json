@@ -1,0 +1,47 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "title": "Is there a DIY sub with fewer rules, designed for people trying to get help with DIY?",
+      "link": "http://localhost:9999/t3_1032niv"
+    },
+    {
+      "title": "chifi diy hauls and fakes",
+      "link": "http://localhost:9999/t3_10916aw"
+    },
+    {
+      "title": "DIY - Plumbing repair that should have cost thousands, fixed by making a \"hellraiser fleshlight\" to clear my homes clogged main sewage line.",
+      "link": "http://localhost:9999/t3_10euo1s"
+    },
+    {
+      "title": "diy LifePo4 power station",
+      "link": "http://localhost:9999/t3_110n31f"
+    },
+    {
+      "title": "Replacing a light switch. Can I DIY or call for help?",
+      "link": "http://localhost:9999/t3_105uxq7"
+    },
+    {
+      "title": "tifu by purchasing a diy boba kit from walmart",
+      "link": "http://localhost:9999/t3_zopegx"
+    },
+    {
+      "title": "DIY Kitchen Cabinet Drawer Help!",
+      "link": "http://localhost:9999/t3_yee1l6"
+    },
+    {
+      "title": "DIY Dog wire run.",
+      "link": "http://localhost:9999/t3_zzb5dt"
+    },
+    {
+      "title": "Trying to pick charger for DIY UPS bank",
+      "link": "http://localhost:9999/t3_123d0st"
+    },
+    {
+      "title": "ISO DIY Auto Repair place in Baltimore",
+      "link": "http://localhost:9999/t3_z1uzvf"
+    }
+  ],
+  "error_details": null
+}

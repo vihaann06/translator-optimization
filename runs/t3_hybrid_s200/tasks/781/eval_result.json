@@ -1,0 +1,162 @@
+{
+  "task_id": 781,
+  "intent_template_id": 742,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/catalog/product/save/id/1573/type/simple/store/0/set/9/back/edit",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "product[status]": "1",
+            "product[name]": "Desiree Fitness Tee-XS-Black",
+            "product[sku]": "WS05-XS-Black",
+            "product[price]": "32.88",
+            "product[tax_class_id]": "2",
+            "product[quantity_and_stock_status][is_in_stock]": "1",
+            "product[weight]": "1",
+            "product[category_ids][0]": "25",
+            "product[category_ids][1]": "33",
+            "product[category_ids][2]": "2",
+            "product[visibility]": "1",
+            "product[size]": "166",
+            "product[color]": "49",
+            "product[eco_collection]": "0",
+            "product[performance_fabric]": "0",
+            "product[erin_recommends]": "0",
+            "product[new]": "0",
+            "product[sale]": "0",
+            "product[description]": "<p>When you're too far to turn back, thank yourself for choosing the Desiree Fitness Tee. Its ultra-lightweight, ultra-breathable fabric wicks sweat away from your body and helps keeps you cool for the distance.</p>\r\n<p>&bull; Short-Sleeves.<br />&bull; Performance fabric.<br />&bull; Machine wash/line dry.</p>",
+            "product[url_key]": "desiree-fitness-tee-xs-black",
+            "product[msrp_display_actual_price_type]": "0",
+            "product[options_container]": "container2",
+            "product[gift_message_available]": "0",
+            "product[attribute_set_id]": "9",
+            "product[stock_data][item_id]": "1573",
+            "product[stock_data][product_id]": "1573",
+            "product[stock_data][stock_id]": "1",
+            "product[stock_data][qty]": "100",
+            "product[stock_data][min_qty]": "0",
+            "product[stock_data][use_config_min_qty]": "1",
+            "product[stock_data][is_qty_decimal]": "0",
+            "product[stock_data][backorders]": "0",
+            "product[stock_data][use_config_backorders]": "1",
+            "product[stock_data][min_sale_qty]": "1",
+            "product[stock_data][use_config_min_sale_qty]": "1",
+            "product[stock_data][max_sale_qty]": "10000",
+            "product[stock_data][use_config_max_sale_qty]": "1",
+            "product[stock_data][is_in_stock]": "1",
+            "product[stock_data][notify_stock_qty]": "1",
+            "product[stock_data][use_config_notify_stock_qty]": "1",
+            "product[stock_data][manage_stock]": "1",
+            "product[stock_data][use_config_manage_stock]": "1",
+            "product[stock_data][stock_status_changed_auto]": "0",
+            "product[stock_data][use_config_qty_increments]": "1",
+            "product[stock_data][qty_increments]": "1",
+            "product[stock_data][use_config_enable_qty_inc]": "1",
+            "product[stock_data][enable_qty_increments]": "0",
+            "product[stock_data][is_decimal_divided]": "0",
+            "product[stock_data][website_id]": "0",
+            "product[stock_data][type_id]": "simple",
+            "product[stock_data][min_qty_allowed_in_shopping_cart][0][record_id]": "0",
+            "product[stock_data][min_qty_allowed_in_shopping_cart][0][customer_group_id]": "32000",
+            "product[links_title]": "Links",
+            "product[links_purchased_separately]": "0",
+            "product[samples_title]": "Samples",
+            "product[current_product_id]": "1573",
+            "product[affect_product_custom_options]": "1",
+            "product[current_store_id]": "0",
+            "product[product_has_weight]": "1",
+            "product[custom_layout_update_file]": "__no_update__",
+            "product[use_config_gift_message_available]": "0",
+            "product[website_ids][1]": "1",
+            "product[url_key_create_redirect]": "desiree-fitness-tee-xs-black",
+            "is_downloadable": "0",
+            "affect_configurable_product_attributes": "1",
+            "salable_quantity[0][stock_id]": "1",
+            "salable_quantity[0][stock_name]": "Default Stock",
+            "salable_quantity[0][qty]": "100",
+            "salable_quantity[0][manage_stock]": "true",
+            "new-variations-attribute-set-id": "9",
+            "configurable-matrix-serialized": "[]",
+            "associated_product_ids_serialized": "[]",
+            "form_key": "FaOmsPPAVD9jBroe"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/catalog/product/save/id/1573/type/simple/store/0/set/9/back/edit",
+            "query_params": {}
+          },
+          "post_data": {
+            "product[price]": "32.88"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__SHOPPING_ADMIN__/catalog/product/save/id/1573/type/simple/store/0/set/\\d+/back/edit$",
+          "query_params": {}
+        },
+        "post_data": {
+          "product[price]": "32.88"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

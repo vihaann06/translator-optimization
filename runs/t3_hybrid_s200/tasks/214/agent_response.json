@@ -1,0 +1,15 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    {
+      "title": "Doesn't fit me. Luma fail.",
+      "rating": 3
+    },
+    {
+      "title": "does not fit. worthless.",
+      "rating": 3
+    }
+  ],
+  "error_details": null
+}

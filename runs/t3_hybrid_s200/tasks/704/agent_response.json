@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Sales order report for last month (February 2023) is displayed."
+  ],
+  "error_details": null
+}

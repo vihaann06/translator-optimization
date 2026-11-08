@@ -1,0 +1,119 @@
+{
+  "task_id": 666,
+  "intent_template_id": 335,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "error",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "error",
+      "score": 0.0,
+      "actual": {
+        "task_type": null,
+        "status": "UNKNOWN_ERROR",
+        "retrieved_data": null,
+        "error_details": "agent did not stop within the step budget"
+      },
+      "actual_normalized": null,
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": "Error during evaluation with evaluator AgentResponseEvaluator for task 666: 'NoneType' object has no attribute 'strip'",
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/primer/design/-/merge_requests",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "5jpP6ic2gTcUM+Fghs3oucF3Pf7Q49i5zEwkbkw6WRTLu5uOudEG5T6yQqEZJa5BokbY27RsfHLzeDM4ypA8bw==",
+            "merge_request[title]": "update generic link text guidance (#272)",
+            "merge_request_diff_head_sha": "ace819b8a4e98a8c65b6f8632604bf0940142a73",
+            "merge_request[description]": "* update generic link text guidance\r\n\r\n* update examples\r\n\r\n* update text\r\n\r\n* Update content/accessibility/links.mdx\r\n\r\nCo-authored-by: Inayaili Le\u00f3n <yaili@github.com>\r\n\r\n* Update content/accessibility/links.mdx\r\n\r\nCo-authored-by: Owen Niblock <owenniblock@github.com>\r\n\r\n* Update content/accessibility/links.mdx\r\n\r\nCo-authored-by: Inayaili Le\u00f3n <yaili@github.com>\r\n\r\n* Update content/accessibility/links.mdx\r\n\r\nCo-authored-by: Chelsea Adelman <40274682+ichelsea@users.noreply.github.com>\r\n\r\n* Use DoDont container\r\n\r\n* Remove unnecessary text\r\n\r\nCo-authored-by: Inayaili Le\u00f3n <yaili@github.com>\r\nCo-authored-by: Owen Niblock <owenniblock@github.com>\r\nCo-authored-by: Chelsea Adelman <40274682+ichelsea@users.noreply.github.com>",
+            "merge_request[assignee_ids][]": "0",
+            "merge_request[reviewer_ids][]": "0",
+            "merge_request[milestone_id]": "",
+            "merge_request[label_ids][]": "",
+            "merge_request[force_remove_source_branch]": "0",
+            "merge_request[squash]": "0",
+            "merge_request[lock_version]": "0",
+            "merge_request[source_project_id]": "180",
+            "merge_request[source_branch]": "dialog-component",
+            "merge_request[target_project_id]": "180",
+            "merge_request[target_branch]": "dialog"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/primer/design/-/merge_requests",
+            "query_params": {}
+          },
+          "post_data": {
+            "merge_request[target_branch]": "dialog",
+            "merge_request[source_branch]": "dialog component",
+            "merge_request[target_project_id]": "180",
+            "merge_request[source_project_id]": "180",
+            "merge_request[assignee_ids][]": "0",
+            "merge_request[reviewer_ids][]": "0"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/primer/design/-/merge_requests",
+          "query_params": {}
+        },
+        "post_data": {
+          "merge_request[target_branch]": "dialog",
+          "merge_request[source_branch]": "dialog component",
+          "merge_request[target_project_id]": "180",
+          "merge_request[source_project_id]": "180",
+          "merge_request[assignee_ids][]": "0",
+          "merge_request[reviewer_ids][]": "2367"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

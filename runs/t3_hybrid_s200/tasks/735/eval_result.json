@@ -1,0 +1,97 @@
+{
+  "task_id": 735,
+  "intent_template_id": 27,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/f/television/70886/-/edit",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[url]": "https://deadline.com/2022/12/lord-of-the-rings-the-rings-of-power-adds-season-2-cast-1235191374/",
+            "submission[title]": "\u2018The Lord Of The Rings: The Rings Of Power\u2019 Adds 8 To Season 2 Cast",
+            "submission[body]": "The cast is amazing!",
+            "submission[userFlag]": "none",
+            "submission[email]": "",
+            "submission[_token]": "1c55f525f1eab0bac267763f56cc22.vbCmuxTKIz7RTmljbzOofKcxIZaS57CPQE6YFC_JWEs.6Mb24X6jWWSffiY5BFnZJsNbZMTR1PbLdzftdU2ZHi3q1s6WVvpLR7Z-UQ"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/f/television/70886/-/edit",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "'the lord of the rings: the rings of power' adds 8 to season 2 cast",
+            "submission[body]": "the cast is amazing!"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/f/television/70886/-/edit",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "'the lord of the rings: the rings of power' adds 8 to season 2 cast",
+          "submission[body]": "the cast is amazing!"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}
