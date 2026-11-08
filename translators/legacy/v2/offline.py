@@ -17,10 +17,10 @@ from src.run_offline import load_steps, match
 from src.run_online import line_for
 from src.tasks import load_tasks, resolve_url
 from translators.baseline_axtree import translate as baseline_translate
-from v2 import tools
-from v2.translator import render
+from translators.legacy.v2 import tools
+from translators.legacy.v2.translator import render
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 MAX_TOOL_CALLS = 3
 
 V2_LEGEND = """

@@ -69,15 +69,15 @@ def _tiny_state():
 def test_pruned_variants_keep_interactive_ids_and_drop_noise():
     import importlib
     for name in ("prune_basic", "prune_labels", "prune_tables", "prune_sections", "prune_viewport", "prune_flat"):
-        out = importlib.import_module(f"translators.{name}").translate(_tiny_state())
+        out = importlib.import_module(f"translators.legacy.{name}").translate(_tiny_state())
         assert set(out["id_map"].values()) == {"w10", "w20"}, name
         assert "generic" not in out["text"] and out["text"].count("Home") == 1, name
-    tables = importlib.import_module("translators.prune_tables").translate(_tiny_state())["text"]
+    tables = importlib.import_module("translators.legacy.prune_tables").translate(_tiny_state())["text"]
     assert 'row: Alice | [2] button "Edit"' in tables
 
 
 def test_prune_flat_v2_keeps_blocks_dedups_values_and_groups_items():
-    from translators.prune_flat_v2 import translate
+    from translators.final_translator.prune_flat_v2 import translate
 
     def n(i, role, name="", kids=(), backend=None, value=None, ignored=False):
         d = {"nodeId": str(i), "role": {"value": role}, "name": {"value": name}, "ignored": ignored,
@@ -99,7 +99,7 @@ def test_prune_flat_v2_keeps_blocks_dedups_values_and_groups_items():
 
 
 def test_t3_hybrid_ids_only_on_choosable_and_folds_passive_text():
-    from translators.t3_hybrid import translate
+    from translators.legacy.t3_hybrid import translate
 
     def n(i, role, name="", kids=(), backend=None, focusable=False):
         return {"nodeId": str(i), "role": {"value": role}, "name": {"value": name}, "childIds": [str(k) for k in kids],

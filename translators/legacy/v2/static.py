@@ -8,7 +8,7 @@ from pathlib import Path
 
 from src.agent import ENC
 from translators.baseline_axtree import translate as baseline
-from v2.translator import render
+from translators.legacy.v2.translator import render
 
 
 def tok(text):

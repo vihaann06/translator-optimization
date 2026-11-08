@@ -1,8 +1,8 @@
 # Vendored from huskydj1/webpage-translator@f2d083c8 (translators/final/pipeline, translators/structural); imports adjusted.
 """T3: every choosable control stays visible in the outline; non-interactive content subtrees fold to one line."""
-from translators.t3.ir import IR, Node
-from translators.t3.registry import register_serializer
-from translators.t3.common import (Ids, LANDMARK_LABELS, descendants, element_line, is_landmark, is_modal, name_of)
+from translators.legacy.t3.ir import IR, Node
+from translators.legacy.t3.registry import register_serializer
+from translators.legacy.t3.common import (Ids, LANDMARK_LABELS, descendants, element_line, is_landmark, is_modal, name_of)
 
 
 @register_serializer

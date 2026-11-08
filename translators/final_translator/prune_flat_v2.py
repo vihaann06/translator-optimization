@@ -1,6 +1,6 @@
 """prune_flat plus fixes from the prune_flat_v1 online run: text blocks stay on separate lines, text repeating a
-control's value is dropped, and multi-line items of repeated containers are bulleted (see translators/pruned.py)."""
-from translators.pruned import render
+control's value is dropped, and multi-line items of repeated containers are bulleted (see translators/final_translator/pruned.py)."""
+from translators.final_translator.pruned import render
 
 
 def translate(state: dict) -> dict:

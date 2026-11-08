@@ -2,7 +2,7 @@
 """Named, principled transformation and serialization components."""
 from typing import Protocol
 
-from translators.t3.ir import IR
+from translators.legacy.t3.ir import IR
 
 
 class Pass(Protocol):

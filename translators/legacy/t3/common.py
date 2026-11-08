@@ -4,7 +4,7 @@ from collections import Counter
 import json
 import re
 
-from translators.t3.ir import IR, Node
+from translators.legacy.t3.ir import IR, Node
 
 INTERACTIVE_ROLES = frozenset({
     "button", "link", "textbox", "searchbox", "combobox", "checkbox", "radio", "switch", "slider", "spinbutton",

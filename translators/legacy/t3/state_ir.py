@@ -7,8 +7,8 @@ is_clickable upstream) is approximated by an onclick attribute or an interactive
 """
 import lxml.html
 
-from translators.t3.common import INTERACTIVE_ROLES
-from translators.t3.ir import DOM_ATTRIBUTES, IR, Bounds, Node
+from translators.legacy.t3.common import INTERACTIVE_ROLES
+from translators.legacy.t3.ir import DOM_ATTRIBUTES, IR, Bounds, Node
 
 
 def _elements(html):

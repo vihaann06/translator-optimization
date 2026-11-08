@@ -1,9 +1,9 @@
 # Vendored from huskydj1/webpage-translator@ab85cadf (translators/structural/select_serializer.py); imports adjusted.
 """T5: the hybrid outline, with each native <select> rendered as one line carrying its options inline."""
-from translators.t3.ir import Node
-from translators.t3.registry import register_serializer
-from translators.t3.common import Ids, descendants, element_line, name_of
-from translators.t3.hybrid_serializer import HybridSerializer
+from translators.legacy.t3.ir import Node
+from translators.legacy.t3.registry import register_serializer
+from translators.legacy.t3.common import Ids, descendants, element_line, name_of
+from translators.legacy.t3.hybrid_serializer import HybridSerializer
 
 MAX_INLINE_OPTIONS = 12
 

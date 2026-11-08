@@ -32,7 +32,9 @@ Map and Wikipedia are not hosted; tasks needing them are excluded.
 
 | path | what |
 |---|---|
+| `translators/final_translator/` | **final translator: prune_flat_v2** (`prune_flat_v2.py` entry point, `pruned.py` renderer) |
 | `translators/baseline_axtree.py` | baseline: Chromium AX tree outline (same renderer as webpage-translator) |
+| `translators/legacy/` | earlier experimental translators, kept for reference only (see below) |
 | `src/browser.py` | page-state capture (tags every element with `data-wid`) and action execution |
 | `src/agent.py` | fixed, representation-agnostic agent prompt, OpenAI call, action grammar |
 | `src/run_online.py` | parallel live runs + WebArena-Verified evaluation |
@@ -57,17 +59,31 @@ work from the AX tree, the HTML, or both.
 # 3. autonomous search (gpt-4.1 proposes, gpt-4.1-mini reads), budget-capped
 .venv/bin/python -m src.search --name s1 --reference runs/baseline_v1 --iterations 5 --max-cost 10
 # 4. compare translators offline: tokens/latency on all saved states + repeated replays
-.venv/bin/python -m scripts.compare_offline translators/baseline_axtree.py translators/prune_flat.py \
+.venv/bin/python -m scripts.compare_offline translators/baseline_axtree.py translators/final_translator/prune_flat_v2.py \
     --repeats 3 --split gold --out runs/compare_v1       # --static-only skips model calls
 # 5. online validation of a champion
 .venv/bin/python -m src.run_online --run champ_v1 --translator runs/search_s1/candidates/iterNN.py
 ```
 
-### Pruning translators
-`translators/pruned.py` is a task-agnostic, configurable pruned AX-tree renderer (IDs only on interactive
-elements, duplicate text and unnamed wrappers dropped, one line per table row, long option lists capped,
-compact landmarks, optional viewport window). `translators/prune_*.py` are its variants; results of the
-offline comparison are in `runs/compare_v1/SUMMARY.md`.
+### Final translator
+`translators/final_translator/` is **prune_flat_v2**, a task-agnostic pruned AX-tree outline: IDs only on
+interactive elements, duplicate text and unnamed wrappers dropped, one line per table row, dropdowns capped at
+25 options, banner/navigation/footer compacted, text blocks kept on separate lines, text repeating a control's
+value dropped, and multi-line items of repeated containers bulleted. On the 200-task subset
+(`data/subset_v2.json`, gpt-4.1-mini) it solved 59/200 vs the baseline's 61/200 (−1 pt, 95% CI −5.6 to +3.6)
+with 46% fewer prompt tokens (`runs/compare_s200_all.json`).
+
+```bash
+.venv/bin/python -m src.run_online --run final_s200 --tasks data/subset_v2.json --read-only-first \
+    --translator translators/final_translator/prune_flat_v2.py
+```
+
+### Legacy translators (not maintained)
+`translators/legacy/` holds the other experiments: `prune_*.py` (earlier configurations of the final
+renderer), `t3_hybrid.py` / `t5_select.py` with `t3/` (ports from webpage-translator), `pr1_prune_agnostic.py`
+with `pr1/` (webpage-translator PR #1 pruner without task text) and `v2_compact.py` with `v2/` (compact
+translator and its tool-using runner, `python -m translators.legacy.v2.online`). Their online results are
+under `runs/`; run configs there record the translator paths as they were at run time.
 
 ### Per-task outputs (`runs/<run>/tasks/<task_id>/`)
 `agent_response.json`, `network.har` (WebArena-Verified inputs), `eval_result.json`, `steps.jsonl`

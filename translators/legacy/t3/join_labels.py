@@ -4,9 +4,9 @@ descendant text, alt/title/placeholder, humanized id/name attribute) and drop me
 from dataclasses import replace
 import re
 
-from translators.t3.ir import IR, Node
-from translators.t3.registry import register_pass
-from translators.t3.common import actionable, clean_name
+from translators.legacy.t3.ir import IR, Node
+from translators.legacy.t3.registry import register_pass
+from translators.legacy.t3.common import actionable, clean_name
 
 LABEL_ROLES = frozenset({"LabelText", "StaticText", "paragraph", "generic", "heading", "cell", "listitem"})
 JUNK_VALUES = frozenset({"on", "off", "true", "false", "1", "0", "yes", "no"})

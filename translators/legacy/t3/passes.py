@@ -1,7 +1,7 @@
 # Vendored from huskydj1/webpage-translator@f2d083c8 (translators/final/pipeline, translators/structural); imports adjusted.
 """Remove inaccessible AX nodes without losing accessible descendants."""
-from translators.t3.ir import IR, retain
-from translators.t3.registry import register_pass
+from translators.legacy.t3.ir import IR, retain
+from translators.legacy.t3.registry import register_pass
 
 
 @register_pass
@@ -15,8 +15,8 @@ class DropIgnored:
         return retain(ir, lambda node: not node.ignored)
 
 """Collapse inert wrappers and redundant inline text fragments."""
-from translators.t3.ir import IR, Node, retain
-from translators.t3.registry import register_pass
+from translators.legacy.t3.ir import IR, Node, retain
+from translators.legacy.t3.registry import register_pass
 
 OUTLINE_STATES = frozenset({"checked", "selected", "disabled", "expanded", "pressed", "required",
                             "readonly", "multiselectable", "level", "valuemin", "valuemax", "valuetext"})
@@ -41,8 +41,8 @@ class DropNoise:
 
 """Absorb StaticText children into parent elements to reduce redundancy."""
 from dataclasses import replace
-from translators.t3.ir import IR, Node
-from translators.t3.registry import register_pass
+from translators.legacy.t3.ir import IR, Node
+from translators.legacy.t3.registry import register_pass
 
 
 @register_pass

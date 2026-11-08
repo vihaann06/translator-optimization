@@ -1,6 +1,6 @@
-from translators import v2_compact
-from v2 import tools
-from v2.translator import render
+from translators.legacy import v2_compact
+from translators.legacy.v2 import tools
+from translators.legacy.v2.translator import render
 
 
 def ax(nodes):

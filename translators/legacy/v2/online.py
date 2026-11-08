@@ -3,7 +3,7 @@
 Differences from src/run_online.run_task: change-only renders chained across steps (memo), the v2 legend in the
 system prompt, a visited-pages line, local query/expand tools answered in-loop (extra LLM calls are counted),
 and a multi-field fill action executed in the browser. Usage: same flags as src.run_online, e.g.
-  python -m v2.online --run v2_online --tasks data/subset_v1.json --concurrency 8 --max-steps 30
+  python -m translators.legacy.v2.online --run v2_online --tasks data/subset_v1.json --concurrency 8 --max-steps 30
 """
 import asyncio
 import json
@@ -14,9 +14,9 @@ from src import agent as agent_lib
 from src.browser import capture, execute
 from src.run_online import line_for, write_gz
 from src.tasks import resolve_url
-from v2 import tools
-from v2.offline import MAX_TOOL_CALLS, V2_LEGEND, parse_any
-from v2.translator import render
+from translators.legacy.v2 import tools
+from translators.legacy.v2.offline import MAX_TOOL_CALLS, V2_LEGEND, parse_any
+from translators.legacy.v2.translator import render
 
 
 async def run_fill(page, action, id_map, text):
