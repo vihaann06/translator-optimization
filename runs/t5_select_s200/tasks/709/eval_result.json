@@ -1,0 +1,115 @@
+{
+  "task_id": 709,
+  "intent_template_id": 271,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "Orders report from May 1, 2021 to March 31, 2022 displayed with total orders: 41, total sales items: 124, total sales amount: $5,559.33, total shipping: $620.00, total discount: $176.11."
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "navigate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected navigate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:7780/admin/reports/report_sales/sales/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1kYXkmZnJvbT0wNSUyRjAxJTJGMjAyMSZ0bz0wMyUyRjMxJTJGMjAyMiZzaG93X29yZGVyX3N0YXR1c2VzPTAmc2hvd19lbXB0eV9yb3dzPTAmc2hvd19hY3R1YWxfY29sdW1ucz0w/",
+          "headers": null,
+          "query_params": null,
+          "post_data": null,
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "GET",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING_ADMIN__/reports/report_sales/sales/filter",
+            "query_params": {
+              "report_type": [
+                "created_at_order"
+              ],
+              "from": [
+                "2021-05-01"
+              ],
+              "to": [
+                "2022-03-31"
+              ]
+            }
+          },
+          "response_status": 200,
+          "http_method": "GET",
+          "post_data": null,
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING_ADMIN__/reports/report_sales/sales/filter",
+          "query_params": {
+            "report_type": [
+              "created_at_order"
+            ],
+            "from": [
+              "2021-05-01"
+            ],
+            "to": [
+              "2022-03-31"
+            ]
+          }
+        },
+        "response_status": 200,
+        "http_method": "GET",
+        "post_data": null,
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

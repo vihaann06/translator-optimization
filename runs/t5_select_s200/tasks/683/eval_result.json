@@ -1,0 +1,113 @@
+{
+  "task_id": 683,
+  "intent_template_id": 116,
+  "sites": [
+    "reddit",
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/technology",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "byteblaze/metaseq",
+            "submission[body]": "7 commit(s) already!",
+            "submission[forum]": "10082",
+            "submission[userFlag]": "none",
+            "submission[_token]": "ebe6072a.x5x6zK90dSh_iv9NUcc5vDZJJ_Zid-Ds3qWfr_FKa7A._tI8j-hHHUYL05gXM5Za8mNkZqY9A6Oet-vo570ZEci-5iWGlzwnTDfGiA"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/technology",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[url]": null,
+            "submission[title]": "byteblaze/metaseq",
+            "submission[body]": "7 commit(s) already!",
+            "submission[forum]": "10082"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/submit/?.*$",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[mediaType]": "url",
+          "submission[url]": "__gitlab__/facebook/metaseq",
+          "submission[title]": "facebook/metaseq",
+          "submission[body]": "272 commits already!",
+          "submission[forum]": "^(10043|10018)$"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

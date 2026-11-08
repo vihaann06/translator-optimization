@@ -1,0 +1,93 @@
+{
+  "task_id": 652,
+  "intent_template_id": 23,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/f/technology/134852/-/comment",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "reply_to_submission_134852[comment]": "???",
+            "reply_to_submission_134852[userFlag]": "none",
+            "reply_to_submission_134852[email]": "",
+            "reply_to_submission_134852[_token]": "4.gAigQEAhQBl7dXpZThiTOnup6yx2qmYR7bkjNld1HOA.xzrlcDR-FHQdQBUyF3nAUxjR2nUXwRJ224xreDwSWI3hfY0FDmN3TBgATg"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/f/technology/134852/-/comment",
+            "query_params": {}
+          },
+          "post_data": {
+            "reply_to_submission_134852[comment]": "???"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/f/technology/134852/-/comment",
+          "query_params": {}
+        },
+        "post_data": {
+          "reply_to_submission_134852[comment]": "???"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

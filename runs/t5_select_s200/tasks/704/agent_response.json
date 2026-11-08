@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "Sales order report for February 2023 shown, no records found."
+  ],
+  "error_details": null
+}

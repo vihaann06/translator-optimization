@@ -1,0 +1,58 @@
+{
+  "task_id": 214,
+  "intent_template_id": 249,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "title": "doesn't fit me. luma fail.",
+            "rating": "2"
+          },
+          {
+            "title": "does not fit. worthless.",
+            "rating": "1"
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_missing_or_null",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected retrieved_data to be ({'title': NormalizedString(\"Doesn't fit me. Luma fail.\" -> \"doesn't fit me. luma fail.\"), 'rating': NormalizedString('2')}, {'title': NormalizedString('does not fit. worthless.'), 'rating': NormalizedString('1')}), but got None or empty"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

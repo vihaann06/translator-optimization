@@ -1,0 +1,69 @@
+{
+  "task_id": 213,
+  "intent_template_id": 249,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          {
+            "title": "Zero support/modesty",
+            "rating": 3
+          }
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": [
+          {
+            "title": "zero support/modesty",
+            "rating": "3"
+          }
+        ],
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "title": "zero support/modesty",
+            "rating": "2"
+          },
+          {
+            "title": "not for high impact",
+            "rating": "3"
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (0/2), Missing: 2, Extra: 1",
+            "Expected: [{'title': NormalizedString('Zero support/modesty' -> 'zero support/modesty'), 'rating': NormalizedString('2')}, {'title': NormalizedString('Not for high impact' -> 'not for high impact'), 'rating': NormalizedString('3')}], Got: [{'title': NormalizedString('Zero support/modesty' -> 'zero support/modesty'), 'rating': NormalizedString(3 -> '3')}]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

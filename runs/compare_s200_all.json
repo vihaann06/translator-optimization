@@ -1,0 +1,187 @@
+{
+ "baseline_s200": {
+  "solved": 61,
+  "n": 200,
+  "success": 0.305,
+  "steps": 2652,
+  "hit_cap": 50,
+  "prompt_tokens_total": 16423188,
+  "prompt_tokens_mean": 6193,
+  "prompt_tokens_median": 3992,
+  "prompt_tokens_p90": 12083,
+  "prompt_tokens_max": 41187,
+  "page_tokens_mean": 5753,
+  "truncated_pages": 42,
+  "tokens_per_task": 82116,
+  "model_latency_mean": 1.022,
+  "model_latency_p90": 1.29,
+  "wall_per_step": 2.6,
+  "wall_per_task": 34.4,
+  "cost_usd": 6.7337,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "20/49",
+   "multi": "0/13",
+   "reddit": "16/38",
+   "shopping": "13/50",
+   "shopping_admin": "12/50"
+  },
+  "by_difficulty": {
+   "hard": "26/100",
+   "normal": "35/100"
+  },
+  "by_type": {
+   "MUTATE": "37/114",
+   "NAVIGATE": "5/22",
+   "RETRIEVE": "19/64"
+  }
+ },
+ "prune_flat_v2_s200": {
+  "solved": 59,
+  "n": 200,
+  "success": 0.295,
+  "steps": 2624,
+  "hit_cap": 48,
+  "prompt_tokens_total": 8826214,
+  "prompt_tokens_mean": 3364,
+  "prompt_tokens_median": 2253,
+  "prompt_tokens_p90": 5687,
+  "prompt_tokens_max": 32939,
+  "page_tokens_mean": 2337,
+  "truncated_pages": 0,
+  "tokens_per_task": 44131,
+  "model_latency_mean": 0.914,
+  "model_latency_p90": 1.21,
+  "wall_per_step": 2.7,
+  "wall_per_task": 35.5,
+  "cost_usd": 3.7474,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "20/49",
+   "multi": "0/13",
+   "reddit": "15/38",
+   "shopping": "13/50",
+   "shopping_admin": "11/50"
+  },
+  "by_difficulty": {
+   "hard": "25/100",
+   "normal": "34/100"
+  },
+  "by_type": {
+   "MUTATE": "36/114",
+   "NAVIGATE": "6/22",
+   "RETRIEVE": "17/64"
+  }
+ },
+ "t3_hybrid_s200": {
+  "solved": 61,
+  "n": 200,
+  "success": 0.305,
+  "steps": 2510,
+  "hit_cap": 44,
+  "prompt_tokens_total": 11940666,
+  "prompt_tokens_mean": 4757,
+  "prompt_tokens_median": 2608,
+  "prompt_tokens_p90": 7972,
+  "prompt_tokens_max": 41045,
+  "page_tokens_mean": 3896,
+  "truncated_pages": 17,
+  "tokens_per_task": 59703,
+  "model_latency_mean": 1.04,
+  "model_latency_p90": 1.42,
+  "wall_per_step": 3.01,
+  "wall_per_task": 37.8,
+  "cost_usd": 5.0093,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "20/49",
+   "multi": "0/13",
+   "reddit": "18/38",
+   "shopping": "14/50",
+   "shopping_admin": "9/50"
+  },
+  "by_difficulty": {
+   "hard": "27/100",
+   "normal": "34/100"
+  },
+  "by_type": {
+   "MUTATE": "39/114",
+   "NAVIGATE": "5/22",
+   "RETRIEVE": "17/64"
+  }
+ },
+ "pr1_prune_agnostic_s200": {
+  "solved": 31,
+  "n": 200,
+  "success": 0.155,
+  "steps": 4210,
+  "hit_cap": 122,
+  "prompt_tokens_total": 15413230,
+  "prompt_tokens_mean": 3661,
+  "prompt_tokens_median": 3398,
+  "prompt_tokens_p90": 5867,
+  "prompt_tokens_max": 41087,
+  "page_tokens_mean": 2809,
+  "truncated_pages": 6,
+  "tokens_per_task": 77066,
+  "model_latency_mean": 0.876,
+  "model_latency_p90": 1.07,
+  "wall_per_step": 1.89,
+  "wall_per_task": 39.8,
+  "cost_usd": 6.5097,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "16/49",
+   "multi": "0/13",
+   "reddit": "3/38",
+   "shopping": "7/50",
+   "shopping_admin": "5/50"
+  },
+  "by_difficulty": {
+   "hard": "14/100",
+   "normal": "17/100"
+  },
+  "by_type": {
+   "MUTATE": "19/114",
+   "NAVIGATE": "2/22",
+   "RETRIEVE": "10/64"
+  }
+ },
+ "t5_select_s200": {
+  "solved": 56,
+  "n": 200,
+  "success": 0.28,
+  "steps": 2615,
+  "hit_cap": 48,
+  "prompt_tokens_total": 10828719,
+  "prompt_tokens_mean": 4141,
+  "prompt_tokens_median": 2714,
+  "prompt_tokens_p90": 5029,
+  "prompt_tokens_max": 40853,
+  "page_tokens_mean": 3261,
+  "truncated_pages": 1,
+  "tokens_per_task": 54144,
+  "model_latency_mean": 0.961,
+  "model_latency_p90": 1.24,
+  "wall_per_step": 2.4,
+  "wall_per_task": 31.4,
+  "cost_usd": 4.569,
+  "runner_errors": [],
+  "by_site": {
+   "gitlab": "19/49",
+   "multi": "0/13",
+   "reddit": "15/38",
+   "shopping": "12/50",
+   "shopping_admin": "10/50"
+  },
+  "by_difficulty": {
+   "hard": "24/100",
+   "normal": "32/100"
+  },
+  "by_type": {
+   "MUTATE": "36/114",
+   "NAVIGATE": "4/22",
+   "RETRIEVE": "16/64"
+  }
+ }
+}

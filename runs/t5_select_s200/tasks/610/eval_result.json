@@ -1,0 +1,164 @@
+{
+  "task_id": 610,
+  "intent_template_id": 9,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/books",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "To Kill a Mockingbird by Harper Lee",
+            "submission[body]": "This is a profound and timeless novel that explores themes of racial injustice and moral growth through the eyes of a child. Highly recommended!",
+            "submission[forum]": "10037",
+            "submission[userFlag]": "none",
+            "submission[_token]": "86ff4ccf2072f80a656b9.NH_MPveUK7cRJ8l9jQeH66hZypc7eF68FR5x3FQFd1Q.QEukS7PnHvBGSrhJ_Ej9nd0rpKB1LgvjIWgh5QtyBGdyGosNw-Vx0Wcf-Q"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/books",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "to kill a mockingbird by harper lee",
+            "submission[forum]": "10037"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/submit",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "to kill a mockingbird by harper lee",
+          "submission[forum]": "10037"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/f/books/5/-/comment",
+          "headers": {
+            "referer": "http://localhost:9999/f/books/5/to-kill-a-mockingbird-by-harper-lee"
+          },
+          "query_params": null,
+          "post_data": {
+            "reply_to_submission_5[comment]": "good book!",
+            "reply_to_submission_5[userFlag]": "none",
+            "reply_to_submission_5[email]": "",
+            "reply_to_submission_5[_token]": "97916788788bc23.LpfeeyTjfxvwLFeyw62nbpKEmXlTD94mGXY8zQQC7KQ.ROOdE3uKSC21eSXx8vrKINj3rgsWPbhCYSVonWhWj8pf_JMJXY4HVJxkHg"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/f/books/5/-/comment",
+            "query_params": {}
+          },
+          "headers": {
+            "referer": {
+              "base_url": "__REDDIT__/f/books/5/to-kill-a-mockingbird-by-harper-lee",
+              "query_params": {}
+            }
+          },
+          "post_data": {
+            "$.^reply_to_submission_\\d+\\[comment\\]$": "good book!"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "^__REDDIT__/f/books/\\d+/-/comment$",
+          "query_params": {}
+        },
+        "headers": {
+          "referer": {
+            "base_url": "^__REDDIT__/f/books/\\d+/to-kill-a-mockingbird-by-harper-lee$",
+            "query_params": {}
+          }
+        },
+        "post_data": {
+          "$.^reply_to_submission_\\d+\\[comment\\]$": "good book!"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

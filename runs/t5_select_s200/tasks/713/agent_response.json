@@ -1,0 +1,8 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "No best sellers records found from May 1, 2022 to May 31, 2023."
+  ],
+  "error_details": null
+}

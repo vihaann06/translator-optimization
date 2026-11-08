@@ -1,0 +1,97 @@
+{
+  "task_id": 645,
+  "intent_template_id": 19,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/books",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "What could machine learning help the books field?",
+            "submission[body]": "How could machine learning help in the books field? For example, could it assist in book recommendations, automated editing, or analyzing literary trends? Looking forward to hearing your thoughts!",
+            "submission[forum]": "10037",
+            "submission[userFlag]": "none",
+            "submission[_token]": "49f66cbbda1c35f7.L6mXKaVBRV61GpTKIqCtwzFq9pmf6b1r6NLJ4pf_Sac.XsL0Q5cvLDT0c-GzcY39qVUCkfTYj_s-g6SoiO2-PsZpxs5j8QUJLs9r-w"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/books",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "what could machine learning help the books field?",
+            "submission[forum]": "10037"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/submit",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "what could machine learning help the books field?",
+          "submission[forum]": "10037"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

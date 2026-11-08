@@ -1,0 +1,99 @@
+{
+  "task_id": 640,
+  "intent_template_id": 16,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/books",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "book reading Meet up!",
+            "submission[body]": "virtual meetup for book reading on March 15th",
+            "submission[forum]": "10037",
+            "submission[userFlag]": "none",
+            "submission[_token]": "d9883e64758f75ab1c1e75.VUMIu58MgRP_JO0TxNWj_96WSrIOXqzn7sgvghBZyMM.AxU4i7J_tnuSUotlr7zWirj1Z8pcFNWJt4NV0EocvagHcWqJ-WrOZY59qA"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/books",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "book reading meet up!",
+            "submission[body]": "virtual meetup for book reading on march 15th",
+            "submission[forum]": "10037"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/submit",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "book reading meet up!",
+          "submission[body]": "virtual meetup for book reading on march 15th",
+          "submission[forum]": "10037"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

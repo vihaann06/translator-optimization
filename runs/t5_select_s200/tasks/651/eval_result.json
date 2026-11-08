@@ -1,0 +1,93 @@
+{
+  "task_id": 651,
+  "intent_template_id": 23,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/f/pittsburgh/45899/-/comment",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "reply_to_submission_45899[comment]": "Yeah, pittsburgh traffic, you know...",
+            "reply_to_submission_45899[userFlag]": "none",
+            "reply_to_submission_45899[email]": "",
+            "reply_to_submission_45899[_token]": "d36b402c984d49f67aa9f6a699b.ugxAYEn0S0XDvc7y-km7tdENg1QkWl-AdAUYFPOnbH8.7CEKEC6Aeib687zEsyLM5bpmsjV7aDOwEVRQfMTJCzPKZQENJ659JpH2uQ"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/f/pittsburgh/45899/-/comment",
+            "query_params": {}
+          },
+          "post_data": {
+            "reply_to_submission_45899[comment]": "yeah, pittsburgh traffic, you know..."
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/f/pittsburgh/45899/-/comment",
+          "query_params": {}
+        },
+        "post_data": {
+          "reply_to_submission_45899[comment]": "yeah, pittsburgh traffic, you know..."
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

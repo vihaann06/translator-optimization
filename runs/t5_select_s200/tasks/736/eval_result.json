@@ -1,0 +1,145 @@
+{
+  "task_id": 736,
+  "intent_template_id": 355,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/byteblaze/gimmiethat.space/-/update/main/LICENSE",
+          "query_params": {}
+        },
+        "post_data": {
+          "$.^file_path|file_name$": "license",
+          "branch_name": "main",
+          "content": "^.*MIT.*License.*$",
+          "_method": "^.*(?!delete$).*$"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/byteblaze/dotfiles/-/create/main",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "md3pJ5oLNhvktYiGHo6rfO0mZeYCPImjQmq/i3fmseniHsbIKDBepbNfwpaYNGfPJuvaRVqtJpRVHjfumI64SQ==",
+            "file_name": "LICENSE",
+            "commit_message": "Add LICENSE",
+            "branch_name": "main",
+            "original_branch": "main",
+            "content": "MIT License\r\n\r\nCopyright (c) 2026 Byte Blaze\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/byteblaze/dotfiles/-/create/main",
+            "query_params": {}
+          },
+          "post_data": {
+            "branch_name": "main",
+            "content": "mit license copyright (c) 2026 byte blaze permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"software\"), to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, and to permit persons to whom the software is furnished to do so, subject to the following conditions: the above copyright notice and this permission notice shall be included in all copies or substantial portions of the software. the software is provided \"as is\", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.",
+            "_method": null,
+            "$.^file_path|file_name$": "license"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/byteblaze/dotfiles/-/update/main/LICENSE",
+          "query_params": {}
+        },
+        "post_data": {
+          "$.^file_path|file_name$": "license",
+          "branch_name": "main",
+          "content": "^.*MIT.*License.*$",
+          "_method": "^.*(?!delete$).*$"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

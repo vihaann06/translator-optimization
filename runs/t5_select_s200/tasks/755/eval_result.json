@@ -1,0 +1,105 @@
+{
+  "task_id": 755,
+  "intent_template_id": 332,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/projects",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "H2y0Mm21C6vhs0VIO+esUxq68O904rm3/B/qjjM+Rflkr5vd345jFbZZD1i9XWDg0XdPTCxzFoDra2Lr3FZMWQ==",
+            "project[template_name]": "plainhtml",
+            "project[ci_cd_only]": "false",
+            "project[name]": "web_agent_index",
+            "project[namespace_id]": "2505",
+            "project[path]": "web_agent_index",
+            "project[description]": "",
+            "project[visibility_level]": "0"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/projects",
+            "query_params": {}
+          },
+          "post_data": {
+            "project[template_name]": "plainhtml",
+            "project[name]": "web_agent_index",
+            "project[namespace_id]": "2505",
+            "project[path]": "web_agent_index",
+            "project[visibility_level]": "0"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/projects",
+          "query_params": {}
+        },
+        "post_data": {
+          "project[template_name]": "plainhtml",
+          "project[name]": "web_agent_index",
+          "project[namespace_id]": "2505",
+          "project[path]": "web_agent_index",
+          "project[visibility_level]": "0"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

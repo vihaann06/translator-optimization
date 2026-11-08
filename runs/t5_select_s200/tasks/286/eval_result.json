@@ -1,0 +1,104 @@
+{
+  "task_id": 286,
+  "intent_template_id": 207,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "SK hynix Gold S31 1TB SATA Gen3 2.5 inch Internal SSD | Price: $97.99 | Capacity: 1TB | URL: http://localhost:7770/sk-hynix-gold-s31-1tb-sata-gen3-2-5-inch-internal-ssd-ssd-1tb-up-to-560mb-s-solid-state-drive-compact-2-5-ssd-form-factor-sk-hynix-ssd-internal-solid-state-drive-sata-ssd.html"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "navigate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected navigate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [
+        {
+          "url": "http://localhost:7770/sk-hynix-gold-s31-1tb-sata-gen3-2-5-inch-internal-ssd-ssd-1tb-up-to-560mb-s-solid-state-drive-compact-2-5-ssd-form-factor-sk-hynix-ssd-internal-solid-state-drive-sata-ssd.html",
+          "headers": null,
+          "query_params": null,
+          "post_data": null,
+          "response_content": null,
+          "response_status": 200,
+          "http_method": "GET",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__SHOPPING__/sk-hynix-gold-s31-1tb-sata-gen3-2-5-inch-internal-ssd-ssd-1tb-up-to-560mb-s-solid-state-drive-compact-2-5-ssd-form-factor-sk-hynix-ssd-internal-solid-state-drive-sata-ssd.html",
+            "query_params": {}
+          },
+          "response_status": 200,
+          "http_method": "GET",
+          "post_data": null,
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING__/portable-ssd-2tb-external-hard-drive-mobile-solid-state-drive-portable-hard-drive-for-pc-laptop-and-mac-data-storage-and-transfer-2tb-silver.html",
+          "query_params": {}
+        },
+        "response_status": 200,
+        "http_method": "GET",
+        "post_data": null,
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found. Checked 1 event(s) but none matched all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

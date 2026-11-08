@@ -1,0 +1,99 @@
+{
+  "task_id": 631,
+  "intent_template_id": 15,
+  "sites": [
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "status": "success",
+        "retrieved_data": null,
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:9999/submit/sports",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "submission[mediaType]": "url",
+            "submission[title]": "running shoes recommendations?",
+            "submission[body]": "Hey, looking for good running shoes under $100, any suggestions?",
+            "submission[forum]": "10080",
+            "submission[userFlag]": "none",
+            "submission[_token]": "c5f7947055cced5bb3daebaedde.2pXAZDHCIqG1EJaGUz7e97K0PpPAJy2dKEdGS1S1wAo.k6eYC2mbQYzkZcfsP2a5s4PFd6GPamyvZygwBwvM-WPq25MOWadz6uZ88Q"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__REDDIT__/submit/sports",
+            "query_params": {}
+          },
+          "post_data": {
+            "submission[title]": "running shoes recommendations?",
+            "submission[body]": "hey, looking for good running shoes under $100, any suggestions?",
+            "submission[forum]": "10080"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__REDDIT__/submit",
+          "query_params": {}
+        },
+        "post_data": {
+          "submission[title]": "running shoes recommendations?",
+          "submission[body]": "hey, looking for good running shoes under $100, any suggestions?",
+          "submission[forum]": "10080"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}
