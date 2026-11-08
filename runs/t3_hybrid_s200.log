@@ -1,0 +1,688 @@
+{"task_id": 0, "steps": 1, "cost_usd": 0.001177, "wall_s": 4.3, "stopped": true, "error": null}
+{"task_id": 44, "steps": 2, "cost_usd": 0.0020280000000000003, "wall_s": 5.2, "stopped": true, "error": null}
+{"task_id": 26, "steps": 3, "cost_usd": 0.0053170000000000005, "wall_s": 6.3, "stopped": true, "error": null}
+{"task_id": 49, "steps": 2, "cost_usd": 0.002386, "wall_s": 7.0, "stopped": true, "error": null}
+{"task_id": 25, "steps": 5, "cost_usd": 0.010839, "wall_s": 9.8, "stopped": true, "error": null}
+{"task_id": 15, "steps": 4, "cost_usd": 0.006654, "wall_s": 10.2, "stopped": true, "error": null}
+{"task_id": 77, "steps": 3, "cost_usd": 0.003287, "wall_s": 5.6, "stopped": true, "error": null}
+{"task_id": 94, "steps": 5, "cost_usd": 0.004472, "wall_s": 18.2, "stopped": true, "error": null}
+{"task_id": 31, "steps": 8, "cost_usd": 0.041675, "wall_s": 41.3, "stopped": false, "error": null}
+{"task_id": 27, "steps": 4, "cost_usd": 0.019961, "wall_s": 41.3, "stopped": true, "error": null}
+{"task_id": 105, "steps": 5, "cost_usd": 0.005919, "wall_s": 40.2, "stopped": true, "error": null}
+{"task_id": 117, "steps": 2, "cost_usd": 0.002333, "wall_s": 11.6, "stopped": true, "error": null}
+{"task_id": 112, "steps": 8, "cost_usd": 0.010169000000000001, "wall_s": 47.7, "stopped": true, "error": null}
+{"task_id": 113, "steps": 5, "cost_usd": 0.024897, "wall_s": 47.3, "stopped": true, "error": null}
+{"task_id": 118, "steps": 5, "cost_usd": 0.006928, "wall_s": 40.9, "stopped": true, "error": null}
+{"task_id": 125, "steps": 2, "cost_usd": 0.002996, "wall_s": 15.8, "stopped": true, "error": null}
+{"task_id": 66, "steps": 19, "cost_usd": 0.024204, "wall_s": 89.9, "stopped": true, "error": null}
+{"task_id": 127, "steps": 1, "cost_usd": 0.00111, "wall_s": 9.1, "stopped": true, "error": null}
+{"task_id": 128, "steps": 1, "cost_usd": 0.001104, "wall_s": 7.9, "stopped": true, "error": null}
+{"task_id": 141, "steps": 3, "cost_usd": 0.003345, "wall_s": 18.7, "stopped": true, "error": null}
+{"task_id": 134, "steps": 7, "cost_usd": 0.016461, "wall_s": 36.7, "stopped": true, "error": null}
+{"task_id": 50, "steps": 29, "cost_usd": 0.032901, "wall_s": 143.4, "stopped": true, "error": null}
+{"task_id": 146, "steps": 11, "cost_usd": 0.011810999999999999, "wall_s": 62.0, "stopped": true, "error": null}
+{"task_id": 165, "steps": 3, "cost_usd": 0.0039049999999999996, "wall_s": 15.1, "stopped": true, "error": null}
+{"task_id": 170, "steps": 1, "cost_usd": 0.001393, "wall_s": 3.1, "stopped": true, "error": null}
+{"task_id": 160, "steps": 5, "cost_usd": 0.006759, "wall_s": 34.4, "stopped": true, "error": null}
+{"task_id": 174, "steps": 2, "cost_usd": 0.002451, "wall_s": 10.2, "stopped": true, "error": null}
+{"task_id": 64, "steps": 30, "cost_usd": 0.23217, "wall_s": 193.8, "stopped": false, "error": null}
+{"task_id": 178, "steps": 4, "cost_usd": 0.004345, "wall_s": 21.9, "stopped": true, "error": null}
+{"task_id": 188, "steps": 2, "cost_usd": 0.002323, "wall_s": 11.6, "stopped": true, "error": null}
+{"task_id": 184, "steps": 3, "cost_usd": 0.017828, "wall_s": 22.3, "stopped": true, "error": null}
+{"task_id": 197, "steps": 1, "cost_usd": 0.001108, "wall_s": 3.8, "stopped": true, "error": null}
+{"task_id": 110, "steps": 30, "cost_usd": 0.305386, "wall_s": 205.1, "stopped": false, "error": null}
+{"task_id": 120, "steps": 30, "cost_usd": 0.08351399999999999, "wall_s": 181.3, "stopped": false, "error": null}
+{"task_id": 200, "steps": 6, "cost_usd": 0.04684, "wall_s": 31.8, "stopped": true, "error": null}
+{"task_id": 201, "steps": 6, "cost_usd": 0.037067, "wall_s": 30.2, "stopped": true, "error": null}
+{"task_id": 212, "steps": 3, "cost_usd": 0.005327, "wall_s": 13.1, "stopped": true, "error": null}
+{"task_id": 142, "steps": 30, "cost_usd": 0.031274, "wall_s": 151.5, "stopped": false, "error": null}
+{"task_id": 157, "steps": 20, "cost_usd": 0.062777, "wall_s": 127.4, "stopped": false, "error": null}
+{"task_id": 226, "steps": 2, "cost_usd": 0.002959, "wall_s": 9.1, "stopped": true, "error": null}
+{"task_id": 228, "steps": 2, "cost_usd": 0.0025570000000000002, "wall_s": 5.9, "stopped": true, "error": null}
+{"task_id": 225, "steps": 4, "cost_usd": 0.004795, "wall_s": 16.1, "stopped": true, "error": null}
+{"task_id": 233, "steps": 2, "cost_usd": 0.0023, "wall_s": 5.3, "stopped": true, "error": null}
+{"task_id": 147, "steps": 30, "cost_usd": 0.032389, "wall_s": 151.1, "stopped": false, "error": null}
+{"task_id": 235, "steps": 2, "cost_usd": 0.002369, "wall_s": 6.6, "stopped": true, "error": null}
+{"task_id": 258, "steps": 2, "cost_usd": 0.0030429999999999997, "wall_s": 5.3, "stopped": true, "error": null}
+{"task_id": 260, "steps": 2, "cost_usd": 0.002918, "wall_s": 7.7, "stopped": true, "error": null}
+{"task_id": 259, "steps": 5, "cost_usd": 0.006139, "wall_s": 11.9, "stopped": true, "error": null}
+{"task_id": 245, "steps": 6, "cost_usd": 0.027832999999999997, "wall_s": 21.9, "stopped": true, "error": null}
+{"task_id": 277, "steps": 2, "cost_usd": 0.003244, "wall_s": 7.5, "stopped": true, "error": null}
+{"task_id": 208, "steps": 30, "cost_usd": 0.03463, "wall_s": 72.3, "stopped": false, "error": null}
+{"task_id": 281, "steps": 2, "cost_usd": 0.003179, "wall_s": 9.0, "stopped": true, "error": null}
+{"task_id": 293, "steps": 2, "cost_usd": 0.001889, "wall_s": 4.2, "stopped": true, "error": null}
+{"task_id": 241, "steps": 11, "cost_usd": 0.014769, "wall_s": 37.5, "stopped": true, "error": null}
+{"task_id": 295, "steps": 2, "cost_usd": 0.0019160000000000002, "wall_s": 4.3, "stopped": true, "error": null}
+{"task_id": 213, "steps": 18, "cost_usd": 0.062131, "wall_s": 66.6, "stopped": true, "error": null}
+{"task_id": 191, "steps": 30, "cost_usd": 0.0325, "wall_s": 109.3, "stopped": false, "error": null}
+{"task_id": 303, "steps": 4, "cost_usd": 0.008612, "wall_s": 14.4, "stopped": true, "error": null}
+{"task_id": 313, "steps": 2, "cost_usd": 0.002079, "wall_s": 7.8, "stopped": true, "error": null}
+{"task_id": 286, "steps": 12, "cost_usd": 0.016465, "wall_s": 41.6, "stopped": true, "error": null}
+{"task_id": 316, "steps": 4, "cost_usd": 0.0030009999999999998, "wall_s": 15.2, "stopped": true, "error": null}
+{"task_id": 314, "steps": 4, "cost_usd": 0.009172, "wall_s": 19.5, "stopped": true, "error": null}
+{"task_id": 323, "steps": 3, "cost_usd": 0.003393, "wall_s": 11.3, "stopped": true, "error": null}
+{"task_id": 312, "steps": 10, "cost_usd": 0.015841, "wall_s": 50.7, "stopped": true, "error": null}
+{"task_id": 339, "steps": 3, "cost_usd": 0.004429000000000001, "wall_s": 21.3, "stopped": true, "error": null}
+{"task_id": 325, "steps": 5, "cost_usd": 0.007684, "wall_s": 28.2, "stopped": true, "error": null}
+{"task_id": 343, "steps": 3, "cost_usd": 0.004002, "wall_s": 10.9, "stopped": true, "error": null}
+{"task_id": 348, "steps": 5, "cost_usd": 0.009049000000000001, "wall_s": 17.7, "stopped": true, "error": null}
+{"task_id": 299, "steps": 19, "cost_usd": 0.019169, "wall_s": 79.8, "stopped": true, "error": null}
+{"task_id": 357, "steps": 3, "cost_usd": 0.003508, "wall_s": 8.8, "stopped": true, "error": null}
+{"task_id": 349, "steps": 4, "cost_usd": 0.004791, "wall_s": 22.8, "stopped": true, "error": null}
+{"task_id": 360, "steps": 5, "cost_usd": 0.005242, "wall_s": 15.9, "stopped": true, "error": null}
+{"task_id": 269, "steps": 30, "cost_usd": 0.047248000000000005, "wall_s": 117.3, "stopped": false, "error": null}
+{"task_id": 388, "steps": 6, "cost_usd": 0.009415, "wall_s": 34.5, "stopped": true, "error": null}
+{"task_id": 214, "steps": 28, "cost_usd": 0.096938, "wall_s": 172.2, "stopped": true, "error": null}
+{"task_id": 679, "steps": 5, "cost_usd": 0.0357, "wall_s": 34.3, "stopped": true, "error": null}
+{"task_id": 676, "steps": 7, "cost_usd": 0.037303, "wall_s": 44.1, "stopped": true, "error": null}
+{"task_id": 708, "steps": 7, "cost_usd": 0.006293999999999999, "wall_s": 35.3, "stopped": true, "error": null}
+{"task_id": 704, "steps": 8, "cost_usd": 0.007378999999999998, "wall_s": 41.4, "stopped": true, "error": null}
+{"task_id": 709, "steps": 6, "cost_usd": 0.007051, "wall_s": 22.3, "stopped": true, "error": null}
+{"task_id": 713, "steps": 10, "cost_usd": 0.010316, "wall_s": 27.0, "stopped": true, "error": null}
+{"task_id": 785, "steps": 6, "cost_usd": 0.007684, "wall_s": 23.9, "stopped": true, "error": null}
+{"task_id": 788, "steps": 8, "cost_usd": 0.008254000000000001, "wall_s": 20.8, "stopped": true, "error": null}
+{"task_id": 335, "steps": 30, "cost_usd": 0.029643, "wall_s": 117.8, "stopped": false, "error": null}
+{"task_id": 288, "steps": 30, "cost_usd": 0.217951, "wall_s": 172.3, "stopped": false, "error": null}
+{"task_id": 793, "steps": 30, "cost_usd": 0.05091799999999999, "wall_s": 124.1, "stopped": false, "error": null}
+{"task_id": 399, "steps": 6, "cost_usd": 0.005257, "wall_s": 7.9, "stopped": true, "error": null}
+{"task_id": 390, "steps": 6, "cost_usd": 0.007678000000000001, "wall_s": 15.2, "stopped": true, "error": null}
+{"task_id": 402, "steps": 6, "cost_usd": 0.005306, "wall_s": 9.4, "stopped": true, "error": null}
+{"task_id": 405, "steps": 10, "cost_usd": 0.013243, "wall_s": 23.5, "stopped": true, "error": null}
+{"task_id": 396, "steps": 17, "cost_usd": 0.014396000000000004, "wall_s": 30.8, "stopped": true, "error": null}
+{"task_id": 408, "steps": 4, "cost_usd": 0.005487, "wall_s": 6.0, "stopped": true, "error": null}
+{"task_id": 432, "steps": 30, "cost_usd": 0.033224, "wall_s": 47.9, "stopped": false, "error": null}
+{"task_id": 580, "steps": 8, "cost_usd": 0.005062, "wall_s": 13.4, "stopped": true, "error": null}
+{"task_id": 582, "steps": 8, "cost_usd": 0.00501, "wall_s": 15.3, "stopped": true, "error": null}
+{"task_id": 397, "steps": 16, "cost_usd": 0.01379, "wall_s": 29.7, "stopped": true, "error": null}
+{"task_id": 416, "steps": 5, "cost_usd": 0.009922, "wall_s": 16.5, "stopped": true, "error": null}
+{"task_id": 598, "steps": 6, "cost_usd": 0.032781000000000005, "wall_s": 24.2, "stopped": true, "error": null}
+{"task_id": 434, "steps": 30, "cost_usd": 0.033251, "wall_s": 59.0, "stopped": false, "error": null}
+{"task_id": 419, "steps": 6, "cost_usd": 0.007814999999999999, "wall_s": 19.7, "stopped": true, "error": null}
+{"task_id": 599, "steps": 6, "cost_usd": 0.013261, "wall_s": 18.6, "stopped": true, "error": null}
+{"task_id": 442, "steps": 11, "cost_usd": 0.008781, "wall_s": 28.7, "stopped": true, "error": null}
+{"task_id": 423, "steps": 30, "cost_usd": 0.39142199999999994, "wall_s": 146.0, "stopped": false, "error": null}
+{"task_id": 603, "steps": 18, "cost_usd": 0.016645000000000004, "wall_s": 32.2, "stopped": true, "error": null}
+{"task_id": 438, "steps": 12, "cost_usd": 0.011857000000000001, "wall_s": 47.3, "stopped": true, "error": null}
+{"task_id": 604, "steps": 6, "cost_usd": 0.006220000000000002, "wall_s": 9.6, "stopped": true, "error": null}
+{"task_id": 606, "steps": 9, "cost_usd": 0.017663, "wall_s": 19.8, "stopped": true, "error": null}
+{"task_id": 443, "steps": 15, "cost_usd": 0.013156000000000003, "wall_s": 43.0, "stopped": true, "error": null}
+{"task_id": 448, "steps": 5, "cost_usd": 0.005949, "wall_s": 7.2, "stopped": true, "error": null}
+{"task_id": 509, "steps": 18, "cost_usd": 0.022034999999999996, "wall_s": 38.2, "stopped": true, "error": null}
+{"task_id": 610, "steps": 9, "cost_usd": 0.008686, "wall_s": 14.3, "stopped": true, "error": null}
+{"task_id": 451, "steps": 5, "cost_usd": 0.005993, "wall_s": 7.8, "stopped": true, "error": null}
+{"task_id": 513, "steps": 3, "cost_usd": 0.003693, "wall_s": 6.7, "stopped": true, "error": null}
+{"task_id": 520, "steps": 2, "cost_usd": 0.0020759999999999997, "wall_s": 4.6, "stopped": true, "error": null}
+{"task_id": 479, "steps": 5, "cost_usd": 0.004769000000000001, "wall_s": 8.5, "stopped": true, "error": null}
+{"task_id": 611, "steps": 12, "cost_usd": 0.009519, "wall_s": 16.2, "stopped": true, "error": null}
+{"task_id": 453, "steps": 30, "cost_usd": 0.10378300000000001, "wall_s": 67.5, "stopped": false, "error": null}
+{"task_id": 521, "steps": 6, "cost_usd": 0.008404, "wall_s": 11.1, "stopped": true, "error": null}
+{"task_id": 615, "steps": 13, "cost_usd": 0.014550000000000002, "wall_s": 40.9, "stopped": true, "error": null}
+{"task_id": 461, "steps": 30, "cost_usd": 0.07921200000000002, "wall_s": 46.5, "stopped": false, "error": null}
+{"task_id": 480, "steps": 30, "cost_usd": 0.030326999999999993, "wall_s": 53.4, "stopped": false, "error": null}
+{"task_id": 619, "steps": 7, "cost_usd": 0.006284, "wall_s": 16.7, "stopped": true, "error": null}
+{"task_id": 472, "steps": 4, "cost_usd": 0.00473, "wall_s": 10.2, "stopped": true, "error": null}
+{"task_id": 528, "steps": 30, "cost_usd": 0.024558000000000007, "wall_s": 59.6, "stopped": false, "error": null}
+{"task_id": 623, "steps": 14, "cost_usd": 0.011947000000000001, "wall_s": 16.9, "stopped": true, "error": null}
+{"task_id": 627, "steps": 14, "cost_usd": 0.011891999999999998, "wall_s": 16.4, "stopped": true, "error": null}
+{"task_id": 572, "steps": 19, "cost_usd": 0.032718, "wall_s": 29.3, "stopped": true, "error": null}
+{"task_id": 489, "steps": 30, "cost_usd": 0.03399200000000001, "wall_s": 43.5, "stopped": false, "error": null}
+{"task_id": 631, "steps": 8, "cost_usd": 0.009147, "wall_s": 13.0, "stopped": true, "error": null}
+{"task_id": 574, "steps": 9, "cost_usd": 0.014127, "wall_s": 15.4, "stopped": true, "error": null}
+{"task_id": 634, "steps": 8, "cost_usd": 0.0065840000000000004, "wall_s": 9.9, "stopped": true, "error": null}
+{"task_id": 484, "steps": 30, "cost_usd": 0.054192, "wall_s": 72.1, "stopped": false, "error": null}
+{"task_id": 490, "steps": 30, "cost_usd": 0.034464, "wall_s": 33.9, "stopped": false, "error": null}
+{"task_id": 635, "steps": 30, "cost_usd": 0.033495, "wall_s": 33.2, "stopped": false, "error": null}
+{"task_id": 492, "steps": 11, "cost_usd": 0.022414999999999997, "wall_s": 25.5, "stopped": true, "error": null}
+{"task_id": 493, "steps": 4, "cost_usd": 0.004435, "wall_s": 7.5, "stopped": true, "error": null}
+{"task_id": 587, "steps": 30, "cost_usd": 0.028681, "wall_s": 64.3, "stopped": false, "error": null}
+{"task_id": 636, "steps": 30, "cost_usd": 0.028257, "wall_s": 35.9, "stopped": false, "error": null}
+{"task_id": 589, "steps": 9, "cost_usd": 0.010199, "wall_s": 20.1, "stopped": true, "error": null}
+{"task_id": 640, "steps": 8, "cost_usd": 0.007812, "wall_s": 11.8, "stopped": true, "error": null}
+{"task_id": 526, "steps": 30, "cost_usd": 0.049362, "wall_s": 78.1, "stopped": false, "error": null}
+{"task_id": 641, "steps": 7, "cost_usd": 0.007228999999999999, "wall_s": 10.7, "stopped": true, "error": null}
+{"task_id": 496, "steps": 15, "cost_usd": 0.012283, "wall_s": 47.1, "stopped": true, "error": null}
+{"task_id": 645, "steps": 8, "cost_usd": 0.007883999999999999, "wall_s": 12.5, "stopped": true, "error": null}
+{"task_id": 649, "steps": 7, "cost_usd": 0.007846, "wall_s": 10.8, "stopped": true, "error": null}
+{"task_id": 657, "steps": 23, "cost_usd": 0.018906, "wall_s": 45.1, "stopped": true, "error": null}
+{"task_id": 651, "steps": 3, "cost_usd": 0.014274, "wall_s": 10.0, "stopped": true, "error": null}
+{"task_id": 652, "steps": 3, "cost_usd": 0.001875, "wall_s": 5.0, "stopped": true, "error": null}
+{"task_id": 691, "steps": 3, "cost_usd": 0.002709, "wall_s": 5.6, "stopped": true, "error": null}
+{"task_id": 535, "steps": 12, "cost_usd": 0.009451000000000001, "wall_s": 65.6, "stopped": true, "error": null}
+{"task_id": 502, "steps": 30, "cost_usd": 0.124447, "wall_s": 84.6, "stopped": false, "error": null}
+{"task_id": 796, "steps": 30, "cost_usd": 0.030075999999999995, "wall_s": 66.8, "stopped": false, "error": null}
+{"task_id": 797, "steps": 8, "cost_usd": 0.011032, "wall_s": 17.0, "stopped": true, "error": null}
+{"task_id": 671, "steps": 6, "cost_usd": 0.009373, "wall_s": 12.0, "stopped": true, "error": null}
+{"task_id": 503, "steps": 30, "cost_usd": 0.08157199999999999, "wall_s": 66.9, "stopped": false, "error": null}
+{"task_id": 674, "steps": 21, "cost_usd": 0.020935, "wall_s": 47.2, "stopped": true, "error": null}
+{"task_id": 543, "steps": 12, "cost_usd": 0.041985, "wall_s": 35.1, "stopped": true, "error": null}
+{"task_id": 675, "steps": 30, "cost_usd": 0.029782000000000003, "wall_s": 43.7, "stopped": false, "error": null}
+{"task_id": 715, "steps": 7, "cost_usd": 0.010851999999999999, "wall_s": 11.0, "stopped": true, "error": null}
+{"task_id": 716, "steps": 6, "cost_usd": 0.01061, "wall_s": 9.5, "stopped": true, "error": null}
+{"task_id": 722, "steps": 2, "cost_usd": 0.0023870000000000002, "wall_s": 3.3, "stopped": true, "error": null}
+{"task_id": 724, "steps": 8, "cost_usd": 0.012356, "wall_s": 21.2, "stopped": true, "error": null}
+{"task_id": 725, "steps": 3, "cost_usd": 0.004234, "wall_s": 6.0, "stopped": true, "error": null}
+{"task_id": 730, "steps": 2, "cost_usd": 0.002438, "wall_s": 3.6, "stopped": true, "error": null}
+{"task_id": 731, "steps": 4, "cost_usd": 0.003699, "wall_s": 6.1, "stopped": true, "error": null}
+{"task_id": 735, "steps": 6, "cost_usd": 0.005542, "wall_s": 9.6, "stopped": true, "error": null}
+{"task_id": 553, "steps": 9, "cost_usd": 0.010612, "wall_s": 16.1, "stopped": true, "error": null}
+{"task_id": 563, "steps": 23, "cost_usd": 0.04718300000000001, "wall_s": 38.4, "stopped": true, "error": null}
+{"task_id": 546, "steps": 30, "cost_usd": 0.092083, "wall_s": 156.8, "stopped": false, "error": null}
+{"task_id": 564, "steps": 30, "cost_usd": 0.047879000000000005, "wall_s": 44.0, "stopped": false, "error": null}
+{"task_id": 565, "steps": 8, "cost_usd": 0.017849999999999998, "wall_s": 17.1, "stopped": true, "error": null}
+{"task_id": 578, "steps": 19, "cost_usd": 0.019979, "wall_s": 27.5, "stopped": true, "error": null}
+{"task_id": 590, "steps": 9, "cost_usd": 0.008722, "wall_s": 23.4, "stopped": true, "error": null}
+{"task_id": 594, "steps": 8, "cost_usd": 0.008374, "wall_s": 12.8, "stopped": true, "error": null}
+{"task_id": 658, "steps": 11, "cost_usd": 0.012606000000000001, "wall_s": 18.9, "stopped": true, "error": null}
+{"task_id": 663, "steps": 7, "cost_usd": 0.006972, "wall_s": 12.8, "stopped": true, "error": null}
+{"task_id": 666, "steps": 30, "cost_usd": 0.02786, "wall_s": 34.4, "stopped": false, "error": null}
+{"task_id": 668, "steps": 15, "cost_usd": 0.015123, "wall_s": 23.3, "stopped": true, "error": null}
+{"task_id": 682, "steps": 30, "cost_usd": 0.031156, "wall_s": 42.0, "stopped": false, "error": null}
+{"task_id": 549, "steps": 30, "cost_usd": 0.110715, "wall_s": 255.6, "stopped": false, "error": null}
+{"task_id": 683, "steps": 16, "cost_usd": 0.022198, "wall_s": 24.6, "stopped": true, "error": null}
+{"task_id": 684, "steps": 9, "cost_usd": 0.010265, "wall_s": 13.5, "stopped": true, "error": null}
+{"task_id": 686, "steps": 21, "cost_usd": 0.023281000000000003, "wall_s": 46.4, "stopped": true, "error": null}
+{"task_id": 688, "steps": 6, "cost_usd": 0.008285, "wall_s": 10.2, "stopped": true, "error": null}
+{"task_id": 696, "steps": 30, "cost_usd": 0.07375499999999999, "wall_s": 124.7, "stopped": false, "error": null}
+{"task_id": 736, "steps": 30, "cost_usd": 0.032533, "wall_s": 51.7, "stopped": false, "error": null}
+{"task_id": 698, "steps": 30, "cost_usd": 0.069022, "wall_s": 52.0, "stopped": false, "error": null}
+{"task_id": 748, "steps": 30, "cost_usd": 0.027076000000000003, "wall_s": 51.8, "stopped": false, "error": null}
+{"task_id": 703, "steps": 14, "cost_usd": 0.013186, "wall_s": 25.9, "stopped": true, "error": null}
+{"task_id": 750, "steps": 30, "cost_usd": 0.026606999999999995, "wall_s": 58.3, "stopped": false, "error": null}
+{"task_id": 755, "steps": 8, "cost_usd": 0.006382, "wall_s": 20.6, "stopped": true, "error": null}
+{"task_id": 773, "steps": 30, "cost_usd": 0.036585, "wall_s": 94.0, "stopped": false, "error": null}
+{"task_id": 791, "steps": 30, "cost_usd": 0.035899, "wall_s": 41.3, "stopped": false, "error": null}
+{"task_id": 800, "steps": 30, "cost_usd": 0.030409, "wall_s": 43.4, "stopped": false, "error": null}
+{"task_id": 808, "steps": 8, "cost_usd": 0.00807, "wall_s": 13.2, "stopped": true, "error": null}
+{"task_id": 774, "steps": 30, "cost_usd": 0.047775000000000005, "wall_s": 74.7, "stopped": false, "error": null}
+{"task_id": 810, "steps": 5, "cost_usd": 0.006328, "wall_s": 12.0, "stopped": true, "error": null}
+{"task_id": 811, "steps": 3, "cost_usd": 0.005102, "wall_s": 8.2, "stopped": true, "error": null}
+{"task_id": 780, "steps": 30, "cost_usd": 0.108444, "wall_s": 68.6, "stopped": false, "error": null}
+{"task_id": 781, "steps": 25, "cost_usd": 0.061147999999999994, "wall_s": 55.0, "stopped": true, "error": null}
+Error during evaluation with evaluator AgentResponseEvaluator for task 31: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 64: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 110: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 120: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 142: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 147: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 157: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 191: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 201: Schema type must be 'array', got: 'null'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 108, in _normalized_actual_value
+    self._normalized_retrieved_data(
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 147, in _normalized_retrieved_data
+    return self.value_normalizer.normalize_array(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/value_normalizer.py", line 151, in normalize_array
+    raise ValueError(f"Schema type must be 'array', got: {schema_type!r}")
+ValueError: Schema type must be 'array', got: 'null'
+Error during evaluation with evaluator AgentResponseEvaluator for task 208: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 235: Schema type must be 'array', got: 'null'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 108, in _normalized_actual_value
+    self._normalized_retrieved_data(
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 147, in _normalized_retrieved_data
+    return self.value_normalizer.normalize_array(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/value_normalizer.py", line 151, in normalize_array
+    raise ValueError(f"Schema type must be 'array', got: {schema_type!r}")
+ValueError: Schema type must be 'array', got: 'null'
+Error during evaluation with evaluator AgentResponseEvaluator for task 269: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 288: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 313: Schema type must be 'array', got: 'null'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 108, in _normalized_actual_value
+    self._normalized_retrieved_data(
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 147, in _normalized_retrieved_data
+    return self.value_normalizer.normalize_array(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/value_normalizer.py", line 151, in normalize_array
+    raise ValueError(f"Schema type must be 'array', got: {schema_type!r}")
+ValueError: Schema type must be 'array', got: 'null'
+Error during evaluation with evaluator AgentResponseEvaluator for task 335: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 423: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 432: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 434: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 453: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 461: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 480: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 484: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 489: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 490: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 502: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 503: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 526: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 528: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 546: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 549: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 564: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 587: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 635: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 636: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 666: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 675: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 682: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 696: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 698: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 736: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 748: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 750: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 773: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 774: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 780: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 791: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 793: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 796: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator AgentResponseEvaluator for task 800: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 68, in evaluate
+    actual_normalized = self._normalized_actual_value(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/agent_response_evaluator.py", line 120, in _normalized_actual_value
+    if _attr_value := value.get(k, "").strip():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+Error during evaluation with evaluator NetworkEventEvaluator for task 811: Alternatives require 2+ items. Got [2330] with 1 item(s). Pass the value directly (not in a list).
+Traceback (most recent call last):
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/base.py", line 63, in evaluate
+    expected_normalized = self._normalized_expected_value(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/network_event_evaluator.py", line 99, in _normalized_expected_value
+    return self._normalize_value(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/network_event_evaluator.py", line 395, in _normalize_value
+    self._normalize_post_data_field(
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/evaluators/network_event_evaluator.py", line 259, in _normalize_post_data_field
+    normalized["post_data"] = self.value_normalizer.normalize(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/value_normalizer.py", line 212, in normalize
+    return self._normalize_object_or_array(value, type_name_or_schema, strict, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/value_normalizer.py", line 344, in _normalize_object_or_array
+    return self._normalize_object(value, object_schema, strict, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/value_normalizer.py", line 412, in _normalize_object
+    normalized[prop_name] = NormalizedString(prop_value, **kwargs)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/repos/translator-optimization/.venv/lib/python3.12/site-packages/webarena_verified/core/evaluation/data_types/base.py", line 69, in __init__
+    raise ValueError(
+ValueError: Alternatives require 2+ items. Got [2330] with 1 item(s). Pass the value directly (not in a list).
+{
+  "run": "t3_hybrid_s200",
+  "translator": "translators/t3_hybrid.py",
+  "model": "gpt-4.1-mini",
+  "n_tasks": 200,
+  "success_rate": 0.305,
+  "cost_usd": 5.0093,
+  "mean_steps": 12.55,
+  "runner_errors": []
+}
