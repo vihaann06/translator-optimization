@@ -1,0 +1,75 @@
+{
+  "task_id": 388,
+  "intent_template_id": 1356,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "Lisa Lee gave 3 stars (60%) - not 1 or 2 stars",
+          "MH gave 5 stars (100%) - not 1 or 2 stars",
+          "Diana Alcaraz gave no star rating visible",
+          "Evelyn Kurver gave 2 stars (40%)",
+          "Misba009 gave 4 stars (80%) - not 1 or 2 stars",
+          "Amanda gave no star rating visible",
+          "N Randall gave no star rating visible",
+          "Amazon Customer gave no star rating visible",
+          "Cally gave no star rating visible",
+          "Bethany Robertson gave no star rating visible"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": [
+          "lisa lee gave 3 stars (60%) - not 1 or 2 stars",
+          "mh gave 5 stars (100%) - not 1 or 2 stars",
+          "diana alcaraz gave no star rating visible",
+          "evelyn kurver gave 2 stars (40%)",
+          "misba009 gave 4 stars (80%) - not 1 or 2 stars",
+          "amanda gave no star rating visible",
+          "n randall gave no star rating visible",
+          "amazon customer gave no star rating visible",
+          "cally gave no star rating visible",
+          "bethany robertson gave no star rating visible"
+        ],
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          "evelyn kurver",
+          "n randall"
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (0/2), Missing: 2, Extra: 10",
+            "Expected: [evelyn kurver, n randall], Got: [lisa lee gave 3 stars (60%) - not 1 or 2 stars, mh gave 5 stars (100%) - not 1 or 2 stars, ..., bethany robertson gave no star rating visible]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

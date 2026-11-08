@@ -1,0 +1,92 @@
+{
+  "task_id": 528,
+  "intent_template_id": 154,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "error",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "error",
+      "score": 0.0,
+      "actual": {
+        "task_type": null,
+        "status": "UNKNOWN_ERROR",
+        "retrieved_data": null,
+        "error_details": "agent did not stop within the step budget"
+      },
+      "actual_normalized": null,
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": "Error during evaluation with evaluator AgentResponseEvaluator for task 528: 'NoneType' object has no attribute 'strip'",
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "^http://.*/dummy_bin$",
+          "query_params": {}
+        },
+        "post_data": {
+          "form_id": "contact form",
+          "name": "emma lopez",
+          "email": "emma.lopez@gmail.com",
+          "comment": "^I\\s+need\\s+a\\s+refund[.\\s]+Order\\s*:\\s*#?\\s*0*180[.\\s]+Amount\\s*:\\s*(\\$\\s*)?12\\.99(\\s*\\$|\\s+dollars)?[.\\s]+Reason\\s*:\\s*It\\s+broke\\s+after\\s+three\\s+days\\s+of\\s+use\\.?$"
+        },
+        "response_status": -1,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__SHOPPING__/contact/index/post",
+          "query_params": {}
+        },
+        "response_status": 200,
+        "http_method": "POST",
+        "post_data": null,
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": true
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

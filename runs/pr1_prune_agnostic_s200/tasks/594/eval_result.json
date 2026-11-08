@@ -1,0 +1,98 @@
+{
+  "task_id": 594,
+  "intent_template_id": 339,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "success",
+  "score": 1.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": {
+        "task_type": "MUTATE",
+        "status": "SUCCESS",
+        "retrieved_data": null,
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "mutate"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/byteblaze/dotfiles/-/milestones",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "97ye71KUnhxzb90prXs59w2yZyY6dvXWBQ21G28GOT0xXoQGvAw5whHJ3mXzPrvbLvlgRjjbRBsxdMtZmyNrRw==",
+            "milestone[title]": "zsh comprehensive support",
+            "milestone[start_date]": "2044-05-01",
+            "milestone[due_date]": "2044-05-20",
+            "milestone[description]": ""
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/byteblaze/dotfiles/-/milestones",
+            "query_params": {}
+          },
+          "post_data": {
+            "milestone[title]": "zsh comprehensive support",
+            "milestone[start_date]": "2044-05-01",
+            "milestone[due_date]": "2044-05-20"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/byteblaze/dotfiles/-/milestones",
+          "query_params": {}
+        },
+        "post_data": {
+          "milestone[title]": "zsh comprehensive support",
+          "milestone[start_date]": "2044-05-01",
+          "milestone[due_date]": "2044-05-20"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

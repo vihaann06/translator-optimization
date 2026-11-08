@@ -1,0 +1,58 @@
+{
+  "task_id": 120,
+  "intent_template_id": 250,
+  "sites": [
+    "shopping_admin"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "title": "it was really hard to find the right siz",
+            "rating": 4.0
+          },
+          {
+            "title": "very lightweight comfy good shoes",
+            "rating": 5.0
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_missing_or_null",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected retrieved_data to be ({'title': NormalizedString('It was really hard to find the right siz' -> 'it was really hard to find the right siz'), 'rating': Number(4.0)}, {'title': NormalizedString('VERY LIGHTWEIGHT COMFY-GOOD SHOES' -> 'very lightweight comfy good shoes'), 'rating': Number(5.0)}), but got None or empty"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

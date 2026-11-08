@@ -1,0 +1,133 @@
+{
+  "task_id": 750,
+  "intent_template_id": 2100,
+  "sites": [
+    "gitlab"
+  ],
+  "task_revision": 2,
+  "status": "error",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "error",
+      "score": 0.0,
+      "actual": {
+        "task_type": null,
+        "status": "UNKNOWN_ERROR",
+        "retrieved_data": null,
+        "error_details": "agent did not stop within the step budget"
+      },
+      "actual_normalized": null,
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": null,
+      "error_msg": "Error during evaluation with evaluator AgentResponseEvaluator for task 750: 'NoneType' object has no attribute 'strip'",
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/projects",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "vvGVAx2bdqZbzJ50DcebhEWo/azcIpQY7IGiUZdPbh14E4/q8wPReDlqnThTghmoZuP6zN6PJdXY+NwTY2o8Zw==",
+            "project[template_name]": "plainhtml",
+            "project[ci_cd_only]": "false",
+            "project[name]": "agi_index",
+            "project[namespace_id]": "2505",
+            "project[path]": "agi_index",
+            "project[description]": "",
+            "project[visibility_level]": "0"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/projects",
+            "query_params": {}
+          },
+          "post_data": {
+            "project[template_name]": "plainhtml",
+            "project[name]": "agi_index",
+            "project[path]": "agi_index",
+            "project[namespace_id]": "2505",
+            "project[visibility_level]": "0"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/projects",
+          "query_params": {}
+        },
+        "post_data": {
+          "project[template_name]": "plainhtml",
+          "project[name]": "agi_index",
+          "project[path]": "agi_index",
+          "project[namespace_id]": "2505",
+          "project[visibility_level]": "0"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "^__GITLAB__/api/v4/projects/\\d+/invitations$",
+          "query_params": {}
+        },
+        "post_data": {
+          "user_id": "278"
+        },
+        "response_status": 201,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

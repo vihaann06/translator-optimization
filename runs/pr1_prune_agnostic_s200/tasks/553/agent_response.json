@@ -1,0 +1,12 @@
+{
+  "task_type": "RETRIEVE",
+  "status": "SUCCESS",
+  "retrieved_data": [
+    "http://wboc.com/t3_116e4p2",
+    "http://nbcnews.com/t3_yqlpha",
+    "http://wsj.com/t3_yknvtb",
+    "http://apnews.com/t3_z7vn7e",
+    "http://apnews.com/t3_zzmx2a"
+  ],
+  "error_details": null
+}

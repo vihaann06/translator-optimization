@@ -1,0 +1,156 @@
+{
+  "task_id": 563,
+  "intent_template_id": 88,
+  "sites": [
+    "gitlab",
+    "reddit"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          "Typical Connecticut Attractions",
+          "CT in a nutshell",
+          "This whole sub right now V3",
+          "The future of CT is very dark.",
+          "Goodbye giant DD cup"
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": null,
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "mutate",
+        "status": "success",
+        "retrieved_data": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "agent_response.task_type_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Expected mutate, got retrieve"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "success",
+      "score": 1.0,
+      "actual": [
+        {
+          "url": "http://localhost:8023/projects",
+          "headers": null,
+          "query_params": null,
+          "post_data": {
+            "authenticity_token": "N0dmDDA/muwTam51bJDLxh7ZL/yfm2mjc2I4KNHTMBzxpXzl3qc9MnHMbTky1UnqPZIonJ022G5HG0ZqJfZiZg==",
+            "project[ci_cd_only]": "false",
+            "project[name]": "fun_thing_to_do",
+            "project[namespace_id]": "2505",
+            "project[path]": "fun_thing_to_do",
+            "project[visibility_level]": "0",
+            "project[initialize_with_readme]": "1"
+          },
+          "response_content": null,
+          "response_status": 302,
+          "http_method": "POST",
+          "response_cookies": null
+        }
+      ],
+      "actual_normalized": [
+        {
+          "url": {
+            "base_url": "__GITLAB__/projects",
+            "query_params": {}
+          },
+          "post_data": {
+            "project[template_name]": null,
+            "project[name]": "fun_thing_to_do",
+            "project[path]": "fun_thing_to_do",
+            "project[namespace_id]": "2505",
+            "project[visibility_level]": "0"
+          },
+          "response_status": 302,
+          "http_method": "POST",
+          "response_content": null,
+          "response_cookies": null
+        }
+      ],
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/projects",
+          "query_params": {}
+        },
+        "post_data": {
+          "project[template_name]": null,
+          "project[name]": "fun_thing_to_do",
+          "project[path]": "fun_thing_to_do",
+          "project[namespace_id]": "2505",
+          "project[visibility_level]": "0"
+        },
+        "response_status": 302,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": null,
+      "error_msg": null,
+      "should_not_exist": false
+    },
+    {
+      "evaluator_name": "NetworkEventEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": [],
+      "actual_normalized": null,
+      "expected": {
+        "url": {
+          "base_url": "__GITLAB__/api/v4/projects/byteblaze/fun_thing_to_do/repository/commits",
+          "query_params": {}
+        },
+        "post_data": {
+          "branch": "main",
+          "$.actions[0].action": "^(update|create)$",
+          "$.actions[0].file_path": "readme.md",
+          "$.actions[0].content": "# fun_thing_to_do\n\n## Most Active DIY Threads\n\n- [Separate glued plastic parts](__REDDIT__/f/DIY/118903/separate-glued-plastic-parts)\n- [How would you fix this dryer vent mess?](__REDDIT__/f/DIY/118923/how-would-you-fix-this-dryer-vent-mess)\n- [Basement Bulkhead/Soffit + Wall Framing](__REDDIT__/f/DIY/118935/basement-bulkhead-soffit-wall-framing)\n- [GE Water Heater Pilot Light Won't Stay Lit](__REDDIT__/f/DIY/118904/ge-water-heater-pilot-light-won-t-stay-lit)\n- [Attempting to move a wall outlet in my basement a few inches to the left and am totally stumped. Any help GREATLY appreciated!!](__REDDIT__/f/DIY/118960/attempting-to-move-a-wall-outlet-in-my-basement-a-few-inches)",
+          "$.actions[1].action": null
+        },
+        "response_status": 201,
+        "http_method": "POST",
+        "response_content": null,
+        "response_cookies": null
+      },
+      "assertions": [
+        {
+          "assertion_name": "missing_navigation_event",
+          "status": "failure",
+          "assertion_msgs": [
+            "No matching network event found that satisfies all expected criteria."
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": false
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}

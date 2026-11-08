@@ -1,0 +1,79 @@
+{
+  "task_id": 281,
+  "intent_template_id": 204,
+  "sites": [
+    "shopping"
+  ],
+  "task_revision": 2,
+  "status": "failure",
+  "score": 0.0,
+  "evaluators_results": [
+    {
+      "evaluator_name": "AgentResponseEvaluator",
+      "status": "failure",
+      "score": 0.0,
+      "actual": {
+        "task_type": "RETRIEVE",
+        "status": "SUCCESS",
+        "retrieved_data": [
+          {
+            "names": [
+              "Kids Toothbrush Replacement Heads for Oral B Kids Replaced Brush Heads Soft Precision Bristles Children Professional Care 16 Pack (16)",
+              "VINFANY 16PCS Kid's Toothbrush Heads for Oral B, Children Replacement Brush Heads for Braun Electric Rechargeable Toothbrush Compatible with Sensitive Clean, Professional Care, Advanced Power, Floss",
+              "Oral-B Kids Extra Soft Replacement Brush Heads featuring STAR WARS, 2 count"
+            ],
+            "min": 11.59,
+            "max": 18.99
+          }
+        ],
+        "error_details": null
+      },
+      "actual_normalized": {
+        "retrieved_data": [
+          {
+            "names": [
+              "kids toothbrush replacement heads for oral b kids replaced brush heads soft precision bristles children professional care 16 pack (16)",
+              "vinfany 16pcs kid's toothbrush heads for oral b, children replacement brush heads for braun electric rechargeable toothbrush compatible with sensitive clean, professional care, advanced power, floss",
+              "oral b kids extra soft replacement brush heads featuring star wars, 2 count"
+            ],
+            "min": "11.59",
+            "max": "18.99"
+          }
+        ],
+        "status": "success",
+        "task_type": "retrieve"
+      },
+      "expected": {
+        "task_type": "retrieve",
+        "status": "success",
+        "retrieved_data": [
+          {
+            "names": [
+              "oral b kids extra soft replacement brush heads featuring star wars, 2 count",
+              "kids by oral b stages power star wars replacement heads 4 pack"
+            ],
+            "min": "12.99",
+            "max": "14.98"
+          }
+        ]
+      },
+      "assertions": [
+        {
+          "assertion_name": "retrieved_data_array_values_mismatch",
+          "status": "failure",
+          "assertion_msgs": [
+            "Array value mismatch (unordered). Matched (0/1), Missing: 1, Extra: 1",
+            "Expected: [{'names': (NormalizedString('Oral-B Kids Extra Soft Replacement Brush Heads featuring STAR WARS, 2 count' -> 'oral b kids extra soft replacement brush heads featuring star wars, 2 count'), NormalizedString('Kids By Oral-b Stages Power Star Wars Replacement Heads 4 Pack' -> 'kids by oral b stages power star wars replacement heads 4 pack')), 'min': Currency(12.99 -> Decimal('12.99')), 'max': Currency(14.98 -> Decimal('14.98'))}], Got: [{'names': (NormalizedString('Kids Toothbrush Replacement Heads for Oral B Kids Replaced Brush Heads Soft Precision Bristles Children Professional Care 16 Pack (16)' -> 'kids toothbrush replacement heads for oral b kids replaced brush heads soft precision bristles children professional care 16 pack (16)'), NormalizedString(\"VINFANY 16PCS Kid's Toothbrush Heads for Oral B, Children Replacement Brush Heads for Braun Electric Rechargeable Toothbrush Compatible with Sensitive Clean, Professional Care, Advanced Power, Floss\" -> \"vinfany 16pcs kid's toothbrush heads for oral b, children replacement brush heads for braun electric rechargeable toothbrush compatible with sensitive clean, professional care, advanced power, floss\"), NormalizedString('Oral-B Kids Extra Soft Replacement Brush Heads featuring STAR WARS, 2 count' -> 'oral b kids extra soft replacement brush heads featuring star wars, 2 count')), 'min': Currency(11.59 -> Decimal('11.59')), 'max': Currency(18.99 -> Decimal('18.99'))}]"
+          ],
+          "error_msg": null
+        }
+      ],
+      "error_msg": null,
+      "should_not_exist": null
+    }
+  ],
+  "error_msg": null,
+  "webarena_verified_version": "1.2.3",
+  "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+  "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+}
